@@ -3,125 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Union Quiz</title>
-    <!-- Link to CSS -->
+    <title>Irish Credit Union Schools Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- Added oncontextmenu="return false;" to block right-click at the HTML level -->
 <body oncontextmenu="return false;">
-
-<!-- Mobile Navbar -->
-<div class="mobile-header">
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <h2>Credit Union Quiz</h2>
-    <div style="width: 24px;"></div>
-</div>
-
-<!-- Dark Overlay for Mobile Menu -->
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-<div class="app-layout">
-    <!-- Left Navigation Menu (Now with scrollbars) -->
-    <div class="sidebar" id="sidebar">
-        <button class="sidebar-close" onclick="toggleMenu()">✕</button>
-        
-        <h3>🗂️ Modules</h3>
-        <div id="moduleContainer"></div>
+    <div class="mobile-header">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <h2>Credit Union Quiz</h2>
+        <div style="width: 24px;"></div>
     </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
-    <!-- Main Content Area -->
-    <div class="main-content">
-        <h1 id="mainTitle">Credit Union Quiz</h1>
-        <h1 id="mainTitle">Primary Exam Preparation</h1>
-        <p style="text-align:center; color:#666; font-size: 18px; margin-top: 30px;" id="instructionsText">👈 Please select a Module from the menu to begin.</p>
-        
-        <!-- NEW: Mode Toggle Buttons -->
-        <div class="mode-toggle" id="modeToggleContainer" style="display: none;">
-            <button type="button" id="btnQuizMode" class="mode-btn active" onclick="switchMode('QUIZ')">📝 Quiz Mode</button>
-            <button type="button" id="btnFlashcardMode" class="mode-btn" onclick="switchMode('FLASHCARD')">📇 Flashcard Mode</button>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar" id="sidebar">
+            <button class="sidebar-close" onclick="toggleMenu()">✕</button>
+            
+            <!-- Quick Launch Competition Quiz -->
+            <div class="practice-box">
+                <button type="button" class="btn-competition" onclick="startPracticeQuiz()">
+                    🏆 Start 3-Round Quiz
+                </button>
+                <small>Official ILCU Format: 6 questions per round (2 Easy, 2 Moderate, 2 Hard)</small>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>🗂️ Browse Modules</h3>
+            </div>
+            <div id="moduleContainer"></div>
         </div>
 
-        <!-- NEW: Flashcard Container -->
-        <div id="flashcardView" style="display:none; text-align:center;">
-            <p style="color: #666; margin-bottom: 15px;">Tap the card to flip it!</p>
-            <div class="flashcard-container" onclick="flipCard()">
-                <div class="flashcard" id="flashcardInner">
-                    <div class="flashcard-front">
-                        <div class="fc-question" id="fcFrontText">Loading...</div>
-                    </div>
-                    <div class="flashcard-back">
-                        <div class="fc-answer" id="fcBackAnswer">Loading...</div>
-                        <div class="fc-explanation" id="fcBackExplanation">Loading...</div>
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="hero-banner">
+                <h1 id="mainTitle">Credit Union Schools Quiz</h1>
+                <p id="mainSubtitle" class="subtitle">Primary Schools Competition Preparation</p>
+                <p id="instructionsText" class="instructions">
+                    👈 Click <b>Start 3-Round Quiz</b> in the sidebar for competition practice, or select an individual category module to study.
+                </p>
+            </div>
+
+            <!-- Mode Toggle for Single Modules -->
+            <div class="mode-toggle" id="modeToggleContainer" style="display: none;">
+                <button type="button" id="btnQuizMode" class="mode-btn active" onclick="switchMode('QUIZ')">📝 Quiz Mode</button>
+                <button type="button" id="btnFlashcardMode" class="mode-btn" onclick="switchMode('FLASHCARD')">📇 Flashcard Mode</button>
+            </div>
+
+            <!-- Flashcard View -->
+            <div id="flashcardView" style="display:none; text-align:center;">
+                <p style="color: #666; margin-bottom: 15px;">Tap the card to reveal the answer and explanation!</p>
+                <div class="flashcard-container" onclick="flipCard()">
+                    <div class="flashcard" id="flashcardInner">
+                        <div class="flashcard-front">
+                            <div class="fc-badge" id="fcFrontBadge">Question</div>
+                            <div class="fc-question" id="fcFrontText">Loading...</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="fc-badge" id="fcBackBadge">Answer</div>
+                            <div class="fc-answer" id="fcBackAnswer">Loading...</div>
+                            <div class="fc-explanation" id="fcBackExplanation">Loading...</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="pagination-controls" style="justify-content: center; align-items: center; margin-top: 25px;">
-                <button type="button" class="btn btn-outline" style="max-width: 150px;" onclick="prevFlashcard()">⬅ Prev</button>
-                <span id="fcCounter" style="margin: 0 15px; font-weight:bold; font-size: 18px; color: #1a73e8;">1 / 10</span>
-                <button type="button" class="btn btn-outline" style="max-width: 150px;" onclick="nextFlashcard()">Next ➡</button>
-            </div>
-        </div>
-        
-        <!-- The Quiz Container -->
-        <form id="quizForm">
-            <div id="quizContainer"></div>
-            
-            <!-- NEW: Pagination Controls -->
-            <div id="paginationControls" class="pagination-controls" style="display: none;">
-                <button type="button" class="btn btn-outline" id="prevPageBtn" onclick="prevPage()">⬅ Previous</button>
-                <button type="button" class="btn btn-outline" id="nextPageBtn" onclick="nextPage()">Next ➡</button>
-            </div>
-            
-            <!-- Submit Button (Shows only on the last page) -->
-            <button type="button" class="btn" id="submitQuizBtn" onclick="gradeQuiz()" style="display: none;">Submit Quiz & View Analytics</button>
-            
-            <div class="action-buttons" id="reviewActionBtns" style="display:none; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
-                <button type="button" class="btn btn-outline" onclick="showAnalytics()">📊 Back to Analytics</button>
-                <button type="button" class="btn" onclick="retakeQuiz()">🔄 Retake This Section</button>
-            </div>
-        </form>
-        
-        <!-- Full Analytics Dashboard -->
-        <div id="fullAnalyticsView" class="full-analytics">
-            <h2 style="color: #1a73e8; margin-top:0;">Performance Dashboard</h2>
-            
-            <div class="score-circle" id="overallScoreCircle"></div>
-            <div class="score-feedback" id="overallScoreText"></div>
-
-            <div class="analytics-box">
-                <div class="analytics-title">📊 Topic Breakdown</div>
-                <div id="analyticsContent"></div>
+                <div class="pagination-controls" style="justify-content: center; align-items: center; margin-top: 25px;">
+                    <button type="button" class="btn btn-outline" style="max-width: 140px;" onclick="prevFlashcard()">⬅ Prev</button>
+                    <span id="fcCounter" class="fc-counter">1 / 50</span>
+                    <button type="button" class="btn btn-outline" style="max-width: 140px;" onclick="nextFlashcard()">Next ➡</button>
+                </div>
             </div>
 
-            <div class="action-buttons">
-                <button type="button" class="btn btn-outline" onclick="reviewAnswers()">👀 Review Answers</button>
-                <button type="button" class="btn" onclick="retakeQuiz()">🔄 Retake This Section</button>
+            <!-- Quiz View -->
+            <form id="quizForm" style="display:none;" onsubmit="return false;">
+                <div id="roundIndicator" class="round-indicator" style="display: none;"></div>
+                <div id="quizContainer"></div>
+
+                <!-- Navigation Controls -->
+                <div id="paginationControls" class="pagination-controls" style="display: none;">
+                    <button type="button" class="btn btn-outline" id="prevPageBtn" onclick="prevRoundOrPage()">⬅ Previous Round</button>
+                    <button type="button" class="btn btn-outline" id="nextPageBtn" onclick="nextRoundOrPage()">Next Round ➡</button>
+                </div>
+
+                <button type="button" class="btn btn-submit" id="submitQuizBtn" onclick="gradeQuiz()" style="display: none;">
+                    Submit Quiz & View Analytics
+                </button>
+
+                <div class="action-buttons" id="reviewActionBtns" style="display:none;">
+                    <button type="button" class="btn btn-outline" onclick="showAnalytics()">📊 Back to Scorecard</button>
+                    <button type="button" class="btn" onclick="startPracticeQuiz()">🔄 New 3-Round Quiz</button>
+                </div>
+            </form>
+
+            <!-- Analytics Dashboard -->
+            <div id="fullAnalyticsView" class="full-analytics" style="display:none;">
+                <h2 style="color: #0b5394; margin-top:0;">Competition Scorecard</h2>
+                <div class="score-circle" id="overallScoreCircle"></div>
+                <div class="score-feedback" id="overallScoreText"></div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-box">
+                        <div class="analytics-title">🎯 Round-by-Round Breakdown</div>
+                        <div id="roundAnalyticsContent"></div>
+                    </div>
+                    <div class="analytics-box">
+                        <div class="analytics-title">📈 Difficulty Breakdown</div>
+                        <div id="difficultyAnalyticsContent"></div>
+                    </div>
+                </div>
+
+                <div class="analytics-box" style="margin-top: 20px;">
+                    <div class="analytics-title">📊 Subject & Topic Performance</div>
+                    <div id="analyticsContent"></div>
+                </div>
+
+                <div class="action-buttons" style="margin-top: 25px;">
+                    <button type="button" class="btn btn-outline" onclick="reviewAnswers()">👀 Review Answers</button>
+                    <button type="button" class="btn" onclick="startPracticeQuiz()">🔄 Start Another Quiz</button>
+                </div>
             </div>
-        </div>
 
-        <!-- ADD THIS FOOTER HERE -->
-        <footer class="app-footer">
-            <p>&copy; 2026 by Jane Patta. All rights reserved.</p>
-        </footer>
-        
-    </div>
-</div>
-
-<!-- CUSTOM MODAL POPUP -->
-<div id="customModal" class="modal-overlay hidden">
-    <div class="modal-content">
-        <h3 style="margin-top:0; color:#dc3545;">⚠️ Unanswered Questions</h3>
-        <p id="modalMessage"></p>
-        <div class="modal-actions">
-            <button id="modalCancelBtn" class="btn btn-outline" style="margin-top:0;">No, Keep Working</button>
-            <button id="modalConfirmBtn" class="btn" style="margin-top:0; background:#dc3545;">Yes, Submit Anyway</button>
+            <footer class="app-footer">
+                <p>&copy; 2026 Irish Credit Union Schools Quiz Preparation Platform</p>
+            </footer>
         </div>
     </div>
-</div>
 
-<!-- Load Modern ES6 App Logic -->
-<script type="module" src="app.js"></script>
+    <!-- Modal for Incomplete Submissions -->
+    <div id="customModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 style="margin-top:0; color:#dc3545;">⚠️ Unanswered Questions</h3>
+            <p id="modalMessage"></p>
+            <div class="modal-actions">
+                <button type="button" id="modalCancelBtn" class="btn btn-outline">Keep Answering</button>
+                <button type="button" id="modalConfirmBtn" class="btn" style="background:#dc3545;">Submit Anyway</button>
+            </div>
+        </div>
+    </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

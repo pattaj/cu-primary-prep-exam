@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Name this famous Irish landmark.",
+    "image": "./images/giants-causeway.jpg",
+    "answer": "Giant's Causeway",
+    "answers": ["Giants Causeway", "The Giant's Causeway"],
+    "topic": "Irish Landmarks",
+    "explanation": "Located in County Antrim, it consists of about 40,000 interlocking basalt columns."
+  },
+  {
+    "question": "Which country does this flag belong to?",
+    "image": "./images/flag-japan.jpg",
+    "answer": "Japan",
+    "topic": "World Flags",
+    "explanation": "The red circle in the center represents the sun."
+  }
+]

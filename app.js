@@ -40,6 +40,9 @@ function shuffle(array) {
 function normalizeAnswer(str) {
     return (str || "")
         .toString()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "") // removes accents/fadas
+        .replace(/[.,!?;:'"()-]/g, "")   // removes common punctuation
         .trim()
         .toLowerCase()
         .replace(/\s+/g, " ");

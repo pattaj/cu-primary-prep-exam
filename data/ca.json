@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "1. Which country hosted the 2026 Winter Olympics in February 2026?",
+    "options": {
+      "A": "France",
+      "B": "Italy",
+      "C": "Switzerland",
+      "D": "Norway"
+    },
+    "correct_answer": "B",
+    "explanation": "Italy hosted the XXV Olympic Winter Games in February 2026 across Milan and Cortina d'Ampezzo."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "2. Which European city hosted the 2026 Eurovision Song Contest?",
+    "options": {
+      "A": "Vienna",
+      "B": "Stockholm",
+      "C": "Basel",
+      "D": "Copenhagen"
+    },
+    "correct_answer": "A",
+    "explanation": "Vienna, Austria was the host city for the 2026 Eurovision Song Contest."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "3. Which country won the 2026 FIFA Men's World Cup?",
+    "options": {
+      "A": "Argentina",
+      "B": "France",
+      "C": "Spain",
+      "D": "Brazil"
+    },
+    "correct_answer": "C",
+    "explanation": "Spain defeated Argentina 1–0 after extra time to win the 2026 FIFA Men's World Cup."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "4. Which county won the 2026 All-Ireland Senior Football Championship?",
+    "options": {
+      "A": "Dublin",
+      "B": "Kerry",
+      "C": "Armagh",
+      "D": "Mayo"
+    },
+    "correct_answer": "D",
+    "explanation": "Mayo defeated Kerry to win the 2026 All-Ireland Senior Football Championship."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "5. Which county won the 2026 All-Ireland Senior Hurling Championship?",
+    "options": {
+      "A": "Limerick",
+      "B": "Clare",
+      "C": "Cork",
+      "D": "Galway"
+    },
+    "correct_answer": "A",
+    "explanation": "Limerick triumphed over Galway to win the 2026 All-Ireland Senior Hurling Championship."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "6. Which country won the 2026 Men's Six Nations Rugby Championship?",
+    "options": {
+      "A": "Ireland",
+      "B": "France",
+      "C": "England",
+      "D": "Scotland"
+    },
+    "correct_answer": "B",
+    "explanation": "France captured the 2026 Men's Six Nations title, while Ireland secured the Triple Crown."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "7. Which English football club won the 2025–26 Premier League title?",
+    "options": {
+      "A": "Manchester City",
+      "B": "Arsenal",
+      "C": "Liverpool",
+      "D": "Chelsea"
+    },
+    "correct_answer": "B",
+    "explanation": "Arsenal clinched the 2025–26 Premier League championship title."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "8. Which three North American countries co-hosted the 2026 FIFA Men's World Cup?",
+    "options": {
+      "A": "USA, Canada, and Mexico",
+      "B": "USA, Mexico, and Costa Rica",
+      "C": "USA, Canada, and Brazil",
+      "D": "Canada, Mexico, and Panama"
+    },
+    "correct_answer": "A",
+    "explanation": "The 2026 FIFA World Cup was jointly staged across the USA, Canada, and Mexico."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "9. Who is the President of the United States in 2026?",
+    "options": {
+      "A": "Joe Biden",
+      "B": "Kamala Harris",
+      "C": "Donald Trump",
+      "D": "JD Vance"
+    },
+    "correct_answer": "C",
+    "explanation": "Donald Trump took office as the 47th President of the United States following the 2024 election."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "10. Who is the Prime Minister of the United Kingdom in 2026?",
+    "options": {
+      "A": "Rishi Sunak",
+      "B": "Keir Starmer",
+      "C": "Boris Johnson",
+      "D": "Angela Rayner"
+    },
+    "correct_answer": "B",
+    "explanation": "Sir Keir Starmer leads the UK Government as Prime Minister in 2026."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "11. Who is the reigning British monarch in 2026?",
+    "options": {
+      "A": "King William V",
+      "B": "King Charles III",
+      "C": "Prince Harry",
+      "D": "Prince Edward"
+    },
+    "correct_answer": "B",
+    "explanation": "King Charles III is the reigning monarch of the United Kingdom and Commonwealth realms."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "12. Which Irish actress won Best Actress at the 2026 Oscars for her role in Hamnet?",
+    "options": {
+      "A": "Saoirse Ronan",
+      "B": "Jessie Buckley",
+      "C": "Eve Hewson",
+      "D": "Ruth Negga"
+    },
+    "correct_answer": "B",
+    "explanation": "Jessie Buckley won the Academy Award for Best Actress for her performance in Hamnet."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "13. Which animated film won Best Animated Feature at the 2026 Oscars?",
+    "options": {
+      "A": "Inside Out 2",
+      "B": "KPop Demon Hunters",
+      "C": "The Wild Robot",
+      "D": "Moana 2"
+    },
+    "correct_answer": "B",
+    "explanation": "KPop Demon Hunters was awarded Best Animated Feature at the 2026 Academy Awards."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "14. Which country won the 2026 Eurovision Song Contest?",
+    "options": {
+      "A": "Austria",
+      "B": "Bulgaria",
+      "C": "Sweden",
+      "D": "Italy"
+    },
+    "correct_answer": "B",
+    "explanation": "Bulgaria won the 2026 Eurovision Song Contest with the song 'Bangaranga'."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "15. What is the name of the Irish rugby trophy Ireland won during the 2026 Six Nations?",
+    "options": {
+      "A": "The Calcutta Cup",
+      "B": "The Triple Crown",
+      "C": "The Millennium Trophy",
+      "D": "The Centenary Quaich"
+    },
+    "correct_answer": "B",
+    "explanation": "Ireland claimed the Triple Crown during the 2026 Six Nations by defeating England, Scotland, and Wales."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "16. Which two Italian cities co-hosted the 2026 Winter Olympics?",
+    "options": {
+      "A": "Rome and Turin",
+      "B": "Milan and Cortina d'Ampezzo",
+      "C": "Turin and Venice",
+      "D": "Milan and Bolzano"
+    },
+    "correct_answer": "B",
+    "explanation": "Milan and Cortina d'Ampezzo served as co-hosts for the 2026 Olympic Winter Games."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "17. Who is the President of France in 2026?",
+    "options": {
+      "A": "Emmanuel Macron",
+      "B": "Marine Le Pen",
+      "C": "Gabriel Attal",
+      "D": "Michel Barnier"
+    },
+    "correct_answer": "A",
+    "explanation": "Emmanuel Macron is the President of France."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "18. Which film won Best Picture at the 98th Academy Awards (2026 Oscars)?",
+    "options": {
+      "A": "Sinners",
+      "B": "One Battle After Another",
+      "C": "Hamnet",
+      "D": "Weapons"
+    },
+    "correct_answer": "B",
+    "explanation": "One Battle After Another won the Oscar for Best Picture at the 98th Academy Awards."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "19. Who won Best Actor at the 2026 Oscars for his role in Sinners?",
+    "options": {
+      "A": "Paul Mescal",
+      "B": "Michael B. Jordan",
+      "C": "Cillian Murphy",
+      "D": "Timothée Chalamet"
+    },
+    "correct_answer": "B",
+    "explanation": "Michael B. Jordan took home Best Actor for his performance in Sinners."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "20. Who hosted the 2026 Academy Awards ceremony?",
+    "options": {
+      "A": "Jimmy Kimmel",
+      "B": "Conan O'Brien",
+      "C": "Steve Martin",
+      "D": "John Mulaney"
+    },
+    "correct_answer": "B",
+    "explanation": "Conan O'Brien hosted the 98th Academy Awards ceremony in March 2026."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "21. Which county did Mayo defeat in the 2026 All-Ireland Senior Football Final?",
+    "options": {
+      "A": "Dublin",
+      "B": "Kerry",
+      "C": "Galway",
+      "D": "Donegal"
+    },
+    "correct_answer": "B",
+    "explanation": "Mayo overcame Kerry at Croke Park to seal their historic All-Ireland football victory."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "22. Which county did Limerick defeat in the 2026 All-Ireland Senior Hurling Final?",
+    "options": {
+      "A": "Kilkenny",
+      "B": "Galway",
+      "C": "Cork",
+      "D": "Tipperary"
+    },
+    "correct_answer": "B",
+    "explanation": "Limerick defeated Galway in the 2026 All-Ireland Senior Hurling Championship final."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "23. Which team did Spain defeat 1–0 after extra time in the 2026 FIFA World Cup Final?",
+    "options": {
+      "A": "France",
+      "B": "Argentina",
+      "C": "England",
+      "D": "Brazil"
+    },
+    "correct_answer": "B",
+    "explanation": "Spain prevailed 1–0 over Argentina after extra time in the 2026 World Cup Final."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "24. Who is the President of the European Commission in 2026?",
+    "options": {
+      "A": "Roberta Metsola",
+      "B": "Ursula von der Leyen",
+      "C": "Christine Lagarde",
+      "D": "Kaja Kallas"
+    },
+    "correct_answer": "B",
+    "explanation": "Ursula von der Leyen heads the European Commission in her second presidential term."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "25. Who is the Secretary-General of the United Nations in 2026?",
+    "options": {
+      "A": "Ban Ki-moon",
+      "B": "António Guterres",
+      "C": "Amina J. Mohammed",
+      "D": "Tedros Adhanom"
+    },
+    "correct_answer": "B",
+    "explanation": "António Guterres of Portugal serves as UN Secretary-General."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "26. Who is the President of Ukraine in 2026?",
+    "options": {
+      "A": "Petro Poroshenko",
+      "B": "Volodymyr Zelenskyy",
+      "C": "Denys Shmyhal",
+      "D": "Oleksandr Syrskyi"
+    },
+    "correct_answer": "B",
+    "explanation": "Volodymyr Zelenskyy leads Ukraine as President."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "27. Which former Irish Minister for Finance resigned in November 2025 to take up a senior role at the World Bank?",
+    "options": {
+      "A": "Michael McGrath",
+      "B": "Paschal Donohoe",
+      "C": "Brian Cowen",
+      "D": "Charlie McCreevy"
+    },
+    "correct_answer": "B",
+    "explanation": "Paschal Donohoe resigned from ministerial office in late 2025 to join the World Bank executive leadership."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "28. What was the title of Bulgaria's winning song at the 2026 Eurovision Song Contest?",
+    "options": {
+      "A": "Golden",
+      "B": "Bangaranga",
+      "C": "Tattoo",
+      "D": "The Code"
+    },
+    "correct_answer": "B",
+    "explanation": "'Bangaranga' was the title of the entry that carried Bulgaria to Eurovision victory in Vienna."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "29. Which song from KPop Demon Hunters won Best Original Song at the 2026 Oscars?",
+    "options": {
+      "A": "Demon Dance",
+      "B": "Golden",
+      "C": "Neon Soul",
+      "D": "Echoes"
+    },
+    "correct_answer": "B",
+    "explanation": "'Golden' from KPop Demon Hunters won the Oscar for Best Original Song."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "30. Which director won Best Director at the 2026 Oscars for One Battle After Another?",
+    "options": {
+      "A": "Christopher Nolan",
+      "B": "Paul Thomas Anderson",
+      "C": "Denis Villeneuve",
+      "D": "Ryan Coogler"
+    },
+    "correct_answer": "B",
+    "explanation": "Paul Thomas Anderson claimed Best Director honours at the 98th Academy Awards."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "31. Which team did Ireland defeat 42–21 at Twickenham during the 2026 Six Nations?",
+    "options": {
+      "A": "Wales",
+      "B": "England",
+      "C": "Scotland",
+      "D": "Italy"
+    },
+    "correct_answer": "B",
+    "explanation": "Ireland recorded a commanding 42–21 victory against England at Twickenham."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "32. In what month of 2026 did the 98th Academy Awards take place?",
+    "options": {
+      "A": "February",
+      "B": "March",
+      "C": "April",
+      "D": "May"
+    },
+    "correct_answer": "B",
+    "explanation": "The 98th Academy Awards took place on 15 March 2026 at the Dolby Theatre in Hollywood."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "33. Which country is scheduled to host the 2027 Rugby World Cup?",
+    "options": {
+      "A": "South Africa",
+      "B": "Australia",
+      "C": "Japan",
+      "D": "New Zealand"
+    },
+    "correct_answer": "B",
+    "explanation": "Australia was selected as the host nation for the 2027 Men's Rugby World Cup."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "34. Which US city is scheduled to host the 2028 Summer Olympics?",
+    "options": {
+      "A": "Atlanta",
+      "B": "Los Angeles",
+      "C": "Miami",
+      "D": "Chicago"
+    },
+    "correct_answer": "B",
+    "explanation": "Los Angeles, California will host the Games of the XXXIV Olympiad in summer 2028."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "35. Who won the 2026 Nobel Peace Prize for her efforts to promote peace and international law?",
+    "options": {
+      "A": "Narges Mohammadi",
+      "B": "Navi Pillay",
+      "C": "Malala Yousafzai",
+      "D": "Ellen Johnson Sirleaf"
+    },
+    "correct_answer": "B",
+    "explanation": "Former UN High Commissioner for Human Rights Navi Pillay was awarded the 2026 Nobel Peace Prize."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "36. In which country was 2026 Nobel Peace Prize laureate Navi Pillay born?",
+    "options": {
+      "A": "India",
+      "B": "South Africa",
+      "C": "Kenya",
+      "D": "Nigeria"
+    },
+    "correct_answer": "B",
+    "explanation": "Navi Pillay was born in Durban, South Africa in 1941."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "37. Which Norwegian film won Best International Feature Film at the 2026 Oscars?",
+    "options": {
+      "A": "The Worst Person in the World",
+      "B": "Sentimental Value",
+      "C": "Fjord Echoes",
+      "D": "Northern Sun"
+    },
+    "correct_answer": "B",
+    "explanation": "Sentimental Value directed by Joachim Trier won Best International Feature for Norway."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "38. Which film broke the all-time Oscars record in 2026 with 16 nominations?",
+    "options": {
+      "A": "Avatar: Fire and Ash",
+      "B": "Sinners",
+      "C": "Hamnet",
+      "D": "One Battle After Another"
+    },
+    "correct_answer": "B",
+    "explanation": "Sinners set an all-time record by securing 16 nominations at the 98th Academy Awards."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "39. Who won Best Supporting Actor at the 2026 Oscars for One Battle After Another?",
+    "options": {
+      "A": "Robert De Niro",
+      "B": "Sean Penn",
+      "C": "Brad Pitt",
+      "D": "Willem Dafoe"
+    },
+    "correct_answer": "B",
+    "explanation": "Sean Penn received the Oscar for Best Supporting Actor for One Battle After Another."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "40. Who won Best Supporting Actress at the 2026 Oscars for Weapons?",
+    "options": {
+      "A": "Julianne Moore",
+      "B": "Amy Madigan",
+      "C": "Laura Dern",
+      "D": "Annette Bening"
+    },
+    "correct_answer": "B",
+    "explanation": "Amy Madigan won the Academy Award for Best Supporting Actress for Weapons."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "41. Which Avatar sequel won Best Visual Effects at the 2026 Oscars?",
+    "options": {
+      "A": "The Way of Water",
+      "B": "Avatar: Fire and Ash",
+      "C": "The Tulkun Rider",
+      "D": "Eywa Rising"
+    },
+    "correct_answer": "B",
+    "explanation": "Avatar: Fire and Ash took the Oscar for Best Visual Effects."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "42. What new category was awarded for the very first time at the 2026 Academy Awards?",
+    "options": {
+      "A": "Best Stunt Design",
+      "B": "Best Casting",
+      "C": "Best Voice Performance",
+      "D": "Best Title Sequence"
+    },
+    "correct_answer": "B",
+    "explanation": "Best Casting was introduced as a competitive Oscar category at the 98th Academy Awards."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "43. Which streaming platform announced a deal to become the new broadcast home of the Oscars starting in 2029?",
+    "options": {
+      "A": "Netflix",
+      "B": "YouTube",
+      "C": "Disney+",
+      "D": "Apple TV+"
+    },
+    "correct_answer": "B",
+    "explanation": "YouTube struck a landmark rights agreement to become the worldwide streaming home of the Oscars starting in 2029."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "44. Who is the Irish Minister for Further and Higher Education, Research, Innovation and Science in 2026?",
+    "options": {
+      "A": "Simon Harris",
+      "B": "James Lawless",
+      "C": "Patrick O'Donovan",
+      "D": "Niall Collins"
+    },
+    "correct_answer": "B",
+    "explanation": "James Lawless serves as Minister for Further and Higher Education, Research, Innovation and Science."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "45. Who is the Irish Minister for Children, Disability and Equality in 2026?",
+    "options": {
+      "A": "Roderic O'Gorman",
+      "B": "Norma Foley",
+      "C": "Anne Rabbitte",
+      "D": "Josepha Madigan"
+    },
+    "correct_answer": "B",
+    "explanation": "Norma Foley serves as Minister for Children, Disability and Equality in the 2026 cabinet."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "46. Who is the Irish Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation in 2026?",
+    "options": {
+      "A": "Paschal Donohoe",
+      "B": "Jack Chambers",
+      "C": "Michael McGrath",
+      "D": "Darragh O'Brien"
+    },
+    "correct_answer": "B",
+    "explanation": "Jack Chambers is the Minister for Public Expenditure, Infrastructure, Public Service Reform and Digitalisation."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "47. Who is the Irish Minister for Agriculture, Food, Fisheries and the Marine in 2026?",
+    "options": {
+      "A": "Charlie McConalogue",
+      "B": "Martin Heydon",
+      "C": "Pippa Hackett",
+      "D": "Michael Creed"
+    },
+    "correct_answer": "B",
+    "explanation": "Martin Heydon heads the Department of Agriculture, Food, Fisheries and the Marine in 2026."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "48. In June 2026, Tánaiste Simon Harris launched the 2026–2027 Action Plan for which national strategy?",
+    "options": {
+      "A": "National Green Transition Plan",
+      "B": "National Financial Literacy Strategy",
+      "C": "National Digital Youth Scheme",
+      "D": "National SME Lending Framework"
+    },
+    "correct_answer": "B",
+    "explanation": "Tánaiste Simon Harris unveiled the 2026–2027 Action Plan under Ireland's National Financial Literacy Strategy."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "49. Which composer won Best Original Score at the 2026 Oscars for Sinners?",
+    "options": {
+      "A": "Hans Zimmer",
+      "B": "Ludwig Göransson",
+      "C": "John Williams",
+      "D": "Alexandre Desplat"
+    },
+    "correct_answer": "B",
+    "explanation": "Ludwig Göransson was awarded Best Original Score for Sinners."
+  },
+  {
+    "topic": "Current Affairs — 2025/2026 Edition",
+    "question": "50. Which documentary won Best Documentary Feature at the 2026 Oscars?",
+    "options": {
+      "A": "Navalny",
+      "B": "Mr. Nobody Against Putin",
+      "C": "20 Days in Mariupol",
+      "D": "Shadow of the Kremlin"
+    },
+    "correct_answer": "B",
+    "explanation": "Mr. Nobody Against Putin won the Oscar for Best Documentary Feature at the 98th Academy Awards."
+  }
+]

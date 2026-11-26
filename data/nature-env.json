@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Nature & Environment",
+    "question": "1. What is the largest mammal on Earth?",
+    "options": {
+      "A": "African elephant",
+      "B": "Blue whale",
+      "C": "Fin whale",
+      "D": "Colossal squid"
+    },
+    "correct_answer": "B",
+    "explanation": "The blue whale can reach lengths of over 30 metres and weigh up to 190 metric tonnes."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "2. What is the fastest land animal in the world?",
+    "options": {
+      "A": "Lion",
+      "B": "Cheetah",
+      "C": "Pronghorn",
+      "D": "Greyhound"
+    },
+    "correct_answer": "B",
+    "explanation": "The cheetah can reach speeds of over 100 km/h in short sprints."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "3. What do caterpillars turn into?",
+    "options": {
+      "A": "Beetles",
+      "B": "Butterflies",
+      "C": "Dragonflies",
+      "D": "Grasshoppers"
+    },
+    "correct_answer": "B",
+    "explanation": "Caterpillars are the larval stage of lepidopterans (butterflies and moths)."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "4. Which bird is famous for being able to mimic human speech?",
+    "options": {
+      "A": "Owl",
+      "B": "Parrot",
+      "C": "Penguin",
+      "D": "Eagle"
+    },
+    "correct_answer": "B",
+    "explanation": "Parrots (such as the African Grey) use their syrinx to accurately imitate vocal sounds."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "5. What is a baby frog called?",
+    "options": {
+      "A": "Fry",
+      "B": "Cygnet",
+      "C": "Tadpole",
+      "D": "Joey"
+    },
+    "correct_answer": "C",
+    "explanation": "Frogs hatch from spawn as aquatic, gill-breathing tadpoles before developing legs."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "6. Which tree produces acorns?",
+    "options": {
+      "A": "Ash tree",
+      "B": "Oak tree",
+      "C": "Beech tree",
+      "D": "Sycamore tree"
+    },
+    "correct_answer": "B",
+    "explanation": "Acorns are the fruit and seeds of oak trees (Quercus species)."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "7. How many legs does an insect have?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_answer": "B",
+    "explanation": "All adult insects possess three pairs of jointed legs attached to the thorax."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "8. How many legs does a spider have?",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "10",
+      "D": "12"
+    },
+    "correct_answer": "B",
+    "explanation": "Spiders are arachnids characterized by having eight walking legs."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "9. What is the tallest land animal in the world?",
+    "options": {
+      "A": "Elephant",
+      "B": "Giraffe",
+      "C": "Camel",
+      "D": "Moose"
+    },
+    "correct_answer": "B",
+    "explanation": "Male giraffes can reach heights of up to 5.7 metres (19 feet)."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "10. Which continent are kangaroos and koalas native to?",
+    "options": {
+      "A": "Africa",
+      "B": "South America",
+      "C": "Australia",
+      "D": "Asia"
+    },
+    "correct_answer": "C",
+    "explanation": "Kangaroos and koalas are indigenous marsupials native to Australia."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "11. What is the name of the black-and-white bear native to China that eats bamboo?",
+    "options": {
+      "A": "Sun bear",
+      "B": "Giant panda",
+      "C": "Spectacled bear",
+      "D": "Sloth bear"
+    },
+    "correct_answer": "B",
+    "explanation": "The giant panda subsists almost entirely on bamboo shoots and leaves in Sichuan forests."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "12. Which season comes immediately after winter?",
+    "options": {
+      "A": "Summer",
+      "B": "Autumn",
+      "C": "Spring",
+      "D": "Monsoon"
+    },
+    "correct_answer": "C",
+    "explanation": "Spring follows winter and precedes summer in temperate climate cycles."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "13. What do bees collect from flowers to make honey?",
+    "options": {
+      "A": "Pollen",
+      "B": "Nectar",
+      "C": "Sap",
+      "D": "Dew"
+    },
+    "correct_answer": "B",
+    "explanation": "Bees harvest sugary nectar from floral blossoms and regurgitate it into honeycomb cells."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "14. What is the only mammal capable of true, sustained flight?",
+    "options": {
+      "A": "Flying squirrel",
+      "B": "Sugar glider",
+      "C": "Bat",
+      "D": "Colugo"
+    },
+    "correct_answer": "C",
+    "explanation": "Bats belong to the order Chiroptera and are the only mammals capable of sustained flapping flight."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "15. Which large bird of prey is the national symbol of the United States?",
+    "options": {
+      "A": "Golden eagle",
+      "B": "Bald eagle",
+      "C": "Osprey",
+      "D": "Peregrine falcon"
+    },
+    "correct_answer": "B",
+    "explanation": "The bald eagle was chosen in 1782 as the national emblem of the United States."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "16. What is the name of the small prickly mammal found in Irish gardens that rolls into a ball when threatened?",
+    "options": {
+      "A": "Badger",
+      "B": "Hedgehog",
+      "C": "Pine marten",
+      "D": "Stoat"
+    },
+    "correct_answer": "B",
+    "explanation": "The European hedgehog curls into a spiny sphere to defend against predators."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "17. What are the \"3 Rs\" of waste reduction?",
+    "options": {
+      "A": "Repair, Restore, Rebuild",
+      "B": "Reduce, Reuse, Recycle",
+      "C": "Refuse, Reject, Return",
+      "D": "Remove, Replace, Recover"
+    },
+    "correct_answer": "B",
+    "explanation": "The environmental waste hierarchy prioritises Reduce first, then Reuse, then Recycle."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "18. What is the name of the only native reptile found in Ireland?",
+    "options": {
+      "A": "Adder",
+      "B": "Viviparous lizard",
+      "C": "Slow worm",
+      "D": "Grass snake"
+    },
+    "correct_answer": "B",
+    "explanation": "The common or viviparous lizard (Zootoca vivipara) is Ireland's sole native terrestrial reptile."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "19. Beginning with C, what is the name of the ability some animals have to blend in with their surroundings?",
+    "options": {
+      "A": "Coating",
+      "B": "Camouflage",
+      "C": "Concealment",
+      "D": "Colouration"
+    },
+    "correct_answer": "B",
+    "explanation": "Camouflage enables animals to visually merge with their background environment."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "20. What do we call animals that eat both plants and meat?",
+    "options": {
+      "A": "Carnivores",
+      "B": "Herbivores",
+      "C": "Omnivores",
+      "D": "Frugivores"
+    },
+    "correct_answer": "C",
+    "explanation": "Omnivores consume a broad diet derived from both vegetable matter and animal protein."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "21. Which rainforest in South America is the largest tropical rainforest in the world?",
+    "options": {
+      "A": "Congo Rainforest",
+      "B": "Amazon Rainforest",
+      "C": "Daintree Rainforest",
+      "D": "Sundaland Rainforest"
+    },
+    "correct_answer": "B",
+    "explanation": "The Amazon biome spans over 6.7 million square kilometres across nine South American nations."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "22. What is the name of the seasonal movement of birds or animals from one region to another?",
+    "options": {
+      "A": "Hibernation",
+      "B": "Migration",
+      "C": "Nomadism",
+      "D": "Dispersion"
+    },
+    "correct_answer": "B",
+    "explanation": "Migration is the regular seasonal journey undertaken by many species in response to food and weather."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "23. Which marine animal has three hearts and blue blood?",
+    "options": {
+      "A": "Jellyfish",
+      "B": "Starfish",
+      "C": "Octopus",
+      "D": "Sea turtle"
+    },
+    "correct_answer": "C",
+    "explanation": "Octopuses have three hearts and hemocyanin copper-based blood that turns blue when oxygenated."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "24. What is the name of the gas primarily responsible for human-driven climate change when burned from fossil fuels?",
+    "options": {
+      "A": "Methane",
+      "B": "Carbon dioxide",
+      "C": "Nitrous oxide",
+      "D": "Ozone"
+    },
+    "correct_answer": "B",
+    "explanation": "Combustion of coal, oil, and gas releases massive quantities of carbon dioxide (CO2)."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "25. What type of energy is generated by harnessing the power of the Sun?",
+    "options": {
+      "A": "Geothermal energy",
+      "B": "Hydroelectric energy",
+      "C": "Solar energy",
+      "D": "Biomass energy"
+    },
+    "correct_answer": "C",
+    "explanation": "Solar panels convert photovoltaic energy from solar radiation directly into electricity."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "26. Which Irish bird is known for its bright red breast?",
+    "options": {
+      "A": "Chaffinch",
+      "B": "Robin",
+      "C": "Bullfinch",
+      "D": "Goldfinch"
+    },
+    "correct_answer": "B",
+    "explanation": "The European Robin (Erithacus rubecula) is recognized by its vivid orange-red breast plumage."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "27. What is the name of the group of animals that includes frogs, toads, and newts?",
+    "options": {
+      "A": "Reptiles",
+      "B": "Amphibians",
+      "C": "Arachnids",
+      "D": "Crustaceans"
+    },
+    "correct_answer": "B",
+    "explanation": "Amphibians are ectothermic tetrapods that typically begin life in water before metamorphosing."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "28. Beginning with N, what word describes animals that are active mainly at night?",
+    "options": {
+      "A": "Diurnal",
+      "B": "Crepuscular",
+      "C": "Nocturnal",
+      "D": "Nebulous"
+    },
+    "correct_answer": "C",
+    "explanation": "Nocturnal organisms hunt, forage, or interact primarily during nighttime hours."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "29. What is a group of wolves called?",
+    "options": {
+      "A": "Herd",
+      "B": "Pack",
+      "C": "Flock",
+      "D": "Litter"
+    },
+    "correct_answer": "B",
+    "explanation": "A social unit of wolves living and hunting together is known as a pack."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "30. What is a group of lions called?",
+    "options": {
+      "A": "Colony",
+      "B": "Troop",
+      "C": "Pride",
+      "D": "Mob"
+    },
+    "correct_answer": "C",
+    "explanation": "Lions are unique among felids for living in cooperative family units called prides."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "31. Which tree is the source of natural rubber?",
+    "options": {
+      "A": "Maple tree",
+      "B": "Rubber tree",
+      "C": "Eucalyptus tree",
+      "D": "Banyan tree"
+    },
+    "correct_answer": "B",
+    "explanation": "The Pará rubber tree (Hevea brasiliensis) produces latex harvested to make natural rubber."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "32. What is the name of the wetlands in Ireland famous for peat and unique wildlife?",
+    "options": {
+      "A": "Marshes",
+      "B": "Bogs",
+      "C": "Estuaries",
+      "D": "Swamps"
+    },
+    "correct_answer": "B",
+    "explanation": "Raised bogs and blanket bogs cover extensive areas of the Irish midlands and western coast."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "33. What is the largest bird in the world?",
+    "options": {
+      "A": "Emu",
+      "B": "Albatross",
+      "C": "Ostrich",
+      "D": "Cassowary"
+    },
+    "correct_answer": "C",
+    "explanation": "The common ostrich of Africa is the heaviest and tallest living bird species."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "34. Which flightless bird is native to Antarctica?",
+    "options": {
+      "A": "Puffin",
+      "B": "Penguin",
+      "C": "Guillemot",
+      "D": "Cormorant"
+    },
+    "correct_answer": "B",
+    "explanation": "Emperor and Adélie penguins breed in the extreme conditions of continental Antarctica."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "35. Beginning with E, what is the name for a community of living organisms interacting with their physical environment?",
+    "options": {
+      "A": "Evolution",
+      "B": "Ecosystem",
+      "C": "Equator",
+      "D": "Endosphere"
+    },
+    "correct_answer": "B",
+    "explanation": "An ecosystem links biological biotic communities with abiotic soil, water, and air components."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "36. Beginning with B, what word describes the variety of plant and animal life in the world or in a particular habitat?",
+    "options": {
+      "A": "Biomass",
+      "B": "Biodiversity",
+      "C": "Biosphere",
+      "D": "Bioluminescence"
+    },
+    "correct_answer": "B",
+    "explanation": "Biodiversity measures species diversity, genetic variation, and ecosystem complexity."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "37. What is the name of the invasive squirrel species in Ireland that has pushed out the native red squirrel?",
+    "options": {
+      "A": "Black squirrel",
+      "B": "Grey squirrel",
+      "C": "Ground squirrel",
+      "D": "Flying squirrel"
+    },
+    "correct_answer": "B",
+    "explanation": "The North American eastern grey squirrel brought parapoxvirus, displacing native red squirrels."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "38. Beginning with M, what is the biological process by which a caterpillar transforms into a butterfly?",
+    "options": {
+      "A": "Mitosis",
+      "B": "Mutation",
+      "C": "Metamorphosis",
+      "D": "Morphogenesis"
+    },
+    "correct_answer": "C",
+    "explanation": "Holometabolous complete metamorphosis involves egg, larva, pupa (chrysalis), and imago stages."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "39. What is the name of the world's largest coral reef system?",
+    "options": {
+      "A": "Belize Barrier Reef",
+      "B": "Red Sea Coral Reef",
+      "C": "Great Barrier Reef",
+      "D": "Mesoamerican Reef"
+    },
+    "correct_answer": "C",
+    "explanation": "The Great Barrier Reef stretches over 2,300 kilometres in the Coral Sea off Queensland."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "40. Beginning with P, what is the name of the tiny floating organisms in oceans that form the base of the marine food chain?",
+    "options": {
+      "A": "Protozoa",
+      "B": "Polyp",
+      "C": "Plankton",
+      "D": "Pelagic"
+    },
+    "correct_answer": "C",
+    "explanation": "Phytoplankton and zooplankton drift in water currents and sustain ocean ecosystems."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "41. What is the term for a species that is at very high risk of becoming extinct in the wild?",
+    "options": {
+      "A": "Threatened",
+      "B": "Endangered",
+      "C": "Vulnerable",
+      "D": "Extirpated"
+    },
+    "correct_answer": "B",
+    "explanation": "Endangered species face critical population decline categorized on the IUCN Red List."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "42. Beginning with S, what is the relationship called when two different species live closely together and both benefit (like bees and flowers)?",
+    "options": {
+      "A": "Speciation",
+      "B": "Symbiosis",
+      "C": "Succession",
+      "D": "Sedimentation"
+    },
+    "correct_answer": "B",
+    "explanation": "Symbiosis (specifically mutualism) occurs when both participating organisms derive evolutionary advantages."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "43. What is the name of the natural phenomenon where gases in Earth's atmosphere trap heat from the Sun?",
+    "options": {
+      "A": "Coriolis effect",
+      "B": "The Greenhouse Effect",
+      "C": "Albedo effect",
+      "D": "Thermal inversion"
+    },
+    "correct_answer": "B",
+    "explanation": "Greenhouse gases absorb infrared thermal radiation emitted by Earth, warming the planetary surface."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "44. Which Irish national park is located in County Kerry and is home to Ireland's last remaining native herd of red deer?",
+    "options": {
+      "A": "Glenveagh National Park",
+      "B": "Ballycroy National Park",
+      "C": "Killarney National Park",
+      "D": "Connemara National Park"
+    },
+    "correct_answer": "C",
+    "explanation": "Killarney National Park covers over 10,000 hectares and shelters indigenous red deer herds."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "45. Beginning with C, what is the name of the upper layer of branches and leaves in a rainforest?",
+    "options": {
+      "A": "Crown",
+      "B": "Canopy",
+      "C": "Climax",
+      "D": "Covert"
+    },
+    "correct_answer": "B",
+    "explanation": "The canopy layer sits 30 to 45 metres above ground, receiving the majority of tropical sunlight."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "46. What is the name of the largest species of shark in the world (a gentle filter-feeder)?",
+    "options": {
+      "A": "Great white shark",
+      "B": "Tiger shark",
+      "C": "Whale shark",
+      "D": "Basking shark"
+    },
+    "correct_answer": "C",
+    "explanation": "The whale shark (Rhincodon typus) can exceed 18 metres in length, filter-feeding on plankton."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "47. Beginning with D, what is the clearing or cutting down of large areas of forest called?",
+    "options": {
+      "A": "Desertification",
+      "B": "Degradation",
+      "C": "Deforestation",
+      "D": "Drainage"
+    },
+    "correct_answer": "C",
+    "explanation": "Deforestation entails permanent destruction of natural woodland for agriculture or timber."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "48. What is the name of the 2015 international treaty on climate change aimed at limiting global warming?",
+    "options": {
+      "A": "Kyoto Protocol",
+      "B": "Montreal Protocol",
+      "C": "The Paris Agreement",
+      "D": "Geneva Convention"
+    },
+    "correct_answer": "C",
+    "explanation": "The Paris Agreement legally commits signatories to keep warming well below 2°C above pre-industrial levels."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "49. Beginning with E, what is the name of the area where a freshwater river meets the salty sea?",
+    "options": {
+      "A": "Everglade",
+      "B": "Estuary",
+      "C": "Embouchure",
+      "D": "Esker"
+    },
+    "correct_answer": "B",
+    "explanation": "An estuary is a partially enclosed coastal body where freshwater dilutes seawater."
+  },
+  {
+    "topic": "Nature & Environment",
+    "question": "50. Which rare bird of prey was successfully reintroduced to Killarney National Park in Ireland starting in 2007?",
+    "options": {
+      "A": "Golden eagle",
+      "B": "Red kite",
+      "C": "White-tailed sea eagle",
+      "D": "Osprey"
+    },
+    "correct_answer": "C",
+    "explanation": "Norwegian chicks of the white-tailed sea eagle were released in Killarney to re-establish breeding pairs."
+  }
+]

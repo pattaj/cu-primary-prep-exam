@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Music",
+    "question": "1. How many strings does a standard violin have?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "A classical violin has four strings tuned in perfect fifths: G, D, A, and E."
+  },
+  {
+    "topic": "Music",
+    "question": "2. Which traditional Irish drum is played with a small wooden stick called a tipper?",
+    "options": {
+      "A": "Snare drum",
+      "B": "Bodhrán",
+      "C": "Cajón",
+      "D": "Bongo"
+    },
+    "correct_answer": "B",
+    "explanation": "The bodhrán is a circular Irish frame drum struck with a double-ended stick called a tipper or beater."
+  },
+  {
+    "topic": "Music",
+    "question": "3. How many keys are on a standard full-size piano?",
+    "options": {
+      "A": "76",
+      "B": "84",
+      "C": "88",
+      "D": "92"
+    },
+    "correct_answer": "C",
+    "explanation": "A full modern piano keyboard consists of 88 keys (52 white naturals and 36 black accidentals)."
+  },
+  {
+    "topic": "Music",
+    "question": "4. Which famous pop star is known for albums like 1989, Midnights, and The Tortured Poets Department?",
+    "options": {
+      "A": "Adele",
+      "B": "Taylor Swift",
+      "C": "Beyoncé",
+      "D": "Katy Perry"
+    },
+    "correct_answer": "B",
+    "explanation": "Taylor Swift is the singer-songwriter behind these record-breaking blockbuster albums."
+  },
+  {
+    "topic": "Music",
+    "question": "5. What is the name of the famous Irish traditional music and dance show that began at the 1994 Eurovision Song Contest?",
+    "options": {
+      "A": "Lord of the Dance",
+      "B": "Riverdance",
+      "C": "Celtic Woman",
+      "D": "Trad On"
+    },
+    "correct_answer": "B",
+    "explanation": "Riverdance was first performed as an interval act in Dublin at Eurovision 1994 starring Michael Flatley and Jean Butler."
+  },
+  {
+    "topic": "Music",
+    "question": "6. Which instrument is the national symbol of Ireland?",
+    "options": {
+      "A": "Uilleann pipes",
+      "B": "Fiddle",
+      "C": "The Harp",
+      "D": "Tin whistle"
+    },
+    "correct_answer": "C",
+    "explanation": "The cláirseach (Irish harp) is the official heraldic emblem of Ireland, seen on coins and state documents."
+  },
+  {
+    "topic": "Music",
+    "question": "7. In an orchestra, what is the name of the person who stands at the front and directs the musicians?",
+    "options": {
+      "A": "Concertmaster",
+      "B": "Conductor",
+      "C": "Composer",
+      "D": "Soloist"
+    },
+    "correct_answer": "B",
+    "explanation": "The conductor leads rehearsals and performances using a baton to set tempo and interpret dynamics."
+  },
+  {
+    "topic": "Music",
+    "question": "8. Which British band from Liverpool included John Lennon, Paul McCartney, George Harrison, and Ringo Starr?",
+    "options": {
+      "A": "The Rolling Stones",
+      "B": "The Who",
+      "C": "The Beatles",
+      "D": "The Kinks"
+    },
+    "correct_answer": "C",
+    "explanation": "The Beatles formed in Liverpool in 1960 and became the best-selling band in music history."
+  },
+  {
+    "topic": "Music",
+    "question": "9. What type of instrument is a trumpet — brass, string, or woodwind?",
+    "options": {
+      "A": "Woodwind",
+      "B": "Percussion",
+      "C": "Brass",
+      "D": "String"
+    },
+    "correct_answer": "C",
+    "explanation": "The trumpet is a soprano brass instrument sounded by buzzing the lips into an embouchure mouthpiece."
+  },
+  {
+    "topic": "Music",
+    "question": "10. Which Irish singer-songwriter is famous for the hit song \"Take Me to Church\"?",
+    "options": {
+      "A": "Dermot Kennedy",
+      "B": "Hozier",
+      "C": "Damien Rice",
+      "D": "Gavin James"
+    },
+    "correct_answer": "B",
+    "explanation": "Hozier (Andrew Hozier-Byrne) from County Wicklow achieved global stardom with 'Take Me to Church'."
+  },
+  {
+    "topic": "Music",
+    "question": "11. How many lines make up a standard musical staff (stave)?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "8"
+    },
+    "correct_answer": "B",
+    "explanation": "A standard musical stave consists of five horizontal parallel lines and four intervening spaces."
+  },
+  {
+    "topic": "Music",
+    "question": "12. Which pop singer released the hit album Short n' Sweet and the song \"Espresso\"?",
+    "options": {
+      "A": "Olivia Rodrigo",
+      "B": "Sabrina Carpenter",
+      "C": "Dua Lipa",
+      "D": "Camila Cabello"
+    },
+    "correct_answer": "B",
+    "explanation": "Sabrina Carpenter topped charts globally with 'Espresso' from her sixth studio album Short n' Sweet."
+  },
+  {
+    "topic": "Music",
+    "question": "13. What is the name of the highest female singing voice?",
+    "options": {
+      "A": "Alto",
+      "B": "Contralto",
+      "C": "Mezzo-soprano",
+      "D": "Soprano"
+    },
+    "correct_answer": "D",
+    "explanation": "Soprano is the highest standard classical female vocal range."
+  },
+  {
+    "topic": "Music",
+    "question": "14. Which country is the birthplace of opera?",
+    "options": {
+      "A": "France",
+      "B": "Germany",
+      "C": "Italy",
+      "D": "Austria"
+    },
+    "correct_answer": "C",
+    "explanation": "Opera originated in late 16th-century Italy (specifically Florence) through the Florentine Camerata."
+  },
+  {
+    "topic": "Music",
+    "question": "15. What is the name of the small, four-stringed Hawaiian instrument that looks like a tiny guitar?",
+    "options": {
+      "A": "Mandolin",
+      "B": "Banjo",
+      "C": "Ukulele",
+      "D": "Balalaika"
+    },
+    "correct_answer": "C",
+    "explanation": "The ukulele is a Hawaiian chordophone derived from Portuguese machetes in the 1880s."
+  },
+  {
+    "topic": "Music",
+    "question": "16. Which Irish boyband from Sligo had hits like \"Flying Without Wings\" and \"World of Our Own\"?",
+    "options": {
+      "A": "Boyzone",
+      "B": "Westlife",
+      "C": "Keywest",
+      "D": "The Wanted"
+    },
+    "correct_answer": "B",
+    "explanation": "Westlife formed in Sligo in 1998 and accumulated 14 UK number-one singles."
+  },
+  {
+    "topic": "Music",
+    "question": "17. What musical term means to play a piece of music loudly — forte or piano?",
+    "options": {
+      "A": "Piano",
+      "B": "Forte",
+      "C": "Adagio",
+      "D": "Legato"
+    },
+    "correct_answer": "B",
+    "explanation": "'Forte' (f) is Italian for strong or loud, whereas 'piano' (p) indicates soft."
+  },
+  {
+    "topic": "Music",
+    "question": "18. Which Puerto Rican artist won Album of the Year at the 2026 Grammy Awards for DeBÍ TiRAR MáS FOToS?",
+    "options": {
+      "A": "J Balvin",
+      "B": "Bad Bunny",
+      "C": "Daddy Yankee",
+      "D": "Rauw Alejandro"
+    },
+    "correct_answer": "B",
+    "explanation": "Bad Bunny took home Album of the Year at the 68th Grammy Awards in 2026."
+  },
+  {
+    "topic": "Music",
+    "question": "19. Which singer won Song of the Year at the 2026 Grammy Awards for \"WILDFLOWER\"?",
+    "options": {
+      "A": "Billie Eilish",
+      "B": "Chappell Roan",
+      "C": "Olivia Rodrigo",
+      "D": "SZA"
+    },
+    "correct_answer": "A",
+    "explanation": "Billie Eilish and Finneas O'Connell won Song of the Year for 'WILDFLOWER'."
+  },
+  {
+    "topic": "Music",
+    "question": "20. Who won Best New Artist at the 2026 Grammy Awards?",
+    "options": {
+      "A": "Raye",
+      "B": "Olivia Dean",
+      "C": "Teddy Swims",
+      "D": "Gracie Abrams"
+    },
+    "correct_answer": "B",
+    "explanation": "British soul-pop singer-songwriter Olivia Dean took home Best New Artist in 2026."
+  },
+  {
+    "topic": "Music",
+    "question": "21. Which German composer wrote his famous Ninth Symphony (Ode to Joy) after becoming deaf?",
+    "options": {
+      "A": "Johann Sebastian Bach",
+      "B": "Johannes Brahms",
+      "C": "Ludwig van Beethoven",
+      "D": "Felix Mendelssohn"
+    },
+    "correct_answer": "C",
+    "explanation": "Beethoven premiered his monumental Symphony No. 9 in Vienna in 1824 despite near total deafness."
+  },
+  {
+    "topic": "Music",
+    "question": "22. What is the name of the traditional Irish bagpipes played with a bellows under the arm rather than by blowing?",
+    "options": {
+      "A": "Great Highland pipes",
+      "B": "Uilleann pipes",
+      "C": "Northumbrian pipes",
+      "D": "Gaida"
+    },
+    "correct_answer": "B",
+    "explanation": "Uilleann pipes (meaning 'pipes of the elbow') use bellows strapped under the arm to inflate the bag."
+  },
+  {
+    "topic": "Music",
+    "question": "23. Which Irish rock band from Limerick was fronted by Dolores O'Riordan and sang \"Zombie\"?",
+    "options": {
+      "A": "The Corrs",
+      "B": "The Cranberries",
+      "C": "The Saw Doctors",
+      "D": "Aslan"
+    },
+    "correct_answer": "B",
+    "explanation": "The Cranberries, led by Dolores O'Riordan, achieved international renown with 'Zombie' and 'Linger'."
+  },
+  {
+    "topic": "Music",
+    "question": "24. How many times has Ireland won the Eurovision Song Contest?",
+    "options": {
+      "A": "5 times",
+      "B": "6 times",
+      "C": "7 times",
+      "D": "8 times"
+    },
+    "correct_answer": "C",
+    "explanation": "Ireland has won Eurovision 7 times (1970, 1980, 1987, 1992, 1993, 1994, 1996), tied for the record with Sweden."
+  },
+  {
+    "topic": "Music",
+    "question": "25. Which Austrian child prodigy composed The Magic Flute and Eine kleine Nachtmusik?",
+    "options": {
+      "A": "Franz Schubert",
+      "B": "Wolfgang Amadeus Mozart",
+      "C": "Joseph Haydn",
+      "D": "Johann Strauss II"
+    },
+    "correct_answer": "B",
+    "explanation": "Mozart composed over 600 works across symphonic, concertante, chamber, and operatic genres."
+  },
+  {
+    "topic": "Music",
+    "question": "26. Which Irish singer-songwriter from Mullingar was a member of One Direction?",
+    "options": {
+      "A": "Harry Styles",
+      "B": "Liam Payne",
+      "C": "Niall Horan",
+      "D": "Louis Tomlinson"
+    },
+    "correct_answer": "C",
+    "explanation": "Niall Horan from Mullingar, County Westmeath, rose to fame with One Direction before launching a solo career."
+  },
+  {
+    "topic": "Music",
+    "question": "27. What is the largest and lowest-pitched instrument in the standard orchestral string family?",
+    "options": {
+      "A": "Violin",
+      "B": "Viola",
+      "C": "Cello",
+      "D": "Double bass"
+    },
+    "correct_answer": "D",
+    "explanation": "The double bass stands over six feet tall and sounds one octave lower than written concert pitch."
+  },
+  {
+    "topic": "Music",
+    "question": "28. Which pop star won Best Pop Vocal Album at the 2026 Grammy Awards for MAYHEM?",
+    "options": {
+      "A": "Katy Perry",
+      "B": "Lady Gaga",
+      "C": "Ariana Grande",
+      "D": "Dua Lipa"
+    },
+    "correct_answer": "B",
+    "explanation": "Lady Gaga claimed Best Pop Vocal Album for her acclaimed studio record MAYHEM in 2026."
+  },
+  {
+    "topic": "Music",
+    "question": "29. What is the name of the traditional Irish dance tune played in 6/8 time?",
+    "options": {
+      "A": "Reel",
+      "B": "Jig",
+      "C": "Hornpipe",
+      "D": "Polka"
+    },
+    "correct_answer": "B",
+    "explanation": "A double jig is characterized by compound duple meter in 6/8 time."
+  },
+  {
+    "topic": "Music",
+    "question": "30. Which Swedish pop group won Eurovision in 1974 with \"Waterloo\"?",
+    "options": {
+      "A": "Ace of Base",
+      "B": "Roxette",
+      "C": "ABBA",
+      "D": "The Cardigans"
+    },
+    "correct_answer": "C",
+    "explanation": "ABBA won the 1974 Eurovision Song Contest in Brighton with 'Waterloo', launching their global career."
+  },
+  {
+    "topic": "Music",
+    "question": "31. Which song by Kendrick Lamar and SZA won Record of the Year at the 2026 Grammy Awards?",
+    "options": {
+      "A": "All the Stars",
+      "B": "luther",
+      "C": "Not Like Us",
+      "D": "Saturn"
+    },
+    "correct_answer": "B",
+    "explanation": "'luther' by Kendrick Lamar and SZA won Record of the Year at the 68th Grammy Awards."
+  },
+  {
+    "topic": "Music",
+    "question": "32. What is the name of the famous Dublin band that sang \"The Fields of Athenry\" and \"The Wild Rover\"?",
+    "options": {
+      "A": "The Fureys",
+      "B": "The Wolfe Tones",
+      "C": "The Dubliners",
+      "D": "The Chieftains"
+    },
+    "correct_answer": "C",
+    "explanation": "The Dubliners, featuring Ronnie Drew and Luke Kelly, popularized iconic Irish folk ballads worldwide."
+  },
+  {
+    "topic": "Music",
+    "question": "33. In music, how many beats does a semibreve (whole note) last in 4/4 time?",
+    "options": {
+      "A": "1 beat",
+      "B": "2 beats",
+      "C": "3 beats",
+      "D": "4 beats"
+    },
+    "correct_answer": "D",
+    "explanation": "A semibreve equals four crotchet beats, filling an entire 4/4 measure."
+  },
+  {
+    "topic": "Music",
+    "question": "34. Which famous reggae musician from Jamaica sang \"Three Little Birds\" and \"One Love\"?",
+    "options": {
+      "A": "Peter Tosh",
+      "B": "Jimmy Cliff",
+      "C": "Bob Marley",
+      "D": "Ziggy Marley"
+    },
+    "correct_answer": "C",
+    "explanation": "Bob Marley was a pioneer of reggae music whose songs championed love, peace, and unity."
+  },
+  {
+    "topic": "Music",
+    "question": "35. Beginning with C, what is the musical term for gradually getting louder?",
+    "options": {
+      "A": "Cadence",
+      "B": "Crescendo",
+      "C": "Coda",
+      "D": "Capo"
+    },
+    "correct_answer": "B",
+    "explanation": "A crescendo is marked by a widening hairpin (<) instructing players to increase volume."
+  },
+  {
+    "topic": "Music",
+    "question": "36. Beginning with T, what is the name of the speed or pace at which a piece of music is played?",
+    "options": {
+      "A": "Tone",
+      "B": "Timbre",
+      "C": "Tempo",
+      "D": "Tuning"
+    },
+    "correct_answer": "C",
+    "explanation": "Tempo indicates the speed of underlying beats, typically measured in beats per minute (BPM)."
+  },
+  {
+    "topic": "Music",
+    "question": "37. Which Russian composer wrote the ballets Swan Lake and The Nutcracker?",
+    "options": {
+      "A": "Igor Stravinsky",
+      "B": "Pyotr Ilyich Tchaikovsky",
+      "C": "Sergei Rachmaninoff",
+      "D": "Dmitri Shostakovich"
+    },
+    "correct_answer": "B",
+    "explanation": "Tchaikovsky composed the beloved classical ballets Swan Lake, The Sleeping Beauty, and The Nutcracker."
+  },
+  {
+    "topic": "Music",
+    "question": "38. What is the name of the famous Irish harpist and composer (1670–1738) often called Ireland's national composer?",
+    "options": {
+      "A": "Edward Bunting",
+      "B": "Turlough O'Carolan",
+      "C": "Seán Ó Riada",
+      "D": "Denis Hempson"
+    },
+    "correct_answer": "B",
+    "explanation": "Turlough O'Carolan was a blind itinerant harper whose planxties blend Gaelic melody and Italian baroque."
+  },
+  {
+    "topic": "Music",
+    "question": "39. Beginning with A, what Italian term describes singing without any instrumental accompaniment?",
+    "options": {
+      "A": "Allegro",
+      "B": "Andante",
+      "C": "A cappella",
+      "D": "Arpeggio"
+    },
+    "correct_answer": "C",
+    "explanation": "'A cappella' translates literally as 'in the manner of the chapel', referring to unaccompanied vocal music."
+  },
+  {
+    "topic": "Music",
+    "question": "40. Which Italian city is famous for its historic violin makers, including Antonio Stradivari?",
+    "options": {
+      "A": "Venice",
+      "B": "Florence",
+      "C": "Cremona",
+      "D": "Bologna"
+    },
+    "correct_answer": "C",
+    "explanation": "Cremona in Lombardy was the workshop of legendary luthier families Amati, Guarneri, and Stradivari."
+  },
+  {
+    "topic": "Music",
+    "question": "41. What is the name of the famous annual Irish traditional music festival held each August?",
+    "options": {
+      "A": "Feis Ceoil",
+      "B": "Fleadh Cheoil",
+      "C": "Willie Clancy Week",
+      "D": "Electric Picnic"
+    },
+    "correct_answer": "B",
+    "explanation": "The Fleadh Cheoil na hÉireann is the largest competition and festival of Irish traditional culture in the world."
+  },
+  {
+    "topic": "Music",
+    "question": "42. Beginning with O, what is the name of a group of eight musical notes spanning from one note to the next of the same name?",
+    "options": {
+      "A": "Overture",
+      "B": "Octave",
+      "C": "Opus",
+      "D": "Oratorio"
+    },
+    "correct_answer": "B",
+    "explanation": "An octave is the musical interval between one pitch and another with double or half its frequency."
+  },
+  {
+    "topic": "Music",
+    "question": "43. Which Norwegian composer wrote \"In the Hall of the Mountain King\" from Peer Gynt?",
+    "options": {
+      "A": "Jean Sibelius",
+      "B": "Edvard Grieg",
+      "C": "Carl Nielsen",
+      "D": "Ole Bull"
+    },
+    "correct_answer": "B",
+    "explanation": "Edvard Grieg composed the famous incidental music to Henrik Ibsen's play Peer Gynt."
+  },
+  {
+    "topic": "Music",
+    "question": "44. Which instrument in the woodwind family uses a double reed — the oboe or the clarinet?",
+    "options": {
+      "A": "Clarinet",
+      "B": "Flute",
+      "C": "Oboe",
+      "D": "Saxophone"
+    },
+    "correct_answer": "C",
+    "explanation": "The oboe uses two vibrating cane blades (a double reed), whereas a clarinet uses a single reed."
+  },
+  {
+    "topic": "Music",
+    "question": "45. Beginning with P, what is the technique of plucking the strings of a violin or cello with the fingers instead of using a bow?",
+    "options": {
+      "A": "Portamento",
+      "B": "Pizzicato",
+      "C": "Prestissimo",
+      "D": "Parlando"
+    },
+    "correct_answer": "B",
+    "explanation": "Pizzicato (abbreviated pizz.) instructs bowed-string musicians to pluck strings with the fingers."
+  },
+  {
+    "topic": "Music",
+    "question": "46. Who composed the famous Messiah oratorio, which had its very first performance in Dublin in 1742?",
+    "options": {
+      "A": "Johann Sebastian Bach",
+      "B": "George Frideric Handel",
+      "C": "Henry Purcell",
+      "D": "Antonio Vivaldi"
+    },
+    "correct_answer": "B",
+    "explanation": "Handel's Messiah, containing the famous 'Hallelujah' chorus, premiered at Neal's Music Hall on Fishamble Street, Dublin in April 1742."
+  },
+  {
+    "topic": "Music",
+    "question": "47. Which duo won Best Pop Duo/Group Performance at the 2026 Grammy Awards for \"Defying Gravity\"?",
+    "options": {
+      "A": "Lady Gaga and Bruno Mars",
+      "B": "Taylor Swift and Post Malone",
+      "C": "Cynthia Erivo and Ariana Grande",
+      "D": "Billie Eilish and Finneas"
+    },
+    "correct_answer": "C",
+    "explanation": "Cynthia Erivo and Ariana Grande won Best Pop Duo for their rendition of 'Defying Gravity' from the Wicked movie soundtrack."
+  },
+  {
+    "topic": "Music",
+    "question": "48. What is the name of the symbol (♯) that raises a musical note by a semitone?",
+    "options": {
+      "A": "Flat",
+      "B": "Sharp",
+      "C": "Natural",
+      "D": "Clef"
+    },
+    "correct_answer": "B",
+    "explanation": "A sharp (♯) accidental raises the pitch of the note by one half step (semitone)."
+  },
+  {
+    "topic": "Music",
+    "question": "49. Which famous Irish singer from Donegal is known for \"Orinoco Flow\" and is Ireland's best-selling solo artist?",
+    "options": {
+      "A": "Sinéad O'Connor",
+      "B": "Enya",
+      "C": "Mary Black",
+      "D": "Imelda May"
+    },
+    "correct_answer": "B",
+    "explanation": "Enya (Eithne Ní Bhraonáin) from Gweedore, Donegal has sold over 75 million records globally."
+  },
+  {
+    "topic": "Music",
+    "question": "50. Beginning with L, what is the name of the text or words of an opera?",
+    "options": {
+      "A": "Lyrics",
+      "B": "Libretto",
+      "C": "Legend",
+      "D": "Liturgy"
+    },
+    "correct_answer": "B",
+    "explanation": "A libretto (Italian for 'little book') contains the sung and spoken text of an opera or oratorio."
+  }
+]

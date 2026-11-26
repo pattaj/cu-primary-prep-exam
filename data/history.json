@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "History",
+    "question": "1. Who is the patron saint of Ireland?",
+    "options": {
+      "A": "St. Brigid",
+      "B": "St. Colmcille",
+      "C": "St. Patrick",
+      "D": "St. Brendan"
+    },
+    "correct_answer": "C",
+    "explanation": "St. Patrick is the primary patron saint of Ireland, commemorated on March 17th."
+  },
+  {
+    "topic": "History",
+    "question": "2. In which country were the Great Pyramids of Giza built?",
+    "options": {
+      "A": "Greece",
+      "B": "Egypt",
+      "C": "Mexico",
+      "D": "Iraq"
+    },
+    "correct_answer": "B",
+    "explanation": "The Great Pyramids of Giza were constructed on the Giza plateau in Egypt."
+  },
+  {
+    "topic": "History",
+    "question": "3. Which famous ocean liner sank on its maiden voyage in April 1912?",
+    "options": {
+      "A": "RMS Lusitania",
+      "B": "RMS Titanic",
+      "C": "RMS Britannic",
+      "D": "SS United States"
+    },
+    "correct_answer": "B",
+    "explanation": "The RMS Titanic sank in the North Atlantic in April 1912 after striking an iceberg."
+  },
+  {
+    "topic": "History",
+    "question": "4. What was the name of the famous Greek wooden trick used to enter the city of Troy?",
+    "options": {
+      "A": "The Trojan Horse",
+      "B": "The Trojan Chariot",
+      "C": "The Minotaur's Labyrinth",
+      "D": "The Shield of Achilles"
+    },
+    "correct_answer": "A",
+    "explanation": "The Greeks concealed warriors inside a giant wooden horse to breach Troy's walls."
+  },
+  {
+    "topic": "History",
+    "question": "5. Which High King of Ireland fought the Vikings at the Battle of Clontarf in 1014?",
+    "options": {
+      "A": "Niall of the Nine Hostages",
+      "B": "Brian Boru",
+      "C": "Rory O'Connor",
+      "D": "Cormac mac Airt"
+    },
+    "correct_answer": "B",
+    "explanation": "Brian Boru, High King of Ireland, defeated the Norse-Leinster coalition at Clontarf on Good Friday 1014."
+  },
+  {
+    "topic": "History",
+    "question": "6. In which year did humans first land on the Moon?",
+    "options": {
+      "A": "1965",
+      "B": "1969",
+      "C": "1971",
+      "D": "1975"
+    },
+    "correct_answer": "B",
+    "explanation": "Apollo 11 astronauts landed on the lunar surface on 20 July 1969."
+  },
+  {
+    "topic": "History",
+    "question": "7. Who was the first person to walk on the Moon?",
+    "options": {
+      "A": "Buzz Aldrin",
+      "B": "Neil Armstrong",
+      "C": "Yuri Gagarin",
+      "D": "Michael Collins"
+    },
+    "correct_answer": "B",
+    "explanation": "Neil Armstrong stepped onto the lunar surface declaring 'That's one small step for man, one giant leap for mankind.'"
+  },
+  {
+    "topic": "History",
+    "question": "8. What was the name of the ancient Egyptian rulers?",
+    "options": {
+      "A": "Emperors",
+      "B": "Pharaohs",
+      "C": "Czars",
+      "D": "Sultans"
+    },
+    "correct_answer": "B",
+    "explanation": "The monarchs of ancient Egyptian dynasties were known as Pharaohs."
+  },
+  {
+    "topic": "History",
+    "question": "9. Which Italian explorer is credited with reaching the Americas in 1492?",
+    "options": {
+      "A": "Amerigo Vespucci",
+      "B": "Marco Polo",
+      "C": "Christopher Columbus",
+      "D": "John Cabot"
+    },
+    "correct_answer": "C",
+    "explanation": "Christopher Columbus sailed across the Atlantic in 1492 under the Spanish Crown."
+  },
+  {
+    "topic": "History",
+    "question": "10. What crop failed in Ireland during the Great Famine of the 1840s?",
+    "options": {
+      "A": "Wheat",
+      "B": "Barley",
+      "C": "Potatoes",
+      "D": "Oats"
+    },
+    "correct_answer": "C",
+    "explanation": "Potato blight (Phytophthora infestans) decimated the potato crop, the staple food of rural Ireland."
+  },
+  {
+    "topic": "History",
+    "question": "11. Which Roman general was assassinated on the Ides of March (15 March) in 44 BC?",
+    "options": {
+      "A": "Augustus Caesar",
+      "B": "Julius Caesar",
+      "C": "Mark Antony",
+      "D": "Nero"
+    },
+    "correct_answer": "B",
+    "explanation": "Julius Caesar was assassinated in the Roman Senate on the Ides of March in 44 BC."
+  },
+  {
+    "topic": "History",
+    "question": "12. What was the name of the famous medieval castle in Dublin that was the seat of British rule in Ireland for centuries?",
+    "options": {
+      "A": "Kilkenny Castle",
+      "B": "Dublin Castle",
+      "C": "Bunratty Castle",
+      "D": "Blarney Castle"
+    },
+    "correct_answer": "B",
+    "explanation": "Dublin Castle served as the administrative centre of British administration in Ireland until 1922."
+  },
+  {
+    "topic": "History",
+    "question": "13. Which English king is famous for having six wives?",
+    "options": {
+      "A": "Henry VII",
+      "B": "Henry VIII",
+      "C": "George III",
+      "D": "Charles I"
+    },
+    "correct_answer": "B",
+    "explanation": "King Henry VIII married six times between 1509 and his death in 1547."
+  },
+  {
+    "topic": "History",
+    "question": "14. In what year did World War II end?",
+    "options": {
+      "A": "1943",
+      "B": "1944",
+      "C": "1945",
+      "D": "1948"
+    },
+    "correct_answer": "C",
+    "explanation": "World War II concluded globally in 1945 with the surrender of Axis forces."
+  },
+  {
+    "topic": "History",
+    "question": "15. What ancient passage tomb in County Meath is older than Stonehenge and the Egyptian pyramids?",
+    "options": {
+      "A": "Knowth",
+      "B": "Dowth",
+      "C": "Newgrange",
+      "D": "Loughcrew"
+    },
+    "correct_answer": "C",
+    "explanation": "Newgrange in the Boyne Valley was built around 3200 BC, predating both Stonehenge and Giza."
+  },
+  {
+    "topic": "History",
+    "question": "16. Which famous nurse was known as \"The Lady with the Lamp\"?",
+    "options": {
+      "A": "Clara Barton",
+      "B": "Florence Nightingale",
+      "C": "Mary Seacole",
+      "D": "Edith Cavell"
+    },
+    "correct_answer": "B",
+    "explanation": "Florence Nightingale tended wounded soldiers during the Crimean War, earning her famous moniker."
+  },
+  {
+    "topic": "History",
+    "question": "17. What was the name of the ancient people who built the Colosseum in Rome?",
+    "options": {
+      "A": "The Greeks",
+      "B": "The Romans",
+      "C": "The Etruscans",
+      "D": "The Persians"
+    },
+    "correct_answer": "B",
+    "explanation": "The Flavian Amphitheatre (Colosseum) was constructed by the Romans between 70 and 80 AD."
+  },
+  {
+    "topic": "History",
+    "question": "18. In what year did the Easter Rising take place in Dublin?",
+    "options": {
+      "A": "1914",
+      "B": "1916",
+      "C": "1918",
+      "D": "1921"
+    },
+    "correct_answer": "B",
+    "explanation": "The Easter Rising commenced in Dublin on Easter Monday, 24 April 1916."
+  },
+  {
+    "topic": "History",
+    "question": "19. Which Dublin post office served as the headquarters of the rebels during the 1916 Easter Rising?",
+    "options": {
+      "A": "The Custom House",
+      "B": "The GPO",
+      "C": "City Hall",
+      "D": "Four Courts"
+    },
+    "correct_answer": "B",
+    "explanation": "The General Post Office (GPO) on O'Connell Street served as rebellion headquarters."
+  },
+  {
+    "topic": "History",
+    "question": "20. Who was the first female pilot to fly solo across the Atlantic Ocean, landing in Derry in 1932?",
+    "options": {
+      "A": "Amy Johnson",
+      "B": "Amelia Earhart",
+      "C": "Bessie Coleman",
+      "D": "Jacqueline Cochran"
+    },
+    "correct_answer": "B",
+    "explanation": "Amelia Earhart completed her solo transatlantic crossing on 21 May 1932, landing at Culmore, Derry."
+  },
+  {
+    "topic": "History",
+    "question": "21. In what year did World War I begin?",
+    "options": {
+      "A": "1912",
+      "B": "1914",
+      "C": "1916",
+      "D": "1918"
+    },
+    "correct_answer": "B",
+    "explanation": "World War I broke out in late July and August 1914 following the assassination of Archduke Franz Ferdinand."
+  },
+  {
+    "topic": "History",
+    "question": "22. Which ancient Greek city-state is considered the birthplace of democracy?",
+    "options": {
+      "A": "Sparta",
+      "B": "Athens",
+      "C": "Corinth",
+      "D": "Thebes"
+    },
+    "correct_answer": "B",
+    "explanation": "Direct democracy developed in classical Athens under Cleisthenes around 508 BC."
+  },
+  {
+    "topic": "History",
+    "question": "23. Who was the Irish leader known as \"The Liberator\" who campaigned for Catholic Emancipation?",
+    "options": {
+      "A": "Charles Stewart Parnell",
+      "B": "Daniel O'Connell",
+      "C": "Wolfe Tone",
+      "D": "Robert Emmet"
+    },
+    "correct_answer": "B",
+    "explanation": "Daniel O'Connell earned the title 'The Liberator' for securing Catholic Emancipation in 1829."
+  },
+  {
+    "topic": "History",
+    "question": "24. What was the name of the wall that divided a German city from 1961 to 1989?",
+    "options": {
+      "A": "The Iron Wall",
+      "B": "The Berlin Wall",
+      "C": "The Munich Wall",
+      "D": "The Western Wall"
+    },
+    "correct_answer": "B",
+    "explanation": "The Berlin Wall separated East and West Berlin until its historic fall in November 1989."
+  },
+  {
+    "topic": "History",
+    "question": "25. Which French military leader was defeated at the Battle of Waterloo in 1815?",
+    "options": {
+      "A": "Louis XIV",
+      "B": "Napoleon Bonaparte",
+      "C": "Charles de Gaulle",
+      "D": "Marquis de Lafayette"
+    },
+    "correct_answer": "B",
+    "explanation": "Napoleon Bonaparte was decisively defeated at Waterloo by Anglo-allied and Prussian forces."
+  },
+  {
+    "topic": "History",
+    "question": "26. Who was the President of the United States during the American Civil War?",
+    "options": {
+      "A": "George Washington",
+      "B": "Abraham Lincoln",
+      "C": "Ulysses S. Grant",
+      "D": "Thomas Jefferson"
+    },
+    "correct_answer": "B",
+    "explanation": "Abraham Lincoln presided over the Union during the American Civil War (1861–1865)."
+  },
+  {
+    "topic": "History",
+    "question": "27. In what year was the Anglo-Irish Treaty signed, leading to the creation of the Irish Free State?",
+    "options": {
+      "A": "1916",
+      "B": "1919",
+      "C": "1921",
+      "D": "1923"
+    },
+    "correct_answer": "C",
+    "explanation": "The Anglo-Irish Treaty was signed in London on 6 December 1921."
+  },
+  {
+    "topic": "History",
+    "question": "28. Which Irish revolutionary leader was assassinated at Béal na Bláth in County Cork in 1922?",
+    "options": {
+      "A": "Arthur Griffith",
+      "B": "Michael Collins",
+      "C": "Cathal Brugha",
+      "D": "Liam Mellows"
+    },
+    "correct_answer": "B",
+    "explanation": "Michael Collins was killed during an ambush at Béal na Bláth on 22 August 1922 during the Irish Civil War."
+  },
+  {
+    "topic": "History",
+    "question": "29. What was the name of the 14th-century plague that killed millions across Europe?",
+    "options": {
+      "A": "The Spanish Flu",
+      "B": "The Black Death",
+      "C": "The Great Plague of London",
+      "D": "The Antonine Plague"
+    },
+    "correct_answer": "B",
+    "explanation": "The Black Death (bubonic plague) struck Europe between 1347 and 1351."
+  },
+  {
+    "topic": "History",
+    "question": "30. Which ancient civilisation built the city of Machu Picchu in Peru?",
+    "options": {
+      "A": "The Aztecs",
+      "B": "The Mayans",
+      "C": "The Incas",
+      "D": "The Toltecs"
+    },
+    "correct_answer": "C",
+    "explanation": "The Inca citadel of Machu Picchu was built high in the Andes in the 15th century."
+  },
+  {
+    "topic": "History",
+    "question": "31. Who was the first woman to win a Nobel Prize?",
+    "options": {
+      "A": "Marie Curie",
+      "B": "Bertha von Suttner",
+      "C": "Jane Addams",
+      "D": "Mother Teresa"
+    },
+    "correct_answer": "A",
+    "explanation": "Marie Curie was awarded the Nobel Prize in Physics in 1903."
+  },
+  {
+    "topic": "History",
+    "question": "32. In what year did the Republic of Ireland officially become a republic?",
+    "options": {
+      "A": "1922",
+      "B": "1937",
+      "C": "1949",
+      "D": "1955"
+    },
+    "correct_answer": "C",
+    "explanation": "The Republic of Ireland Act 1948 came into force on Easter Monday, 18 April 1949."
+  },
+  {
+    "topic": "History",
+    "question": "33. Which famous illuminated manuscript from around 800 AD is kept on display at Trinity College Dublin?",
+    "options": {
+      "A": "The Book of Armagh",
+      "B": "The Book of Kells",
+      "C": "The Book of Durrow",
+      "D": "The Annals of the Four Masters"
+    },
+    "correct_answer": "B",
+    "explanation": "The Book of Kells is a masterwork of Insular manuscript illumination housed in Trinity College."
+  },
+  {
+    "topic": "History",
+    "question": "34. Who was the British Prime Minister during most of World War II?",
+    "options": {
+      "A": "Neville Chamberlain",
+      "B": "Winston Churchill",
+      "C": "Clement Attlee",
+      "D": "Anthony Eden"
+    },
+    "correct_answer": "B",
+    "explanation": "Winston Churchill led the UK wartime coalition government from May 1940 to July 1945."
+  },
+  {
+    "topic": "History",
+    "question": "35. Beginning with M, what is the name of the 1215 English charter that limited the power of the king?",
+    "options": {
+      "A": "Magna Carta",
+      "B": "Mayflower Compact",
+      "C": "Modus Tenendi",
+      "D": "Monarchy Act"
+    },
+    "correct_answer": "A",
+    "explanation": "Magna Carta was agreed by King John at Runnymede in 1215, laying foundations for constitutional law."
+  },
+  {
+    "topic": "History",
+    "question": "36. In what year was the Good Friday Agreement signed in Northern Ireland?",
+    "options": {
+      "A": "1994",
+      "B": "1996",
+      "C": "1998",
+      "D": "2000"
+    },
+    "correct_answer": "C",
+    "explanation": "The Good Friday Agreement (Belfast Agreement) was signed on 10 April 1998."
+  },
+  {
+    "topic": "History",
+    "question": "37. Which Irish pirate queen from County Mayo famously met Queen Elizabeth I in 1593?",
+    "options": {
+      "A": "Anne Bonny",
+      "B": "Grace O'Malley",
+      "C": "Mary Read",
+      "D": "Gormlaith"
+    },
+    "correct_answer": "B",
+    "explanation": "Grace O'Malley (Gráinne Mhaol) was the chieftain of the Ó Máille clan in Mayo."
+  },
+  {
+    "topic": "History",
+    "question": "38. Beginning with R, what is the name of the ancient stone slab that allowed scholars to decode Egyptian hieroglyphs?",
+    "options": {
+      "A": "Runic Tablet",
+      "B": "Rosetta Stone",
+      "C": "Roman Inscription",
+      "D": "Rhodes Monolith"
+    },
+    "correct_answer": "B",
+    "explanation": "The Rosetta Stone provided parallel texts in hieroglyphic, Demotic, and Greek."
+  },
+  {
+    "topic": "History",
+    "question": "39. In what year did the French Revolution begin with the storming of the Bastille?",
+    "options": {
+      "A": "1776",
+      "B": "1789",
+      "C": "1793",
+      "D": "1798"
+    },
+    "correct_answer": "B",
+    "explanation": "The storming of the Bastille prison in Paris occurred on 14 July 1789."
+  },
+  {
+    "topic": "History",
+    "question": "40. Who was the first Taoiseach of Ireland (taking office in 1937)?",
+    "options": {
+      "A": "W.T. Cosgrave",
+      "B": "Éamon de Valera",
+      "C": "John A. Costello",
+      "D": "Seán Lemass"
+    },
+    "correct_answer": "B",
+    "explanation": "Éamon de Valera became the first Taoiseach when the 1937 Constitution came into effect."
+  },
+  {
+    "topic": "History",
+    "question": "41. Which Irish explorer from County Kildare led the famous Endurance expedition to Antarctica?",
+    "options": {
+      "A": "Tom Crean",
+      "B": "Robert Falcon Scott",
+      "C": "Ernest Shackleton",
+      "D": "Edward Bransfield"
+    },
+    "correct_answer": "C",
+    "explanation": "Sir Ernest Shackleton led the Imperial Trans-Antarctic Expedition aboard the Endurance."
+  },
+  {
+    "topic": "History",
+    "question": "42. What was the name of the 1169 Norman invader who married Aoife, daughter of Dermot MacMurrough?",
+    "options": {
+      "A": "Hugh de Lacy",
+      "B": "Strongbow",
+      "C": "John de Courcy",
+      "D": "Maurice FitzGerald"
+    },
+    "correct_answer": "B",
+    "explanation": "Richard de Clare, 2nd Earl of Pembroke (known as Strongbow), married Aoife of Leinster in Waterford."
+  },
+  {
+    "topic": "History",
+    "question": "43. In what year did the 1798 Rebellion take place in Ireland, led by the United Irishmen?",
+    "options": {
+      "A": "1782",
+      "B": "1798",
+      "C": "1803",
+      "D": "1848"
+    },
+    "correct_answer": "B",
+    "explanation": "The 1798 Rebellion was an uprising against British rule inspired by American and French revolutions."
+  },
+  {
+    "topic": "History",
+    "question": "44. Who was the leader of the United Irishmen during the 1798 Rebellion?",
+    "options": {
+      "A": "Henry Joy McCracken",
+      "B": "Lord Edward FitzGerald",
+      "C": "Wolfe Tone",
+      "D": "Robert Emmet"
+    },
+    "correct_answer": "C",
+    "explanation": "Theobald Wolfe Tone is regarded as the father of Irish republicanism."
+  },
+  {
+    "topic": "History",
+    "question": "45. Beginning with P, which ancient Roman city was buried by the eruption of Mount Vesuvius in 79 AD?",
+    "options": {
+      "A": "Palmyra",
+      "B": "Pompeii",
+      "C": "Pergamon",
+      "D": "Paestum"
+    },
+    "correct_answer": "B",
+    "explanation": "Pompeii and Herculaneum were engulfed in volcanic ash by Mount Vesuvius in 79 AD."
+  },
+  {
+    "topic": "History",
+    "question": "46. Who was the first female MP elected to the British House of Commons in 1918 (representing Dublin St Patrick's)?",
+    "options": {
+      "A": "Nancy Astor",
+      "B": "Countess Constance Markievicz",
+      "C": "Emmeline Pankhurst",
+      "D": "Maud Gonne"
+    },
+    "correct_answer": "B",
+    "explanation": "Constance Markievicz won election in 1918 for Sinn Féin and abstained, joining the First Dáil."
+  },
+  {
+    "topic": "History",
+    "question": "47. In what year did the Titanic's captain, Edward Smith, go down with the ship?",
+    "options": {
+      "A": "1910",
+      "B": "1912",
+      "C": "1914",
+      "D": "1916"
+    },
+    "correct_answer": "B",
+    "explanation": "Captain Edward J. Smith died when the Titanic sank on 15 April 1912."
+  },
+  {
+    "topic": "History",
+    "question": "48. Which German inventor developed the movable-type printing press in Europe around 1440?",
+    "options": {
+      "A": "Johannes Kepler",
+      "B": "Johannes Gutenberg",
+      "C": "Martin Luther",
+      "D": "Albrecht Dürer"
+    },
+    "correct_answer": "B",
+    "explanation": "Johannes Gutenberg introduced movable metal type printing to Europe, publishing his 42-line Bible."
+  },
+  {
+    "topic": "History",
+    "question": "49. Beginning with S, what was the name of the first artificial satellite launched into space by the Soviet Union in 1957?",
+    "options": {
+      "A": "Soyuz 1",
+      "B": "Sputnik 1",
+      "C": "Salyut 1",
+      "D": "Vostok 1"
+    },
+    "correct_answer": "B",
+    "explanation": "Sputnik 1 was launched into low Earth orbit on 4 October 1957, initiating the Space Age."
+  },
+  {
+    "topic": "History",
+    "question": "50. In what year was the Treaty of Rome signed, establishing the European Economic Community?",
+    "options": {
+      "A": "1951",
+      "B": "1957",
+      "C": "1963",
+      "D": "1973"
+    },
+    "correct_answer": "B",
+    "explanation": "The Treaty of Rome was signed on 25 March 1957 by Belgium, France, Italy, Luxembourg, Netherlands, and West Germany."
+  }
+]

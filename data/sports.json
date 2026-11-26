@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Sport",
+    "question": "1. How many players are on a GAA Gaelic football or hurling team on the pitch at the start of a match?",
+    "options": {
+      "A": "11",
+      "B": "13",
+      "C": "15",
+      "D": "17"
+    },
+    "correct_answer": "C",
+    "explanation": "Standard GAA teams field 15 players per side at the start of competitive matches."
+  },
+  {
+    "topic": "Sport",
+    "question": "2. What is the name of the famous GAA stadium in Dublin?",
+    "options": {
+      "A": "Aviva Stadium",
+      "B": "Croke Park",
+      "C": "Páirc Uí Chaoimh",
+      "D": "Pearse Stadium"
+    },
+    "correct_answer": "B",
+    "explanation": "Croke Park in north Dublin is the headquarters and primary stadium of the Gaelic Athletic Association."
+  },
+  {
+    "topic": "Sport",
+    "question": "3. In which sport is the Wimbledon Championships played?",
+    "options": {
+      "A": "Cricket",
+      "B": "Tennis",
+      "C": "Golf",
+      "D": "Badminton"
+    },
+    "correct_answer": "B",
+    "explanation": "Wimbledon is the world's oldest tennis tournament, contested on outdoor grass courts."
+  },
+  {
+    "topic": "Sport",
+    "question": "4. What is the name of the small, hard ball used in hurling and camogie?",
+    "options": {
+      "A": "Puck",
+      "B": "Sliotar",
+      "C": "Pelota",
+      "D": "Bocce"
+    },
+    "correct_answer": "B",
+    "explanation": "The sliotar has a cork core covered in stitched leather with raised ribs."
+  },
+  {
+    "topic": "Sport",
+    "question": "5. How many points is a goal worth in Gaelic football and hurling?",
+    "options": {
+      "A": "1 point",
+      "B": "2 points",
+      "C": "3 points",
+      "D": "5 points"
+    },
+    "correct_answer": "C",
+    "explanation": "A goal scored into the net is worth three points, equivalent to three points scored over the crossbar."
+  },
+  {
+    "topic": "Sport",
+    "question": "6. In which sport would you use a driver, iron, and putter?",
+    "options": {
+      "A": "Cricket",
+      "B": "Hockey",
+      "C": "Golf",
+      "D": "Polo"
+    },
+    "correct_answer": "C",
+    "explanation": "Golfers use woods/drivers for distance, irons for approach shots, and putters on the green."
+  },
+  {
+    "topic": "Sport",
+    "question": "7. How often are the Summer Olympic Games held?",
+    "options": {
+      "A": "Every 2 years",
+      "B": "Every 3 years",
+      "C": "Every 4 years",
+      "D": "Every 5 years"
+    },
+    "correct_answer": "C",
+    "explanation": "The modern Olympic Games are scheduled in an Olympiad cycle of every four years."
+  },
+  {
+    "topic": "Sport",
+    "question": "8. What colour card does a soccer referee show to send a player off the pitch?",
+    "options": {
+      "A": "Yellow",
+      "B": "Red",
+      "C": "Black",
+      "D": "White"
+    },
+    "correct_answer": "B",
+    "explanation": "A red card signifies direct dismissal or accumulation of two yellow card offences."
+  },
+  {
+    "topic": "Sport",
+    "question": "9. In which sport do players score a \"slam dunk\"?",
+    "options": {
+      "A": "Volleyball",
+      "B": "Basketball",
+      "C": "Netball",
+      "D": "Handball"
+    },
+    "correct_answer": "B",
+    "explanation": "A slam dunk occurs when a basketball player jumps and forcibly thrusts the ball through the hoop."
+  },
+  {
+    "topic": "Sport",
+    "question": "10. What is the name of the trophy awarded to the winners of the All-Ireland Senior Football Championship?",
+    "options": {
+      "A": "Liam MacCarthy Cup",
+      "B": "Sam Maguire Cup",
+      "C": "O'Duffy Cup",
+      "D": "Brendan Martin Cup"
+    },
+    "correct_answer": "B",
+    "explanation": "The Sam Maguire Cup has been presented to the All-Ireland Senior Football champions since 1928."
+  },
+  {
+    "topic": "Sport",
+    "question": "11. What is the name of the trophy awarded to the winners of the All-Ireland Senior Hurling Championship?",
+    "options": {
+      "A": "Sam Maguire Cup",
+      "B": "Liam MacCarthy Cup",
+      "C": "Dr. Croke Cup",
+      "D": "Webb Ellis Cup"
+    },
+    "correct_answer": "B",
+    "explanation": "The Liam MacCarthy Cup is awarded annually to the All-Ireland Senior Hurling champions."
+  },
+  {
+    "topic": "Sport",
+    "question": "12. In boxing, how many rounds are in a standard men's world title fight?",
+    "options": {
+      "A": "10",
+      "B": "12",
+      "C": "15",
+      "D": "8"
+    },
+    "correct_answer": "B",
+    "explanation": "Championship professional boxing bouts are contested over a maximum of 12 rounds of three minutes each."
+  },
+  {
+    "topic": "Sport",
+    "question": "13. Which Irish boxer won Olympic gold in London 2012 and became an undisputed world champion?",
+    "options": {
+      "A": "Kellie Harrington",
+      "B": "Katie Taylor",
+      "C": "Amy Broadhurst",
+      "D": "Michael Conlan"
+    },
+    "correct_answer": "B",
+    "explanation": "Katie Taylor won gold at London 2012 and unified world lightweight titles as a professional."
+  },
+  {
+    "topic": "Sport",
+    "question": "14. In rugby union, how many players are on each team on the pitch?",
+    "options": {
+      "A": "11",
+      "B": "13",
+      "C": "15",
+      "D": "18"
+    },
+    "correct_answer": "C",
+    "explanation": "Rugby union teams feature 15 active players (8 forwards and 7 backs) per side on the field."
+  },
+  {
+    "topic": "Sport",
+    "question": "15. What is the name of the stadium in Dublin where Ireland plays its home international rugby and soccer matches?",
+    "options": {
+      "A": "Croke Park",
+      "B": "Dalymount Park",
+      "C": "Aviva Stadium",
+      "D": "Tallaght Stadium"
+    },
+    "correct_answer": "C",
+    "explanation": "The Aviva Stadium at Lansdowne Road is Ireland's home ground for international rugby union and association football."
+  },
+  {
+    "topic": "Sport",
+    "question": "16. In snooker, what colour ball is worth the most points (7 points)?",
+    "options": {
+      "A": "Pink",
+      "B": "Blue",
+      "C": "Black",
+      "D": "Brown"
+    },
+    "correct_answer": "C",
+    "explanation": "The black ball is worth 7 points, followed by pink (6), blue (5), brown (4), green (3), yellow (2), and red (1)."
+  },
+  {
+    "topic": "Sport",
+    "question": "17. In athletics, how many metres are in a standard outdoor running track lap?",
+    "options": {
+      "A": "200 metres",
+      "B": "300 metres",
+      "C": "400 metres",
+      "D": "500 metres"
+    },
+    "correct_answer": "C",
+    "explanation": "Lane 1 of a standard regulation outdoor athletics track measures exactly 400 metres."
+  },
+  {
+    "topic": "Sport",
+    "question": "18. Which county won the 2026 All-Ireland Senior Camogie Championship, defeating Galway in the final?",
+    "options": {
+      "A": "Kilkenny",
+      "B": "Cork",
+      "C": "Tipperary",
+      "D": "Wexford"
+    },
+    "correct_answer": "B",
+    "explanation": "Cork defeated Galway to capture the 2026 Senior Camogie title."
+  },
+  {
+    "topic": "Sport",
+    "question": "19. Which French club won the 2025–26 UEFA Champions League, beating Arsenal on penalties in the final?",
+    "options": {
+      "A": "Marseille",
+      "B": "Paris Saint-Germain",
+      "C": "Monaco",
+      "D": "Lyon"
+    },
+    "correct_answer": "B",
+    "explanation": "Paris Saint-Germain (PSG) clinched the 2025–26 UEFA Champions League crown in a penalty shootout."
+  },
+  {
+    "topic": "Sport",
+    "question": "20. Who won the 2026 Wimbledon Men's Singles title, defeating Alexander Zverev in the final?",
+    "options": {
+      "A": "Carlos Alcaraz",
+      "B": "Jannik Sinner",
+      "C": "Novak Djokovic",
+      "D": "Daniil Medvedev"
+    },
+    "correct_answer": "B",
+    "explanation": "Jannik Sinner defeated Alexander Zverev on Centre Court to win Wimbledon 2026."
+  },
+  {
+    "topic": "Sport",
+    "question": "21. Who won the 2026 Tour de France, claiming his fifth overall title?",
+    "options": {
+      "A": "Jonas Vingegaard",
+      "B": "Tadej Pogačar",
+      "C": "Remco Evenepoel",
+      "D": "Primož Roglič"
+    },
+    "correct_answer": "B",
+    "explanation": "Tadej Pogačar sealed his 5th Tour de France general classification triumph in July 2026."
+  },
+  {
+    "topic": "Sport",
+    "question": "22. In tennis, what word is used for a score of zero?",
+    "options": {
+      "A": "Nil",
+      "B": "Blank",
+      "C": "Love",
+      "D": "Duck"
+    },
+    "correct_answer": "C",
+    "explanation": "In tennis scoring, 'love' indicates zero (derived from the French 'l'oeuf' meaning egg)."
+  },
+  {
+    "topic": "Sport",
+    "question": "23. How many points is a try worth in rugby union?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "C",
+    "explanation": "Grounding the ball in the in-goal area earns 5 points for a try."
+  },
+  {
+    "topic": "Sport",
+    "question": "24. In golf, what term is used for completing a hole in one stroke under par?",
+    "options": {
+      "A": "Bogey",
+      "B": "Birdie",
+      "C": "Eagle",
+      "D": "Albatross"
+    },
+    "correct_answer": "B",
+    "explanation": "A score of 1-under par on an individual hole is called a birdie."
+  },
+  {
+    "topic": "Sport",
+    "question": "25. Which Irish swimmer won gold in the 800m freestyle at the 2024 Paris Olympics?",
+    "options": {
+      "A": "Mona McSharry",
+      "B": "Daniel Wiffen",
+      "C": "Jack McMillan",
+      "D": "Ellen Keane"
+    },
+    "correct_answer": "B",
+    "explanation": "Daniel Wiffen from County Armagh won gold in Olympic record time in the men's 800m freestyle in Paris."
+  },
+  {
+    "topic": "Sport",
+    "question": "26. Which Irish gymnast won gold on the pommel horse at the 2024 Paris Olympics?",
+    "options": {
+      "A": "Rhys McClenaghan",
+      "B": "Dominick Cunningham",
+      "C": "Max Whitlock",
+      "D": "Stephen Nedoroscik"
+    },
+    "correct_answer": "A",
+    "explanation": "Rhys McClenaghan of County Down secured Ireland's first ever Olympic gymnastics gold medal."
+  },
+  {
+    "topic": "Sport",
+    "question": "27. In which sport is the Stanley Cup awarded?",
+    "options": {
+      "A": "American football",
+      "B": "Baseball",
+      "C": "Ice hockey",
+      "D": "Lacrosse"
+    },
+    "correct_answer": "C",
+    "explanation": "The Stanley Cup is the championship trophy awarded to the NHL playoff winners in professional ice hockey."
+  },
+  {
+    "topic": "Sport",
+    "question": "28. How many Grand Slam tournaments are played in tennis each year?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "The four major Grand Slam tournaments are the Australian Open, French Open (Roland Garros), Wimbledon, and US Open."
+  },
+  {
+    "topic": "Sport",
+    "question": "29. In cricket, how many players are on a team?",
+    "options": {
+      "A": "9",
+      "B": "10",
+      "C": "11",
+      "D": "12"
+    },
+    "correct_answer": "C",
+    "explanation": "A standard cricket team fields 11 players."
+  },
+  {
+    "topic": "Sport",
+    "question": "30. Which country has won the FIFA Men's World Cup the most times (5 times)?",
+    "options": {
+      "A": "Germany",
+      "B": "Italy",
+      "C": "Brazil",
+      "D": "Argentina"
+    },
+    "correct_answer": "C",
+    "explanation": "Brazil has won five World Cup tournaments (1958, 1962, 1970, 1994, 2002)."
+  },
+  {
+    "topic": "Sport",
+    "question": "31. What is the distance of a marathon to the nearest kilometre?",
+    "options": {
+      "A": "38 km",
+      "B": "40 km",
+      "C": "42 km",
+      "D": "45 km"
+    },
+    "correct_answer": "C",
+    "explanation": "The official marathon distance is 42.195 kilometres (26 miles 385 yards)."
+  },
+  {
+    "topic": "Sport",
+    "question": "32. In Formula 1 racing, what colour flag is waved to signal the end of a race?",
+    "options": {
+      "A": "Yellow",
+      "B": "Green",
+      "C": "Chequered",
+      "D": "Red"
+    },
+    "correct_answer": "C",
+    "explanation": "The black-and-white chequered flag signals the completion of the Grand Prix."
+  },
+  {
+    "topic": "Sport",
+    "question": "33. Which Northern Irish golfer has won four major championships, including the US Open and The Open?",
+    "options": {
+      "A": "Pádraig Harrington",
+      "B": "Graeme McDowell",
+      "C": "Rory McIlroy",
+      "D": "Shane Lowry"
+    },
+    "correct_answer": "C",
+    "explanation": "Rory McIlroy from Holywood, County Down, has won four major championship titles."
+  },
+  {
+    "topic": "Sport",
+    "question": "34. In Gaelic games, what is the name of the trophy awarded to the winners of the All-Ireland Senior Camogie Championship?",
+    "options": {
+      "A": "Brendan Martin Cup",
+      "B": "O'Duffy Cup",
+      "C": "Liam MacCarthy Cup",
+      "D": "Corn Uí Mhuirí"
+    },
+    "correct_answer": "B",
+    "explanation": "The O'Duffy Cup is presented to the victorious All-Ireland Senior Camogie team."
+  },
+  {
+    "topic": "Sport",
+    "question": "35. Who won the 2026 Wimbledon Women's Singles title, defeating Karolína Muchová in an all-Czech final?",
+    "options": {
+      "A": "Markéta Vondroušová",
+      "B": "Linda Nosková",
+      "C": "Aryna Sabalenka",
+      "D": "Iga Świątek"
+    },
+    "correct_answer": "B",
+    "explanation": "Linda Nosková captured her maiden Grand Slam singles title at Wimbledon 2026."
+  },
+  {
+    "topic": "Sport",
+    "question": "36. In which European city was the 2026 UEFA Champions League Final played?",
+    "options": {
+      "A": "Munich",
+      "B": "London",
+      "C": "Budapest",
+      "D": "Madrid"
+    },
+    "correct_answer": "C",
+    "explanation": "The 2026 UEFA Champions League Final was staged at the Puskás Aréna in Budapest, Hungary."
+  },
+  {
+    "topic": "Sport",
+    "question": "37. Beginning with V, what is the name of the wooden stadium cycling track used in Olympic track cycling?",
+    "options": {
+      "A": "Vector",
+      "B": "Velodrome",
+      "C": "Vortex",
+      "D": "Velocity"
+    },
+    "correct_answer": "B",
+    "explanation": "A velodrome features steeply banked oval tracks purpose-built for track cycling."
+  },
+  {
+    "topic": "Sport",
+    "question": "38. In rowing, what is the name of the person who sits at the stern and steers the boat without rowing?",
+    "options": {
+      "A": "Bow",
+      "B": "Stroke",
+      "C": "Cox",
+      "D": "Sculler"
+    },
+    "correct_answer": "C",
+    "explanation": "The coxswain (or cox) steers the shell, calls cadence, and executes race strategy."
+  },
+  {
+    "topic": "Sport",
+    "question": "39. Beginning with E, what is the name of the golf score that is two strokes under par on a single hole?",
+    "options": {
+      "A": "Even",
+      "B": "Eagle",
+      "C": "Entry",
+      "D": "Extra"
+    },
+    "correct_answer": "B",
+    "explanation": "An eagle represents scoring 2 strokes under par on a given hole."
+  },
+  {
+    "topic": "Sport",
+    "question": "40. Which Irish county has won the most All-Ireland Senior Hurling Championships?",
+    "options": {
+      "A": "Cork",
+      "B": "Tipperary",
+      "C": "Kilkenny",
+      "D": "Limerick"
+    },
+    "correct_answer": "C",
+    "explanation": "Kilkenny leads the all-time roll of honour with 36 Senior Hurling titles."
+  },
+  {
+    "topic": "Sport",
+    "question": "41. Which Irish county has won the most All-Ireland Senior Football Championships?",
+    "options": {
+      "A": "Dublin",
+      "B": "Kerry",
+      "C": "Galway",
+      "D": "Cork"
+    },
+    "correct_answer": "B",
+    "explanation": "Kerry tops the all-time leaderboard with 38 All-Ireland Senior Football crowns."
+  },
+  {
+    "topic": "Sport",
+    "question": "42. In fencing, what are the three types of swords used?",
+    "options": {
+      "A": "Dagger, rapier, and broadsword",
+      "B": "Foil, épée, and sabre",
+      "C": "Cutlass, foil, and lance",
+      "D": "Blade, scimitar, and épée"
+    },
+    "correct_answer": "B",
+    "explanation": "Olympic fencing competitions are held using foil, épée, and sabre weapons."
+  },
+  {
+    "topic": "Sport",
+    "question": "43. Which city hosted the first modern Olympic Games in 1896?",
+    "options": {
+      "A": "Paris",
+      "B": "London",
+      "C": "Athens",
+      "D": "Rome"
+    },
+    "correct_answer": "C",
+    "explanation": "The inaugural 1896 modern Olympic Games took place at the Panathenaic Stadium in Athens."
+  },
+  {
+    "topic": "Sport",
+    "question": "44. In badminton, what is the feathered projectile hit over the net called?",
+    "options": {
+      "A": "Puck",
+      "B": "Shuttlecock",
+      "C": "Sliotar",
+      "D": "Quoit"
+    },
+    "correct_answer": "B",
+    "explanation": "A shuttlecock (or birdie) is made of 16 natural feathers embedded into a rounded cork base."
+  },
+  {
+    "topic": "Sport",
+    "question": "45. Beginning with B, what is the name of the Winter Olympic sport that combines cross-country skiing and rifle shooting?",
+    "options": {
+      "A": "Bobsleigh",
+      "B": "Biathlon",
+      "C": "Banditry",
+      "D": "Bouldering"
+    },
+    "correct_answer": "B",
+    "explanation": "Biathlon tests cross-country skate-ski endurance paired with precision small-bore rifle marksmanship."
+  },
+  {
+    "topic": "Sport",
+    "question": "46. In darts, what is the highest possible score you can achieve with a single dart?",
+    "options": {
+      "A": "50",
+      "B": "60",
+      "C": "100",
+      "D": "180"
+    },
+    "correct_answer": "B",
+    "explanation": "Hitting the inner narrow treble ring of the 20 segment scores 3 × 20 = 60 points."
+  },
+  {
+    "topic": "Sport",
+    "question": "47. Which country won the 2023 Rugby World Cup in France?",
+    "options": {
+      "A": "New Zealand",
+      "B": "England",
+      "C": "South Africa",
+      "D": "France"
+    },
+    "correct_answer": "C",
+    "explanation": "The Springboks of South Africa edged New Zealand 12–11 at the Stade de France to defend their crown."
+  },
+  {
+    "topic": "Sport",
+    "question": "48. In athletics, what is the name of the 10-event men's competition?",
+    "options": {
+      "A": "Heptathlon",
+      "B": "Pentathlon",
+      "C": "Decathlon",
+      "D": "Triathlon"
+    },
+    "correct_answer": "C",
+    "explanation": "The decathlon comprises 10 track and field events contested over two consecutive days."
+  },
+  {
+    "topic": "Sport",
+    "question": "49. Which Irish sprinter broke multiple national records and reached the 400m final at the 2024 Paris Olympics?",
+    "options": {
+      "A": "Phil Healy",
+      "B": "Ciara Mageean",
+      "C": "Rhasidat Adeleke",
+      "D": "Sarah Healy"
+    },
+    "correct_answer": "C",
+    "explanation": "Rhasidat Adeleke set Irish national sprint records and placed 4th in the Olympic 400m final in Paris."
+  },
+  {
+    "topic": "Sport",
+    "question": "50. In horse racing, what is the name of the famous steeplechase held every April at Aintree near Liverpool?",
+    "options": {
+      "A": "Cheltenham Gold Cup",
+      "B": "The Grand National",
+      "C": "The Derby",
+      "D": "Ascot Gold Cup"
+    },
+    "correct_answer": "B",
+    "explanation": "The Grand National is a handicap steeplechase run over 4 miles 2½ furlongs with 30 fences."
+  }
+]

@@ -12,20 +12,20 @@
         <h2>Credit Union Quiz</h2>
         <div style="width: 24px;"></div>
     </div>
-    
+
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
     <div class="app-layout">
         <!-- Sidebar Navigation -->
         <div class="sidebar" id="sidebar">
             <button class="sidebar-close" onclick="toggleMenu()">✕</button>
-            
+
             <!-- Quick Launch Competition Quiz -->
             <div class="practice-box">
                 <button type="button" class="btn-competition" onclick="startPracticeQuiz()">
                     🏆 Start 3-Round Quiz
                 </button>
-                <small>Official ILCU Format: 6 questions per round (2 Easy, 2 Moderate, 2 Hard)</small>
+                <small>Official ILCU Format: 6 questions per round (2 Easy, 2 Medium, 2 Difficult)</small>
             </div>
 
             <div class="sidebar-header">
@@ -42,6 +42,16 @@
                 <p id="instructionsText" class="instructions">
                     👈 Click <b>Start 3-Round Quiz</b> in the sidebar for competition practice, or select an individual category module to study.
                 </p>
+            </div>
+
+            <!-- Difficulty Selection for Single Modules -->
+            <div id="difficultySelector" class="difficulty-selector" style="display: none;">
+                <h3>Select Difficulty Level</h3>
+                <div class="difficulty-buttons">
+                    <button type="button" class="diff-select-btn diff-easy" onclick="selectDifficulty('Easy')">🟢 Easy</button>
+                    <button type="button" class="diff-select-btn diff-medium" onclick="selectDifficulty('Medium')">🟠 Medium</button>
+                    <button type="button" class="diff-select-btn diff-difficult" onclick="selectDifficulty('Difficult')">🔴 Difficult</button>
+                </div>
             </div>
 
             <!-- Mode Toggle for Single Modules -->
@@ -68,7 +78,7 @@
                 </div>
                 <div class="pagination-controls" style="justify-content: center; align-items: center; margin-top: 25px;">
                     <button type="button" class="btn btn-outline" style="max-width: 140px;" onclick="prevFlashcard()">⬅ Prev</button>
-                    <span id="fcCounter" class="fc-counter">1 / 50</span>
+                    <span id="fcCounter" class="fc-counter">1 / 17</span>
                     <button type="button" class="btn btn-outline" style="max-width: 140px;" onclick="nextFlashcard()">Next ➡</button>
                 </div>
             </div>
@@ -80,16 +90,16 @@
 
                 <!-- Navigation Controls -->
                 <div id="paginationControls" class="pagination-controls" style="display: none;">
-                    <button type="button" class="btn btn-outline" id="prevPageBtn" onclick="prevRoundOrPage()">⬅ Previous Round</button>
-                    <button type="button" class="btn btn-outline" id="nextPageBtn" onclick="nextRoundOrPage()">Next Round ➡</button>
+                    <button type="button" class="btn btn-outline" id="prevPageBtn" onclick="prevQuestion()">⬅ Previous Question</button>
+                    <button type="button" class="btn btn-outline" id="nextPageBtn" onclick="nextQuestion()">Next Question ➡</button>
                 </div>
 
                 <button type="button" class="btn btn-submit" id="submitQuizBtn" onclick="gradeQuiz()" style="display: none;">
-                    Submit Quiz & View Analytics
+                    Submit & Show Answers
                 </button>
 
                 <div class="action-buttons" id="reviewActionBtns" style="display:none;">
-                    <button type="button" class="btn btn-outline" onclick="showAnalytics()">📊 Back to Scorecard</button>
+                    <button type="button" class="btn btn-outline" onclick="showAnalytics()">📊 View Scorecard</button>
                     <button type="button" class="btn" onclick="startPracticeQuiz()">🔄 New 3-Round Quiz</button>
                 </div>
             </form>

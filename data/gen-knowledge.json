@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "General Knowledge",
+    "question": "1. How many months of the year have exactly 31 days?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "correct_answer": "C",
+    "explanation": "Seven months have 31 days: January, March, May, July, August, October, and December."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "2. What is the name of the traditional Japanese dish made with vinegared rice and often raw fish?",
+    "options": {
+      "A": "Ramen",
+      "B": "Sushi",
+      "C": "Tempura",
+      "D": "Udon"
+    },
+    "correct_answer": "B",
+    "explanation": "Sushi is prepared with vinegared sumeshi rice combined with seafood and vegetables."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "3. Which colour is at the top of a standard set of traffic lights?",
+    "options": {
+      "A": "Green",
+      "B": "Amber",
+      "C": "Red",
+      "D": "Blue"
+    },
+    "correct_answer": "C",
+    "explanation": "Standard international vertical traffic lights display Red at the top, Amber in the middle, and Green at the bottom."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "4. What do you call a person who flies an aeroplane?",
+    "options": {
+      "A": "Navigator",
+      "B": "Pilot",
+      "C": "Engineer",
+      "D": "Steward"
+    },
+    "correct_answer": "B",
+    "explanation": "A pilot (or aviator) operates the flight controls of an aircraft."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "5. How many letters are in the English alphabet?",
+    "options": {
+      "A": "24",
+      "B": "26",
+      "C": "28",
+      "D": "30"
+    },
+    "correct_answer": "B",
+    "explanation": "The standard modern English alphabet consists of 26 Latin letters (A to Z)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "6. Which holiday is celebrated on 31 October each year?",
+    "options": {
+      "A": "Thanksgiving",
+      "B": "Halloween",
+      "C": "St. Patrick's Day",
+      "D": "Bonfire Night"
+    },
+    "correct_answer": "B",
+    "explanation": "Halloween (All Hallows' Eve) is celebrated on 31 October, rooted in the ancient Celtic festival of Samhain."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "7. What is the opposite of \"ancient\"?",
+    "options": {
+      "A": "Historic",
+      "B": "Antique",
+      "C": "Modern",
+      "D": "Archaic"
+    },
+    "correct_answer": "C",
+    "explanation": "Modern refers to the present or recent times, serving as an antonym to ancient."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "8. On a standard compass, which direction is directly opposite East?",
+    "options": {
+      "A": "North",
+      "B": "South",
+      "C": "West",
+      "D": "North-West"
+    },
+    "correct_answer": "C",
+    "explanation": "West lies at 270° on a compass rose, 180° directly opposite East (90°)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "9. What is the main ingredient used to make guacamole?",
+    "options": {
+      "A": "Tomato",
+      "B": "Avocado",
+      "C": "Cucumber",
+      "D": "Chickpea"
+    },
+    "correct_answer": "B",
+    "explanation": "Traditional Mexican guacamole is an avocado-based dip seasoned with lime juice and salt."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "10. How many wheels does a tricycle have?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "C",
+    "explanation": "The prefix 'tri-' means three; a tricycle has three wheels."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "11. What is the name of the white substance made by bees to build their honeycombs?",
+    "options": {
+      "A": "Propolis",
+      "B": "Beeswax",
+      "C": "Royal jelly",
+      "D": "Pollen glue"
+    },
+    "correct_answer": "B",
+    "explanation": "Worker honeybees secrete beeswax from abdominal glands to construct hexagonal comb structures."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "12. Which meal is eaten in the middle of the day?",
+    "options": {
+      "A": "Breakfast",
+      "B": "Lunch",
+      "C": "Supper",
+      "D": "Brunch"
+    },
+    "correct_answer": "B",
+    "explanation": "Lunch (short for luncheon) is the midday meal eaten between breakfast and dinner."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "13. What word is both a flying mammal and a piece of equipment used in baseball or cricket?",
+    "options": {
+      "A": "Club",
+      "B": "Bat",
+      "C": "Stick",
+      "D": "Wing"
+    },
+    "correct_answer": "B",
+    "explanation": "'Bat' denotes both a nocturnal flying mammal and a club used in striking sports."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "14. How many colours are in a traditional rainbow?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "correct_answer": "C",
+    "explanation": "Sir Isaac Newton defined 7 colours in the visible spectrum: red, orange, yellow, green, blue, indigo, and violet (ROYGBIV)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "15. What is the name of the emergency telephone number you can dial anywhere in the European Union (including Ireland)?",
+    "options": {
+      "A": "911",
+      "B": "112",
+      "C": "100",
+      "D": "999"
+    },
+    "correct_answer": "B",
+    "explanation": "112 is the universal European emergency phone number, free to call from any phone (999 also operates in Ireland)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "16. Which fruit is dried to make raisins?",
+    "options": {
+      "A": "Plums",
+      "B": "Grapes",
+      "C": "Apricots",
+      "D": "Figs"
+    },
+    "correct_answer": "B",
+    "explanation": "Raisins are produced by drying harvested grape berries in the sun or food dehydrators."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "17. What is the name of the building where fire engines are kept?",
+    "options": {
+      "A": "Depot",
+      "B": "Fire station",
+      "C": "Armoury",
+      "D": "Barracks"
+    },
+    "correct_answer": "B",
+    "explanation": "Fire engines and firefighting equipment are garaged at municipal fire stations."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "18. What is the name of the system of raised dots that allows blind and visually impaired people to read by touch?",
+    "options": {
+      "A": "Morse code",
+      "B": "Braille",
+      "C": "Sign language",
+      "D": "Moon code"
+    },
+    "correct_answer": "B",
+    "explanation": "Louis Braille invented the tactile 6-dot reading and writing system in 1824."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "19. What word can follow tooth, hair, and paint to make three different everyday objects?",
+    "options": {
+      "A": "Paste",
+      "B": "Brush",
+      "C": "Comb",
+      "D": "Clip"
+    },
+    "correct_answer": "B",
+    "explanation": "The word 'brush' combines to form toothbrush, hairbrush, and paintbrush."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "20. In chess, which piece can only move diagonally?",
+    "options": {
+      "A": "Rook",
+      "B": "Knight",
+      "C": "Bishop",
+      "D": "Pawn"
+    },
+    "correct_answer": "C",
+    "explanation": "The bishop moves any number of vacant squares diagonally, remaining on its starting square colour."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "21. What is the fear of heights called?",
+    "options": {
+      "A": "Claustrophobia",
+      "B": "Arachnophobia",
+      "C": "Acrophobia",
+      "D": "Agoraphobia"
+    },
+    "correct_answer": "C",
+    "explanation": "Acrophobia is an extreme or irrational fear of heights."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "22. Which gemstone is traditionally associated with the month of April and is the hardest natural mineral?",
+    "options": {
+      "A": "Ruby",
+      "B": "Sapphire",
+      "C": "Diamond",
+      "D": "Emerald"
+    },
+    "correct_answer": "C",
+    "explanation": "Diamond is the modern April birthstone and the hardest naturally occurring substance on Mohs scale."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "23. What does SOS stand for in Morse code?",
+    "options": {
+      "A": "Save Our Souls",
+      "B": "Save Our Ship",
+      "C": "Nothing",
+      "D": "Send Out Succour"
+    },
+    "correct_answer": "C",
+    "explanation": "SOS stands for nothing in Morse code; it was chosen solely as an unmistakable continuous signal: ... --- ... (Save Our Souls is a later backronym)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "24. How many squares are on a standard chessboard?",
+    "options": {
+      "A": "48",
+      "B": "64",
+      "C": "72",
+      "D": "81"
+    },
+    "correct_answer": "B",
+    "explanation": "A chessboard is an 8 × 8 grid containing 64 alternating light and dark squares."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "25. What is the name of the traditional Scottish skirt worn by men on formal occasions?",
+    "options": {
+      "A": "Sarong",
+      "B": "Tartan coat",
+      "C": "Kilt",
+      "D": "Toga"
+    },
+    "correct_answer": "C",
+    "explanation": "A kilt is a knee-length pleated skirt-like garment of tartan cloth originating in the Scottish Highlands."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "26. Which Italian pasta's name literally means \"little worms\"?",
+    "options": {
+      "A": "Spaghetti",
+      "B": "Vermicelli",
+      "C": "Fettuccine",
+      "D": "Penne"
+    },
+    "correct_answer": "B",
+    "explanation": "Vermicelli derives from 'verme' (worm) and the diminutive '-celli', meaning 'little worms'."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "27. What word is both the outer covering of a tree and the sound a dog makes?",
+    "options": {
+      "A": "Trunk",
+      "B": "Bark",
+      "C": "Branch",
+      "D": "Howl"
+    },
+    "correct_answer": "B",
+    "explanation": "Bark is both the woody outer layer of stems/roots and the sharp vocalization of a canine."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "28. In which country did the Olympic Games originate?",
+    "options": {
+      "A": "Italy",
+      "B": "Greece",
+      "C": "Egypt",
+      "D": "Turkey"
+    },
+    "correct_answer": "B",
+    "explanation": "The ancient Olympic Games were held at the sanctuary of Zeus in Olympia, ancient Greece, from 776 BC."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "29. What is the name of the famous clock tower at the Houses of Parliament in London?",
+    "options": {
+      "A": "Victoria Tower",
+      "B": "Elizabeth Tower",
+      "C": "Big Ben Tower",
+      "D": "St Stephen's Tower"
+    },
+    "correct_answer": "B",
+    "explanation": "The clock tower was officially named Elizabeth Tower in 2012 for Queen Elizabeth II's Diamond Jubilee; 'Big Ben' is the great bell inside."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "30. Which spice is the most expensive in the world by weight, harvested from crocus flowers?",
+    "options": {
+      "A": "Vanilla",
+      "B": "Cardamom",
+      "C": "Saffron",
+      "D": "Cinnamon"
+    },
+    "correct_answer": "C",
+    "explanation": "Saffron consists of the delicate dried crimson stigmas of Crocus sativus, requiring tens of thousands of blooms per kilogram."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "31. What is the name of a word or phrase that reads the same forwards and backwards, such as \"racecar\" or \"level\"?",
+    "options": {
+      "A": "Anagram",
+      "B": "Palindrome",
+      "C": "Acronym",
+      "D": "Homophone"
+    },
+    "correct_answer": "B",
+    "explanation": "A palindrome is a sequence of characters that reads identically backwards and forwards."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "32. In the phonetic alphabet used by pilots, what word represents the letter A?",
+    "options": {
+      "A": "Apple",
+      "B": "Alpha",
+      "C": "Able",
+      "D": "Adam"
+    },
+    "correct_answer": "B",
+    "explanation": "In the NATO / ICAO phonetic alphabet, 'Alpha' represents the letter A."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "33. What is the traditional birthstone for the month of May, which also gives Ireland its nickname?",
+    "options": {
+      "A": "Jade",
+      "B": "Emerald",
+      "C": "Peridot",
+      "D": "Aquamarine"
+    },
+    "correct_answer": "B",
+    "explanation": "Emerald is May's green birthstone, reflected in Ireland's famous moniker 'The Emerald Isle'."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "34. How many players are needed to play a standard game of draughts (checkers)?",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "B",
+    "explanation": "Draughts is a two-player strategy board game contested on a chequered board."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "35. Beginning with V, what is the study of flags called?",
+    "options": {
+      "A": "Vellumology",
+      "B": "Vexillology",
+      "C": "Vitreology",
+      "D": "Vulcanology"
+    },
+    "correct_answer": "B",
+    "explanation": "Vexillology is the scholarly study of the history, symbolism, and usage of flags (from Latin vexillum)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "36. Beginning with P, what is the name for a collector of postage stamps?",
+    "options": {
+      "A": "Philanthropist",
+      "B": "Philatelist",
+      "C": "Paleontologist",
+      "D": "Phrenologist"
+    },
+    "correct_answer": "B",
+    "explanation": "A philatelist studies and collects postage stamps, postal history, and related materials."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "37. Unscramble this instrument for measuring temperature: MNERTEOHERT?",
+    "options": {
+      "A": "Barometer",
+      "B": "Hydrometer",
+      "C": "Thermometer",
+      "D": "Tachometer"
+    },
+    "correct_answer": "C",
+    "explanation": "The letters M-N-E-R-T-E-O-H-E-R-T unscramble to spell THERMOMETER."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "38. Beginning with A, what is the name for a person who can use both their left and right hands equally well?",
+    "options": {
+      "A": "Amphibious",
+      "B": "Ambidextrous",
+      "C": "Ambivalent",
+      "D": "Ambiguous"
+    },
+    "correct_answer": "B",
+    "explanation": "Ambidexterity is the ability to use both the right and left hands with equal dexterity."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "39. What is the name of the tiny plastic or metal tip at the end of a shoelace?",
+    "options": {
+      "A": "Eyelet",
+      "B": "Aglet",
+      "C": "Grommet",
+      "D": "Ferrule"
+    },
+    "correct_answer": "B",
+    "explanation": "An aglet keeps the fibres of the lace or cord from unravelling and eases lacing."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "40. Beginning with O, what is the scientific study of birds called?",
+    "options": {
+      "A": "Ontology",
+      "B": "Osteology",
+      "C": "Ornithology",
+      "D": "Optometry"
+    },
+    "correct_answer": "C",
+    "explanation": "Ornithology is the branch of zoology dedicated to the study of avians (birds)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "41. In a standard pack of 52 playing cards, which King is the only one pictured without a moustache?",
+    "options": {
+      "A": "King of Spades",
+      "B": "King of Clubs",
+      "C": "King of Diamonds",
+      "D": "King of Hearts"
+    },
+    "correct_answer": "D",
+    "explanation": "The King of Hearts is depicted clean-shaven and is commonly known as the 'suicide king'."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "42. Beginning with E, what is the study of the origin and history of words?",
+    "options": {
+      "A": "Entomology",
+      "B": "Etymology",
+      "C": "Eschatology",
+      "D": "Epistemology"
+    },
+    "correct_answer": "B",
+    "explanation": "Etymology investigates historical linguistic change and the development of word meanings."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "43. What is the name of the dot above the lowercase letters i and j?",
+    "options": {
+      "A": "Circumflex",
+      "B": "Tittle",
+      "C": "Cedilla",
+      "D": "Umlaut"
+    },
+    "correct_answer": "B",
+    "explanation": "A tittle is the small diacritic dot placed over lowercase 'i' and 'j'."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "44. Beginning with C, what is the art of making maps called?",
+    "options": {
+      "A": "Calligraphy",
+      "B": "Cartography",
+      "C": "Cryptography",
+      "D": "Chorography"
+    },
+    "correct_answer": "B",
+    "explanation": "Cartography combines science, aesthetics, and technique to construct geographic maps."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "45. In Morse code, which letter is represented by a single dot?",
+    "options": {
+      "A": "A",
+      "B": "T",
+      "C": "E",
+      "D": "I"
+    },
+    "correct_answer": "C",
+    "explanation": "Because 'E' is the most frequent letter in English, Samuel Morse assigned it the shortest code: a single dot (.)."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "46. Beginning with P, what is the name of a person who speaks many languages?",
+    "options": {
+      "A": "Polymath",
+      "B": "Polyglot",
+      "C": "Polygamist",
+      "D": "Polygon"
+    },
+    "correct_answer": "B",
+    "explanation": "A polyglot is an individual capable of communicating fluently in several languages."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "47. Which country is the birthplace of the Lego toy company?",
+    "options": {
+      "A": "Sweden",
+      "B": "Germany",
+      "C": "Denmark",
+      "D": "Netherlands"
+    },
+    "correct_answer": "C",
+    "explanation": "Lego was founded in 1932 by Ole Kirk Christiansen in Billund, Denmark."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "48. Beginning with N, what is the study or collection of coins and paper money?",
+    "options": {
+      "A": "Necrology",
+      "B": "Numismatics",
+      "C": "Nomology",
+      "D": "Neology"
+    },
+    "correct_answer": "B",
+    "explanation": "Numismatics is the study and collection of currency, including coins, tokens, and banknotes."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "49. What is the only letter in the English alphabet that does not appear in the name of any US state?",
+    "options": {
+      "A": "Z",
+      "B": "X",
+      "C": "Q",
+      "D": "J"
+    },
+    "correct_answer": "C",
+    "explanation": "The letter Q does not feature in the spelling of any of the 50 United States."
+  },
+  {
+    "topic": "General Knowledge",
+    "question": "50. Beginning with S, what is the name of the branch of science that studies earthquakes?",
+    "options": {
+      "A": "Speleology",
+      "B": "Seismology",
+      "C": "Stratigraphy",
+      "D": "Sedimentology"
+    },
+    "correct_answer": "B",
+    "explanation": "Seismology is the scientific study of earthquakes and propagation of elastic seismic waves through Earth."
+  }
+]

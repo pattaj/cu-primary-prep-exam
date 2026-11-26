@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Mathematics",
+    "question": "1. How many sides does a pentagon have?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "6",
+      "D": "8"
+    },
+    "correct_answer": "B",
+    "explanation": "A pentagon is a polygon with exactly 5 sides."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "2. How many minutes are in 2 hours?",
+    "options": {
+      "A": "100",
+      "B": "120",
+      "C": "140",
+      "D": "180"
+    },
+    "correct_answer": "B",
+    "explanation": "There are 60 minutes in an hour, so 2 hours is 2 × 60 = 120 minutes."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "3. What is 7 × 8?",
+    "options": {
+      "A": "54",
+      "B": "56",
+      "C": "58",
+      "D": "64"
+    },
+    "correct_answer": "B",
+    "explanation": "7 multiplied by 8 equals 56."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "4. How many centimetres are in 1 metre?",
+    "options": {
+      "A": "10",
+      "B": "100",
+      "C": "1,000",
+      "D": "10,000"
+    },
+    "correct_answer": "B",
+    "explanation": "There are 100 centimetres in one metric metre."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "5. What is half of 90?",
+    "options": {
+      "A": "40",
+      "B": "45",
+      "C": "50",
+      "D": "55"
+    },
+    "correct_answer": "B",
+    "explanation": "90 divided by 2 is 45."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "6. How many degrees are in a right angle?",
+    "options": {
+      "A": "45°",
+      "B": "90°",
+      "C": "180°",
+      "D": "360°"
+    },
+    "correct_answer": "B",
+    "explanation": "A right angle is an angle of exactly 90 degrees."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "7. What is the only even prime number?",
+    "options": {
+      "A": "0",
+      "B": "2",
+      "C": "4",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "2 is the smallest prime number and the only one that is even."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "8. How many sides does an octagon have?",
+    "options": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_answer": "C",
+    "explanation": "An octagon is an eight-sided polygon."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "9. What is 100 - 37?",
+    "options": {
+      "A": "53",
+      "B": "63",
+      "C": "67",
+      "D": "73"
+    },
+    "correct_answer": "B",
+    "explanation": "Subtracting 37 from 100 gives 63."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "10. How many days are in 4 weeks?",
+    "options": {
+      "A": "24",
+      "B": "28",
+      "C": "30",
+      "D": "31"
+    },
+    "correct_answer": "B",
+    "explanation": "Each week has 7 days, so 4 × 7 = 28 days."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "11. What 3D shape is a football?",
+    "options": {
+      "A": "Cylinder",
+      "B": "Sphere",
+      "C": "Cone",
+      "D": "Hemisphere"
+    },
+    "correct_answer": "B",
+    "explanation": "A standard football is round in three dimensions, which is a sphere."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "12. What is 12 × 12?",
+    "options": {
+      "A": "124",
+      "B": "132",
+      "C": "144",
+      "D": "154"
+    },
+    "correct_answer": "C",
+    "explanation": "12 multiplied by 12 equals 144."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "13. How many grams are in 1 kilogram?",
+    "options": {
+      "A": "100",
+      "B": "500",
+      "C": "1,000",
+      "D": "10,000"
+    },
+    "correct_answer": "C",
+    "explanation": "The prefix 'kilo-' denotes one thousand, so 1 kilogram = 1,000 grams."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "14. What is the next number in this sequence: 5, 10, 15, 20, ___?",
+    "options": {
+      "A": "22",
+      "B": "24",
+      "C": "25",
+      "D": "30"
+    },
+    "correct_answer": "C",
+    "explanation": "The pattern increases by adding 5 each step: 20 + 5 = 25."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "15. How many faces does a standard cube have?",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "8",
+      "D": "12"
+    },
+    "correct_answer": "B",
+    "explanation": "A cube has 6 square faces, 8 vertices, and 12 edges."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "16. What is 1/4 written as a decimal?",
+    "options": {
+      "A": "0.14",
+      "B": "0.25",
+      "C": "0.4",
+      "D": "0.5"
+    },
+    "correct_answer": "B",
+    "explanation": "1 divided by 4 equals 0.25."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "17. If you buy 3 pencils at 40 cent each, how much do you spend in total?",
+    "options": {
+      "A": "€1.00",
+      "B": "€1.20",
+      "C": "€1.40",
+      "D": "€1.60"
+    },
+    "correct_answer": "B",
+    "explanation": "3 × 40 cent = 120 cent, which is €1.20."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "18. What is the sum of the three angles inside any triangle?",
+    "options": {
+      "A": "90°",
+      "B": "180°",
+      "C": "270°",
+      "D": "360°"
+    },
+    "correct_answer": "B",
+    "explanation": "The interior angles of any planar triangle always sum to 180 degrees."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "19. What is 20% of 150?",
+    "options": {
+      "A": "25",
+      "B": "30",
+      "C": "35",
+      "D": "40"
+    },
+    "correct_answer": "B",
+    "explanation": "20% is one-fifth (0.2); 150 / 5 = 30."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "20. In Roman numerals, what number does XL represent?",
+    "options": {
+      "A": "30",
+      "B": "40",
+      "C": "60",
+      "D": "90"
+    },
+    "correct_answer": "B",
+    "explanation": "In Roman numerals, X (10) before L (50) represents 50 - 10 = 40."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "21. What name is given to a triangle with two equal sides and two equal angles?",
+    "options": {
+      "A": "Equilateral",
+      "B": "Isosceles",
+      "C": "Scalene",
+      "D": "Right-angled"
+    },
+    "correct_answer": "B",
+    "explanation": "An isosceles triangle has two sides of equal length and two equal base angles."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "22. What is the perimeter of a rectangle that is 9 cm long and 5 cm wide?",
+    "options": {
+      "A": "14 cm",
+      "B": "28 cm",
+      "C": "45 cm",
+      "D": "56 cm"
+    },
+    "correct_answer": "B",
+    "explanation": "Perimeter = 2 × (length + width) = 2 × (9 + 5) = 2 × 14 = 28 cm."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "23. What is the square root of 81?",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9",
+      "D": "11"
+    },
+    "correct_answer": "C",
+    "explanation": "Since 9 × 9 = 81, the square root of 81 is 9."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "24. What is the average (mean) of the numbers 6, 8, and 10?",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9",
+      "D": "24"
+    },
+    "correct_answer": "B",
+    "explanation": "(6 + 8 + 10) / 3 = 24 / 3 = 8."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "25. What name is given to an angle that measures between 90° and 180°?",
+    "options": {
+      "A": "Acute",
+      "B": "Obtuse",
+      "C": "Reflex",
+      "D": "Straight"
+    },
+    "correct_answer": "B",
+    "explanation": "An obtuse angle is greater than 90° but less than 180°."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "26. What is 15 × 6?",
+    "options": {
+      "A": "75",
+      "B": "80",
+      "C": "90",
+      "D": "105"
+    },
+    "correct_answer": "C",
+    "explanation": "15 multiplied by 6 equals 90."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "27. What is 3/5 written as a percentage?",
+    "options": {
+      "A": "35%",
+      "B": "50%",
+      "C": "60%",
+      "D": "75%"
+    },
+    "correct_answer": "C",
+    "explanation": "3/5 = 6/10 = 60/100 = 60%."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "28. How many millimetres are in 3.5 centimetres?",
+    "options": {
+      "A": "0.35 mm",
+      "B": "35 mm",
+      "C": "350 mm",
+      "D": "3,500 mm"
+    },
+    "correct_answer": "B",
+    "explanation": "Each centimetre contains 10 millimetres, so 3.5 × 10 = 35 mm."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "29. What is the name of a line drawn from the centre of a circle to its outer edge?",
+    "options": {
+      "A": "Diameter",
+      "B": "Radius",
+      "C": "Chord",
+      "D": "Tangent"
+    },
+    "correct_answer": "B",
+    "explanation": "The radius connects the center point to any point on the circle's circumference."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "30. If a train leaves Dublin at 10:45 AM and arrives in Cork at 1:15 PM, how long is the journey?",
+    "options": {
+      "A": "2 hours 15 minutes",
+      "B": "2 hours 30 minutes",
+      "C": "2 hours 45 minutes",
+      "D": "3 hours"
+    },
+    "correct_answer": "B",
+    "explanation": "From 10:45 AM to 12:45 PM is 2 hours; adding 30 minutes brings it to 1:15 PM (2 hours 30 minutes total)."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "31. What is the value of 5^3 (5 cubed)?",
+    "options": {
+      "A": "15",
+      "B": "25",
+      "C": "75",
+      "D": "125"
+    },
+    "correct_answer": "D",
+    "explanation": "5 cubed is 5 × 5 × 5 = 25 × 5 = 125."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "32. How many degrees are in a full circle?",
+    "options": {
+      "A": "180°",
+      "B": "270°",
+      "C": "360°",
+      "D": "400°"
+    },
+    "correct_answer": "C",
+    "explanation": "A complete rotation or full circle contains 360 degrees."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "33. What is the largest prime number less than 20?",
+    "options": {
+      "A": "15",
+      "B": "17",
+      "C": "19",
+      "D": "21"
+    },
+    "correct_answer": "C",
+    "explanation": "19 is divisible only by 1 and 19, making it the largest prime below 20."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "34. If 4 notebooks cost €10, how much does 1 notebook cost?",
+    "options": {
+      "A": "€2.00",
+      "B": "€2.25",
+      "C": "€2.50",
+      "D": "€2.75"
+    },
+    "correct_answer": "C",
+    "explanation": "€10 divided by 4 equals €2.50 per notebook."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "35. Beginning with H, what is the name of the longest side of a right-angled triangle?",
+    "options": {
+      "A": "Height",
+      "B": "Hypotenuse",
+      "C": "Hexagon",
+      "D": "Horizon"
+    },
+    "correct_answer": "B",
+    "explanation": "The hypotenuse is the side opposite the 90-degree right angle."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "36. Beginning with C, what is the name for the distance all the way around the outside of a circle?",
+    "options": {
+      "A": "Chord",
+      "B": "Circumference",
+      "C": "Centroid",
+      "D": "Cylinder"
+    },
+    "correct_answer": "B",
+    "explanation": "Circumference is the linear distance around the perimeter of a circle."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "37. What is the value of 3 + 4 × 5?",
+    "options": {
+      "A": "20",
+      "B": "23",
+      "C": "35",
+      "D": "60"
+    },
+    "correct_answer": "B",
+    "explanation": "Following order of operations (BIMDAS), multiply first: 4 × 5 = 20, then 3 + 20 = 23."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "38. In Roman numerals, what year does MMXXVI represent?",
+    "options": {
+      "A": "2024",
+      "B": "2025",
+      "C": "2026",
+      "D": "2036"
+    },
+    "correct_answer": "C",
+    "explanation": "MM (2000) + XX (20) + VI (6) = 2026."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "39. What is the area of a right-angled triangle with a base of 10 cm and a height of 6 cm?",
+    "options": {
+      "A": "16 cm²",
+      "B": "30 cm²",
+      "C": "60 cm²",
+      "D": "120 cm²"
+    },
+    "correct_answer": "B",
+    "explanation": "Area = 1/2 × base × height = 1/2 × 10 × 6 = 30 cm²."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "40. What is the sum of the interior angles of any quadrilateral (four-sided shape)?",
+    "options": {
+      "A": "180°",
+      "B": "270°",
+      "C": "360°",
+      "D": "540°"
+    },
+    "correct_answer": "C",
+    "explanation": "Every 4-sided polygon can be split into two triangles (2 × 180° = 360°)."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "41. Beginning with P, what is the name for a 2D shape with two pairs of parallel sides?",
+    "options": {
+      "A": "Pentagon",
+      "B": "Parallelogram",
+      "C": "Pyramid",
+      "D": "Polygon"
+    },
+    "correct_answer": "B",
+    "explanation": "A parallelogram is a quadrilateral where opposite sides are parallel and equal."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "42. What is 3/8 written as a decimal?",
+    "options": {
+      "A": "0.35",
+      "B": "0.375",
+      "C": "0.38",
+      "D": "0.425"
+    },
+    "correct_answer": "B",
+    "explanation": "3 divided by 8 equals exactly 0.375."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "43. What is the next prime number after 29?",
+    "options": {
+      "A": "31",
+      "B": "33",
+      "C": "35",
+      "D": "37"
+    },
+    "correct_answer": "A",
+    "explanation": "31 has no positive divisors other than 1 and itself."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "44. A jacket normally costs €80 and is reduced by 15% in a sale. What is the sale price?",
+    "options": {
+      "A": "€65",
+      "B": "€68",
+      "C": "€70",
+      "D": "€72"
+    },
+    "correct_answer": "B",
+    "explanation": "15% of €80 is €12; €80 - €12 = €68."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "45. How many edges does a cube have?",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "10",
+      "D": "12"
+    },
+    "correct_answer": "D",
+    "explanation": "A cube has 12 straight edges connecting its 8 vertices."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "46. What is the value of π (pi) rounded to two decimal places?",
+    "options": {
+      "A": "3.12",
+      "B": "3.14",
+      "C": "3.16",
+      "D": "3.18"
+    },
+    "correct_answer": "B",
+    "explanation": "The mathematical constant π is approximately 3.14159..., rounding to 3.14."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "47. Beginning with R, what is the name of an angle that measures more than 180° and less than 360°?",
+    "options": {
+      "A": "Right",
+      "B": "Reflex",
+      "C": "Radius",
+      "D": "Radian"
+    },
+    "correct_answer": "B",
+    "explanation": "A reflex angle is an angle greater than 180° but less than 360°."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "48. What is the least common multiple (LCM) of 6 and 8?",
+    "options": {
+      "A": "12",
+      "B": "18",
+      "C": "24",
+      "D": "48"
+    },
+    "correct_answer": "C",
+    "explanation": "Multiples of 6: 6, 12, 18, 24; multiples of 8: 8, 16, 24. The smallest shared multiple is 24."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "49. If 3x + 7 = 22, what is the value of x?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "C",
+    "explanation": "Subtract 7: 3x = 15; divide by 3: x = 5."
+  },
+  {
+    "topic": "Mathematics",
+    "question": "50. What is the next number in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13, ___?",
+    "options": {
+      "A": "18",
+      "B": "20",
+      "C": "21",
+      "D": "26"
+    },
+    "correct_answer": "C",
+    "explanation": "Each term is the sum of the two preceding terms: 8 + 13 = 21."
+  }
+]

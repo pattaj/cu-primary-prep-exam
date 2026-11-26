@@ -274,7 +274,8 @@ const availableModules = [
     { id: "music", title: "Music" },
     { id: "literature", title: "Literature" },
     { id: "gen-knowledge", title: "General Knowledge" },
-    { id: "countries", title: "Countries & Capitals" }
+    { id: "countries", title: "Countries & Capitals" },
+    { id: "picture-round", title: "Picture Round" }
 ];
 
 function shuffle(array) {
@@ -327,12 +328,10 @@ function evaluateAnswer(userInput, correctAnswerText, acceptedList = []) {
         .map(normalizeAnswer)
         .filter(Boolean);
 
-    // 1. Check for exact match first
     if (candidates.includes(normUser)) {
         return "exact";
     }
 
-    // 2. Check for minor spelling typos (skip pure numbers/years)
     for (const target of candidates) {
         if (/^\d+$/.test(target)) continue;
 
@@ -504,6 +503,11 @@ function renderQuestion() {
 
     const badgeClass = q.difficulty.toLowerCase();
     const cleanQuestion = q.question.replace(/^\d+\.\s*/, "");
+    const imageHtml = q.image
+        ? `<div class="question-image-wrap">
+               <img src="${q.image}" alt="Quiz picture" class="question-image" />
+           </div>`
+        : "";
 
     card.innerHTML = `
         <div class="question-header">
@@ -511,6 +515,7 @@ function renderQuestion() {
             <span class="difficulty-badge badge-${badgeClass}">${q.difficulty}</span>
             <span class="topic-tag">${q.topic}</span>
         </div>
+        ${imageHtml}
         <div class="question-title">${cleanQuestion}</div>
         <div class="answer-input-group">
             <input
@@ -943,6 +948,12 @@ window.reviewAnswers = () => {
             statusHtml = `<span style="font-weight:bold; color:#b45309;">✨ Almost! (Check spelling — Point Awarded)</span>`;
         }
 
+        const reviewImageHtml = q.image
+            ? `<div class="question-image-wrap">
+                   <img src="${q.image}" alt="Quiz picture" class="question-image review-thumb" />
+               </div>`
+            : "";
+
         card.innerHTML = `
             <div class="question-header">
                 <span class="q-number">${qLabel}</span>
@@ -950,6 +961,7 @@ window.reviewAnswers = () => {
                 ${statusHtml}
                 <span class="topic-tag">${q.topic}</span>
             </div>
+            ${reviewImageHtml}
             <div class="question-title">${q.question.replace(/^\d+\.\s*/, "")}</div>
             <div class="review-answer ${isCorrect ? 'review-correct' : 'review-wrong'}">
                 <b>Your Answer:</b> ${userText}
@@ -1080,7 +1092,12 @@ function renderFlashcard() {
     fcInner.classList.remove("is-flipped");
 
     document.getElementById("fcFrontBadge").innerText = `${card.topic} • ${card.difficulty}`;
-    document.getElementById("fcFrontText").innerText = card.question.replace(/^\d+\.\s*/, "");
+
+    const fcImgHtml = card.image
+        ? `<img src="${card.image}" alt="Flashcard picture" class="question-image fc-thumb" />`
+        : "";
+    document.getElementById("fcFrontText").innerHTML = `${fcImgHtml}<div>${card.question.replace(/^\d+\.\s*/, "")}</div>`;
+
     document.getElementById("fcBackAnswer").innerText = card.correctAnswerText;
     document.getElementById("fcBackExplanation").innerText = card.explanation;
     document.getElementById("fcCounter").innerText = `${flashcardIndex + 1} / ${currentQuizData.length}`;

@@ -20,7 +20,7 @@ const availableModules = [
     { id: "science", title: "Science" },
     { id: "history", title: "History" },
     { id: "geography", title: "Geography" },
-    { id: "sport", title: "Sport" },
+    { id: "sports", title: "Sports" },
     { id: "nature-env", title: "Nature & Environment" },
     { id: "music", title: "Music" },
     { id: "literature", title: "Literature" },

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Union Quiz</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Added oncontextmenu="return false;" to block right-click at the HTML level -->
+<body oncontextmenu="return false;">
+
+<!-- Mobile Navbar -->
+<div class="mobile-header">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <h2>Credit Union Quiz</h2>
+    <div style="width: 24px;"></div>
+</div>
+
+<!-- Dark Overlay for Mobile Menu -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<div class="app-layout">
+    <!-- Left Navigation Menu (Now with scrollbars) -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" onclick="toggleMenu()">✕</button>
+        
+        <h3>🗂️ Modules</h3>
+        <div id="moduleContainer"></div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h1 id="mainTitle">Credit Union Quiz</h1>
+        <h1 id="mainTitle">Primary Exam Preparation</h1>
+        <p style="text-align:center; color:#666; font-size: 18px; margin-top: 30px;" id="instructionsText">👈 Please select a Module from the menu to begin.</p>
+        
+        <!-- NEW: Mode Toggle Buttons -->
+        <div class="mode-toggle" id="modeToggleContainer" style="display: none;">
+            <button type="button" id="btnQuizMode" class="mode-btn active" onclick="switchMode('QUIZ')">📝 Quiz Mode</button>
+            <button type="button" id="btnFlashcardMode" class="mode-btn" onclick="switchMode('FLASHCARD')">📇 Flashcard Mode</button>
+        </div>
+
+        <!-- NEW: Flashcard Container -->
+        <div id="flashcardView" style="display:none; text-align:center;">
+            <p style="color: #666; margin-bottom: 15px;">Tap the card to flip it!</p>
+            <div class="flashcard-container" onclick="flipCard()">
+                <div class="flashcard" id="flashcardInner">
+                    <div class="flashcard-front">
+                        <div class="fc-question" id="fcFrontText">Loading...</div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="fc-answer" id="fcBackAnswer">Loading...</div>
+                        <div class="fc-explanation" id="fcBackExplanation">Loading...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination-controls" style="justify-content: center; align-items: center; margin-top: 25px;">
+                <button type="button" class="btn btn-outline" style="max-width: 150px;" onclick="prevFlashcard()">⬅ Prev</button>
+                <span id="fcCounter" style="margin: 0 15px; font-weight:bold; font-size: 18px; color: #1a73e8;">1 / 10</span>
+                <button type="button" class="btn btn-outline" style="max-width: 150px;" onclick="nextFlashcard()">Next ➡</button>
+            </div>
+        </div>
+        
+        <!-- The Quiz Container -->
+        <form id="quizForm">
+            <div id="quizContainer"></div>
+            
+            <!-- NEW: Pagination Controls -->
+            <div id="paginationControls" class="pagination-controls" style="display: none;">
+                <button type="button" class="btn btn-outline" id="prevPageBtn" onclick="prevPage()">⬅ Previous</button>
+                <button type="button" class="btn btn-outline" id="nextPageBtn" onclick="nextPage()">Next ➡</button>
+            </div>
+            
+            <!-- Submit Button (Shows only on the last page) -->
+            <button type="button" class="btn" id="submitQuizBtn" onclick="gradeQuiz()" style="display: none;">Submit Quiz & View Analytics</button>
+            
+            <div class="action-buttons" id="reviewActionBtns" style="display:none; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <button type="button" class="btn btn-outline" onclick="showAnalytics()">📊 Back to Analytics</button>
+                <button type="button" class="btn" onclick="retakeQuiz()">🔄 Retake This Section</button>
+            </div>
+        </form>
+        
+        <!-- Full Analytics Dashboard -->
+        <div id="fullAnalyticsView" class="full-analytics">
+            <h2 style="color: #1a73e8; margin-top:0;">Performance Dashboard</h2>
+            
+            <div class="score-circle" id="overallScoreCircle"></div>
+            <div class="score-feedback" id="overallScoreText"></div>
+
+            <div class="analytics-box">
+                <div class="analytics-title">📊 Topic Breakdown</div>
+                <div id="analyticsContent"></div>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="btn btn-outline" onclick="reviewAnswers()">👀 Review Answers</button>
+                <button type="button" class="btn" onclick="retakeQuiz()">🔄 Retake This Section</button>
+            </div>
+        </div>
+
+        <!-- ADD THIS FOOTER HERE -->
+        <footer class="app-footer">
+            <p>&copy; 2026 by Jane Patta. All rights reserved.</p>
+        </footer>
+        
+    </div>
+</div>
+
+<!-- CUSTOM MODAL POPUP -->
+<div id="customModal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h3 style="margin-top:0; color:#dc3545;">⚠️ Unanswered Questions</h3>
+        <p id="modalMessage"></p>
+        <div class="modal-actions">
+            <button id="modalCancelBtn" class="btn btn-outline" style="margin-top:0;">No, Keep Working</button>
+            <button id="modalConfirmBtn" class="btn" style="margin-top:0; background:#dc3545;">Yes, Submit Anyway</button>
+        </div>
+    </div>
+</div>
+
+<!-- Load Modern ES6 App Logic -->
+<script type="module" src="app.js"></script>
+
+</body>
+</html>

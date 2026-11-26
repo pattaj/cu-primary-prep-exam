@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "1. What is the capital city of Ireland?",
+    "options": {
+      "A": "Cork",
+      "B": "Galway",
+      "C": "Dublin",
+      "D": "Limerick"
+    },
+    "correct_answer": "C",
+    "explanation": "Dublin (Baile Átha Cliath) is the capital and largest city of Ireland."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "2. What is the capital city of the United Kingdom?",
+    "options": {
+      "A": "Edinburgh",
+      "B": "Manchester",
+      "C": "London",
+      "D": "Birmingham"
+    },
+    "correct_answer": "C",
+    "explanation": "London is the capital city of the United Kingdom and England, situated on the River Thames."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "3. What is the currency used in the United Kingdom?",
+    "options": {
+      "A": "Euro",
+      "B": "Pound Sterling",
+      "C": "Crown",
+      "D": "Dollar"
+    },
+    "correct_answer": "B",
+    "explanation": "The official currency of the United Kingdom is the Pound Sterling (£/GBP)."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "4. What is the capital city of Spain?",
+    "options": {
+      "A": "Barcelona",
+      "B": "Seville",
+      "C": "Madrid",
+      "D": "Valencia"
+    },
+    "correct_answer": "C",
+    "explanation": "Madrid is the capital city and political centre of the Kingdom of Spain."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "5. What is the capital city of Italy?",
+    "options": {
+      "A": "Milan",
+      "B": "Venice",
+      "C": "Rome",
+      "D": "Florence"
+    },
+    "correct_answer": "C",
+    "explanation": "Rome ('The Eternal City') has served as Italy's capital since 1871."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "6. What is the capital city of Germany?",
+    "options": {
+      "A": "Munich",
+      "B": "Frankfurt",
+      "C": "Berlin",
+      "D": "Hamburg"
+    },
+    "correct_answer": "C",
+    "explanation": "Berlin is the capital and largest city of the Federal Republic of Germany."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "7. What is the currency used in the United States?",
+    "options": {
+      "A": "Pound",
+      "B": "US Dollar",
+      "C": "Peso",
+      "D": "Euro"
+    },
+    "correct_answer": "B",
+    "explanation": "The United States Dollar ($/USD) is the national currency and global reserve currency."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "8. What is the capital city of the United States?",
+    "options": {
+      "A": "New York City",
+      "B": "Los Angeles",
+      "C": "Washington, D.C.",
+      "D": "Chicago"
+    },
+    "correct_answer": "C",
+    "explanation": "Washington, D.C. is the federal capital district of the United States."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "9. What is the capital city of Japan?",
+    "options": {
+      "A": "Kyoto",
+      "B": "Osaka",
+      "C": "Tokyo",
+      "D": "Sapporo"
+    },
+    "correct_answer": "C",
+    "explanation": "Tokyo is the capital and primary metropolitan hub of Japan."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "10. What is the capital city of China?",
+    "options": {
+      "A": "Shanghai",
+      "B": "Guangzhou",
+      "C": "Beijing",
+      "D": "Shenzhen"
+    },
+    "correct_answer": "C",
+    "explanation": "Beijing is the national capital and seat of government of the People's Republic of China."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "11. What is the capital city of Portugal?",
+    "options": {
+      "A": "Porto",
+      "B": "Faro",
+      "C": "Lisbon",
+      "D": "Coimbra"
+    },
+    "correct_answer": "C",
+    "explanation": "Lisbon is the coastal capital city of Portugal situated on the Tagus estuary."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "12. What is the capital city of Greece?",
+    "options": {
+      "A": "Thessaloniki",
+      "B": "Patras",
+      "C": "Athens",
+      "D": "Heraklion"
+    },
+    "correct_answer": "C",
+    "explanation": "Athens is the historic capital of Greece, renowned for the Acropolis."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "13. What is the capital city of Egypt?",
+    "options": {
+      "A": "Alexandria",
+      "B": "Giza",
+      "C": "Cairo",
+      "D": "Luxor"
+    },
+    "correct_answer": "C",
+    "explanation": "Cairo is Egypt's sprawling capital along the Nile River."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "14. What is the capital city of Northern Ireland?",
+    "options": {
+      "A": "Derry",
+      "B": "Armagh",
+      "C": "Belfast",
+      "D": "Lisburn"
+    },
+    "correct_answer": "C",
+    "explanation": "Belfast is the capital and largest city of Northern Ireland."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "15. What is the capital city of Scotland?",
+    "options": {
+      "A": "Glasgow",
+      "B": "Aberdeen",
+      "C": "Edinburgh",
+      "D": "Dundee"
+    },
+    "correct_answer": "C",
+    "explanation": "Edinburgh has been the recognized capital of Scotland since at least the 15th century."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "16. What is the capital city of Wales?",
+    "options": {
+      "A": "Swansea",
+      "B": "Newport",
+      "C": "Cardiff",
+      "D": "Bangor"
+    },
+    "correct_answer": "C",
+    "explanation": "Cardiff (Caerdydd) was proclaimed capital of Wales in 1955."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "17. Which country has a red maple leaf on its national flag?",
+    "options": {
+      "A": "United States",
+      "B": "Australia",
+      "C": "Canada",
+      "D": "New Zealand"
+    },
+    "correct_answer": "C",
+    "explanation": "Canada's national flag (the Maple Leaf / l'Unifolié) features a stylized red maple leaf centered on white."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "18. Which European country became the 21st member of the Eurozone on 1 January 2026, replacing the lev with the Euro?",
+    "options": {
+      "A": "Romania",
+      "B": "Bulgaria",
+      "C": "Czechia",
+      "D": "Poland"
+    },
+    "correct_answer": "B",
+    "explanation": "Bulgaria officially adopted the Euro on 1 January 2026, becoming the 21st member state."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "19. How many European Union countries use the Euro as their official currency as of 2026?",
+    "options": {
+      "A": "19",
+      "B": "20",
+      "C": "21",
+      "D": "27"
+    },
+    "correct_answer": "C",
+    "explanation": "Following Bulgaria's entry in 2026, 21 of the 27 EU member states use the Euro."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "20. What is the capital city of Canada?",
+    "options": {
+      "A": "Toronto",
+      "B": "Montreal",
+      "C": "Ottawa",
+      "D": "Vancouver"
+    },
+    "correct_answer": "C",
+    "explanation": "Ottawa in Ontario was designated the capital of Canada by Queen Victoria in 1857."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "21. What is the capital city of Brazil?",
+    "options": {
+      "A": "Rio de Janeiro",
+      "B": "São Paulo",
+      "C": "Brasília",
+      "D": "Salvador"
+    },
+    "correct_answer": "C",
+    "explanation": "Brasília was inaugurated in 1960 as the purpose-built federal capital of Brazil."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "22. What is the capital city of India?",
+    "options": {
+      "A": "Mumbai",
+      "B": "Kolkata",
+      "C": "New Delhi",
+      "D": "Bengaluru"
+    },
+    "correct_answer": "C",
+    "explanation": "New Delhi is the national capital of the Republic of India."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "23. What is the currency used in India?",
+    "options": {
+      "A": "Taka",
+      "B": "Indian Rupee",
+      "C": "Rupiah",
+      "D": "Dinar"
+    },
+    "correct_answer": "B",
+    "explanation": "The Indian Rupee (₹/INR) is issued and regulated by the Reserve Bank of India."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "24. What is the capital city of Poland?",
+    "options": {
+      "A": "Kraków",
+      "B": "Gdańsk",
+      "C": "Warsaw",
+      "D": "Wrocław"
+    },
+    "correct_answer": "C",
+    "explanation": "Warsaw (Warszawa) is the historic and political capital of Poland on the Vistula River."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "25. What is the currency used in Poland?",
+    "options": {
+      "A": "Euro",
+      "B": "Koruna",
+      "C": "Złoty",
+      "D": "Forint"
+    },
+    "correct_answer": "C",
+    "explanation": "Poland uses the Polish Złoty (PLN), meaning 'golden' in Polish."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "26. What is the capital city of the Netherlands?",
+    "options": {
+      "A": "Rotterdam",
+      "B": "The Hague",
+      "C": "Amsterdam",
+      "D": "Utrecht"
+    },
+    "correct_answer": "C",
+    "explanation": "Amsterdam is the constitutional capital of the Netherlands, though government seats reside in The Hague."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "27. What is the capital city of Belgium?",
+    "options": {
+      "A": "Antwerp",
+      "B": "Ghent",
+      "C": "Brussels",
+      "D": "Bruges"
+    },
+    "correct_answer": "C",
+    "explanation": "Brussels is the capital of Belgium and the de facto administrative headquarters of the European Union."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "28. What is the capital city of Austria?",
+    "options": {
+      "A": "Salzburg",
+      "B": "Innsbruck",
+      "C": "Vienna",
+      "D": "Graz"
+    },
+    "correct_answer": "C",
+    "explanation": "Vienna (Wien) on the Danube River is the federal capital of Austria."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "29. What is the capital city of Sweden?",
+    "options": {
+      "A": "Gothenburg",
+      "B": "Malmö",
+      "C": "Stockholm",
+      "D": "Uppsala"
+    },
+    "correct_answer": "C",
+    "explanation": "Stockholm spans 14 islands where Lake Mälaren flows into the Baltic Sea."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "30. What is the currency used in Sweden?",
+    "options": {
+      "A": "Euro",
+      "B": "Swedish Krona",
+      "C": "Danish Krone",
+      "D": "Markka"
+    },
+    "correct_answer": "B",
+    "explanation": "Sweden uses the Swedish Krona (SEK), maintaining its independent currency outside the Eurozone."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "31. What is the capital city of Norway?",
+    "options": {
+      "A": "Bergen",
+      "B": "Trondheim",
+      "C": "Oslo",
+      "D": "Stavanger"
+    },
+    "correct_answer": "C",
+    "explanation": "Oslo is the capital city and governmental hub of the Kingdom of Norway."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "32. What is the capital city of Mexico?",
+    "options": {
+      "A": "Guadalajara",
+      "B": "Monterrey",
+      "C": "Mexico City",
+      "D": "Cancún"
+    },
+    "correct_answer": "C",
+    "explanation": "Mexico City (Ciudad de México) is situated in the high Valley of Mexico."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "33. What is the currency used in Mexico?",
+    "options": {
+      "A": "Real",
+      "B": "Mexican Peso",
+      "C": "Dollar",
+      "D": "Sol"
+    },
+    "correct_answer": "B",
+    "explanation": "The Mexican Peso (MXN) is the official currency of the United Mexican States."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "34. What is the capital city of South Korea?",
+    "options": {
+      "A": "Busan",
+      "B": "Incheon",
+      "C": "Seoul",
+      "D": "Daegu"
+    },
+    "correct_answer": "C",
+    "explanation": "Seoul is the vibrant technological and cultural capital of the Republic of Korea."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "35. What is the capital city of Bulgaria?",
+    "options": {
+      "A": "Plovdiv",
+      "B": "Varna",
+      "C": "Sofia",
+      "D": "Burgas"
+    },
+    "correct_answer": "C",
+    "explanation": "Sofia is the capital and largest city of Bulgaria, located at the foot of Vitosha mountain."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "36. What is the capital city of Turkey?",
+    "options": {
+      "A": "Istanbul",
+      "B": "Izmir",
+      "C": "Ankara",
+      "D": "Antalya"
+    },
+    "correct_answer": "C",
+    "explanation": "Ankara in central Anatolia became the capital of the Republic of Turkey in 1923 under Atatürk."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "37. What is the capital city of New Zealand?",
+    "options": {
+      "A": "Auckland",
+      "B": "Christchurch",
+      "C": "Wellington",
+      "D": "Hamilton"
+    },
+    "correct_answer": "C",
+    "explanation": "Wellington at the southwestern tip of the North Island is the constitutional capital of New Zealand."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "38. What is the currency used in South Africa?",
+    "options": {
+      "A": "Shilling",
+      "B": "Kwanza",
+      "C": "Rand",
+      "D": "Pula"
+    },
+    "correct_answer": "C",
+    "explanation": "The South African Rand (ZAR) takes its name from the gold-rich Witwatersrand ridge."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "39. What is the capital city of Argentina?",
+    "options": {
+      "A": "Córdoba",
+      "B": "Rosario",
+      "C": "Buenos Aires",
+      "D": "Mendoza"
+    },
+    "correct_answer": "C",
+    "explanation": "Buenos Aires sits on the western shore of the Río de la Plata estuary."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "40. What is the capital city of Kenya?",
+    "options": {
+      "A": "Mombasa",
+      "B": "Kisumu",
+      "C": "Nairobi",
+      "D": "Nakuru"
+    },
+    "correct_answer": "C",
+    "explanation": "Nairobi is the economic and political capital of Kenya, known as 'The Green City in the Sun'."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "41. What is the currency used in China?",
+    "options": {
+      "A": "Yen",
+      "B": "Won",
+      "C": "Renminbi",
+      "D": "Ringgit"
+    },
+    "correct_answer": "C",
+    "explanation": "The Renminbi ('people's currency' / CNY), whose base unit is the Yuan, is China's official legal tender."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "42. What is the capital city of Hungary?",
+    "options": {
+      "A": "Debrecen",
+      "B": "Szeged",
+      "C": "Budapest",
+      "D": "Pécs"
+    },
+    "correct_answer": "C",
+    "explanation": "Budapest was formed in 1873 by uniting the historical cities of Buda, Óbuda, and Pest across the Danube."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "43. What is the currency used in Hungary?",
+    "options": {
+      "A": "Euro",
+      "B": "Złoty",
+      "C": "Forint",
+      "D": "Leu"
+    },
+    "correct_answer": "C",
+    "explanation": "Hungary's national currency is the Hungarian Forint (HUF)."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "44. What is the capital city of Morocco?",
+    "options": {
+      "A": "Casablanca",
+      "B": "Marrakech",
+      "C": "Rabat",
+      "D": "Fez"
+    },
+    "correct_answer": "C",
+    "explanation": "Rabat is the administrative capital of Morocco on the Atlantic coastline."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "45. What is the capital city of Iceland?",
+    "options": {
+      "A": "Akureyri",
+      "B": "Keflavík",
+      "C": "Reykjavík",
+      "D": "Hafnarfjörður"
+    },
+    "correct_answer": "C",
+    "explanation": "Reykjavík is the northernmost capital of a sovereign state in the world."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "46. What is the currency used in Brazil?",
+    "options": {
+      "A": "Peso",
+      "B": "Bolívar",
+      "C": "Real",
+      "D": "Sucre"
+    },
+    "correct_answer": "C",
+    "explanation": "The Brazilian Real (R$/BRL) has been the currency of Brazil since the Plano Real in 1994."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "47. What is the capital city of Thailand?",
+    "options": {
+      "A": "Chiang Mai",
+      "B": "Phuket",
+      "C": "Bangkok",
+      "D": "Pattaya"
+    },
+    "correct_answer": "C",
+    "explanation": "Bangkok (Krung Thep Maha Nakhon) is the bustling capital of the Kingdom of Thailand."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "48. What is the currency used in Thailand?",
+    "options": {
+      "A": "Dong",
+      "B": "Kyat",
+      "C": "Baht",
+      "D": "Riel"
+    },
+    "correct_answer": "C",
+    "explanation": "The Thai Baht (฿/THB) is the currency of Thailand."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "49. What is the capital city of Croatia (which adopted the Euro in 2023)?",
+    "options": {
+      "A": "Split",
+      "B": "Dubrovnik",
+      "C": "Zagreb",
+      "D": "Rijeka"
+    },
+    "correct_answer": "C",
+    "explanation": "Zagreb is the capital and largest city of Croatia, situated on the slopes of Medvednica mountain."
+  },
+  {
+    "topic": "Countries, Capitals & Currency",
+    "question": "50. What is the capital city of Vietnam?",
+    "options": {
+      "A": "Ho Chi Minh City",
+      "B": "Da Nang",
+      "C": "Hanoi",
+      "D": "Hai Phong"
+    },
+    "correct_answer": "C",
+    "explanation": "Hanoi is the historic capital of Vietnam, located in the northern Red River Delta."
+  }
+]

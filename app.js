@@ -42,10 +42,8 @@ let currentPage = 1;
 const QUESTIONS_PER_PAGE = 5;
 
 const availableModules = [
-    { id: "math", title: "Mathematics" },
-    { id: "cu-civic", title: "Credit Union and Civic Ireland" },
-    { id: "science", title: "Science" },
-    { id: "gen-knowledge", title: "General Knowledge" }
+    { id: "ca", title: "Current Affairs" },
+    { id: "cu-civic", title: "Credit Union and Civic Ireland" }
 ];
 
 const shuffleArray = (array) => {

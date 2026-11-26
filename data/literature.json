@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Literature",
+    "question": "1. Who wrote the Harry Potter series of books?",
+    "options": {
+      "A": "Enid Blyton",
+      "B": "J.K. Rowling",
+      "C": "Philip Pullman",
+      "D": "Suzanne Collins"
+    },
+    "correct_answer": "B",
+    "explanation": "J.K. Rowling authored the seven fantasy novels chronicling Harry Potter's years at Hogwarts."
+  },
+  {
+    "topic": "Literature",
+    "question": "2. Who wrote Matilda, The BFG, and James and the Giant Peach?",
+    "options": {
+      "A": "Michael Morpurgo",
+      "B": "Roald Dahl",
+      "C": "David Walliams",
+      "D": "C.S. Lewis"
+    },
+    "correct_answer": "B",
+    "explanation": "Roald Dahl was a British author renowned for beloved children's fiction illustrated by Quentin Blake."
+  },
+  {
+    "topic": "Literature",
+    "question": "3. What is the name of the boy who never grows up in J.M. Barrie's famous story?",
+    "options": {
+      "A": "Tom Sawyer",
+      "B": "Peter Pan",
+      "C": "Oliver Twist",
+      "D": "Huckleberry Finn"
+    },
+    "correct_answer": "B",
+    "explanation": "Peter Pan is J.M. Barrie's character who lives in Neverland leading the Lost Boys."
+  },
+  {
+    "topic": "Literature",
+    "question": "4. In The Jungle Book, what is the name of the boy raised by wolves?",
+    "options": {
+      "A": "Tarzan",
+      "B": "Mowgli",
+      "C": "Kim",
+      "D": "Rikki-Tikki-Tavi"
+    },
+    "correct_answer": "B",
+    "explanation": "Rudyard Kipling's Mowgli is the 'man-cub' nurtured by the Seeonee wolf pack in the Indian jungle."
+  },
+  {
+    "topic": "Literature",
+    "question": "5. Who wrote the Diary of a Wimpy Kid series?",
+    "options": {
+      "A": "Dav Pilkey",
+      "B": "Jeff Kinney",
+      "C": "Lincoln Peirce",
+      "D": "Liz Pichon"
+    },
+    "correct_answer": "B",
+    "explanation": "Jeff Kinney created Greg Heffley in the illustrated comedy series Diary of a Wimpy Kid."
+  },
+  {
+    "topic": "Literature",
+    "question": "6. What is the name of the famous bear from Darkest Peru who loves marmalade sandwiches?",
+    "options": {
+      "A": "Winnie-the-Pooh",
+      "B": "Paddington Bear",
+      "C": "Yogi Bear",
+      "D": "Rupert Bear"
+    },
+    "correct_answer": "B",
+    "explanation": "Paddington Bear, created by Michael Bond, arrives at Paddington Station wearing an old duffle coat."
+  },
+  {
+    "topic": "Literature",
+    "question": "7. Who wrote the plays Romeo and Juliet, Macbeth, and Hamlet?",
+    "options": {
+      "A": "Christopher Marlowe",
+      "B": "William Shakespeare",
+      "C": "Ben Jonson",
+      "D": "John Milton"
+    },
+    "correct_answer": "B",
+    "explanation": "William Shakespeare is England's national poet, having composed approximately 39 plays."
+  },
+  {
+    "topic": "Literature",
+    "question": "8. In Alice's Adventures in Wonderland, what animal does Alice follow down a hole?",
+    "options": {
+      "A": "Cheshire Cat",
+      "B": "White Rabbit",
+      "C": "March Hare",
+      "D": "Dormouse"
+    },
+    "correct_answer": "B",
+    "explanation": "Alice follows the waistcoat-wearing White Rabbit holding a pocket watch down the rabbit-hole."
+  },
+  {
+    "topic": "Literature",
+    "question": "9. Who wrote The Gruffalo?",
+    "options": {
+      "A": "Beatrix Potter",
+      "B": "Julia Donaldson",
+      "C": "Shirley Hughes",
+      "D": "Jacqueline Wilson"
+    },
+    "correct_answer": "B",
+    "explanation": "Julia Donaldson wrote The Gruffalo, with illustrations provided by Axel Scheffler."
+  },
+  {
+    "topic": "Literature",
+    "question": "10. What is the name of the famous detective who lives at 221B Baker Street in London?",
+    "options": {
+      "A": "Hercule Poirot",
+      "B": "Sherlock Holmes",
+      "C": "Miss Marple",
+      "D": "Inspector Morse"
+    },
+    "correct_answer": "B",
+    "explanation": "Sir Arthur Conan Doyle's legendary consulting detective Sherlock Holmes resided at 221B Baker Street."
+  },
+  {
+    "topic": "Literature",
+    "question": "11. In The Cat in the Hat, who is the author?",
+    "options": {
+      "A": "Shel Silverstein",
+      "B": "Dr. Seuss",
+      "C": "Maurice Sendak",
+      "D": "Eric Carle"
+    },
+    "correct_answer": "B",
+    "explanation": "Dr. Seuss (Theodor Seuss Geisel) wrote and illustrated The Cat in the Hat in 1957."
+  },
+  {
+    "topic": "Literature",
+    "question": "12. What is the name of the wooden puppet whose nose grows when he tells a lie?",
+    "options": {
+      "A": "Gepetto",
+      "B": "Pinocchio",
+      "C": "Punch",
+      "D": "Jiminy"
+    },
+    "correct_answer": "B",
+    "explanation": "Carlo Collodi created the puppet Pinocchio, whose wooden nose lengthens under stress of lying."
+  },
+  {
+    "topic": "Literature",
+    "question": "13. Who wrote Gangsta Granny and Billionaire Boy?",
+    "options": {
+      "A": "Anthony Horowitz",
+      "B": "David Walliams",
+      "C": "Terry Deary",
+      "D": "Eoin Colfer"
+    },
+    "correct_answer": "B",
+    "explanation": "Comedian and author David Walliams wrote Gangsta Granny, Billionaire Boy, and Demon Dentist."
+  },
+  {
+    "topic": "Literature",
+    "question": "14. In Winnie-the-Pooh, what kind of animal is Eeyore?",
+    "options": {
+      "A": "Pig",
+      "B": "Donkey",
+      "C": "Bear",
+      "D": "Tiger"
+    },
+    "correct_answer": "B",
+    "explanation": "Eeyore is a gloomy, old grey stuffed donkey in A.A. Milne's Winnie-the-Pooh books."
+  },
+  {
+    "topic": "Literature",
+    "question": "15. What is the name of the fairy in Peter Pan?",
+    "options": {
+      "A": "Silvermist",
+      "B": "Tinker Bell",
+      "C": "Periwinkle",
+      "D": "Rosetta"
+    },
+    "correct_answer": "B",
+    "explanation": "Tinker Bell is the feisty pixie who accompanies Peter Pan and sprinkles pixie dust."
+  },
+  {
+    "topic": "Literature",
+    "question": "16. In The Hunger Games, what is the name of the main heroine?",
+    "options": {
+      "A": "Tris Prior",
+      "B": "Katniss Everdeen",
+      "C": "Hermione Granger",
+      "D": "Bella Swan"
+    },
+    "correct_answer": "B",
+    "explanation": "Suzanne Collins created Katniss Everdeen, the 'Girl on Fire' from District 12."
+  },
+  {
+    "topic": "Literature",
+    "question": "17. Who wrote The Very Hungry Caterpillar?",
+    "options": {
+      "A": "Leo Lionni",
+      "B": "Eric Carle",
+      "C": "Quentin Blake",
+      "D": "Rod Campbell"
+    },
+    "correct_answer": "B",
+    "explanation": "Eric Carle designed and wrote the classic collage picture book The Very Hungry Caterpillar."
+  },
+  {
+    "topic": "Literature",
+    "question": "18. Which Irish author from Wexford wrote the Artemis Fowl series?",
+    "options": {
+      "A": "Darren Shan",
+      "B": "Eoin Colfer",
+      "C": "Derek Landy",
+      "D": "Paul Stewart"
+    },
+    "correct_answer": "B",
+    "explanation": "Eoin Colfer from Wexford wrote the fantasy adventure series following teenage mastermind Artemis Fowl."
+  },
+  {
+    "topic": "Literature",
+    "question": "19. Which Irish author wrote Skulduggery Pleasant?",
+    "options": {
+      "A": "Eoin Colfer",
+      "B": "Derek Landy",
+      "C": "Darren Shan",
+      "D": "Cormac McCarthy"
+    },
+    "correct_answer": "B",
+    "explanation": "Derek Landy from Lusk, County Dublin, created the skeleton detective Skulduggery Pleasant."
+  },
+  {
+    "topic": "Literature",
+    "question": "20. Who wrote The Hobbit and The Lord of the Rings?",
+    "options": {
+      "A": "C.S. Lewis",
+      "B": "J.R.R. Tolkien",
+      "C": "George R.R. Martin",
+      "D": "Terry Pratchett"
+    },
+    "correct_answer": "B",
+    "explanation": "J.R.R. Tolkien, Oxford professor of Old English, developed Middle-earth mythology and languages."
+  },
+  {
+    "topic": "Literature",
+    "question": "21. Who wrote the classic novel Treasure Island?",
+    "options": {
+      "A": "Daniel Defoe",
+      "B": "Robert Louis Stevenson",
+      "C": "Jules Verne",
+      "D": "H.G. Wells"
+    },
+    "correct_answer": "B",
+    "explanation": "Scottish author Robert Louis Stevenson wrote Treasure Island featuring Long John Silver."
+  },
+  {
+    "topic": "Literature",
+    "question": "22. Which Irish author wrote Gulliver's Travels?",
+    "options": {
+      "A": "Laurence Sterne",
+      "B": "Jonathan Swift",
+      "C": "Oliver Goldsmith",
+      "D": "Edmund Burke"
+    },
+    "correct_answer": "B",
+    "explanation": "Jonathan Swift, Dean of St Patrick's Cathedral in Dublin, published Gulliver's Travels in 1726."
+  },
+  {
+    "topic": "Literature",
+    "question": "23. Who wrote Charlotte's Web?",
+    "options": {
+      "A": "Beverly Cleary",
+      "B": "E.B. White",
+      "C": "Laura Ingalls Wilder",
+      "D": "Lois Lowry"
+    },
+    "correct_answer": "B",
+    "explanation": "E.B. White wrote Charlotte's Web about the friendship between Wilbur the pig and Charlotte the spider."
+  },
+  {
+    "topic": "Literature",
+    "question": "24. Which Irish author wrote The Boy in the Striped Pyjamas?",
+    "options": {
+      "A": "Colm Tóibín",
+      "B": "John Boyne",
+      "C": "Roddy Doyle",
+      "D": "Sebastian Barry"
+    },
+    "correct_answer": "B",
+    "explanation": "Dublin author John Boyne wrote the internationally bestselling Holocaust novel The Boy in the Striped Pyjamas."
+  },
+  {
+    "topic": "Literature",
+    "question": "25. Who wrote Pride and Prejudice?",
+    "options": {
+      "A": "Charlotte Brontë",
+      "B": "Jane Austen",
+      "C": "George Eliot",
+      "D": "Emily Brontë"
+    },
+    "correct_answer": "B",
+    "explanation": "Jane Austen published Pride and Prejudice in 1813 focusing on Elizabeth Bennet and Mr. Darcy."
+  },
+  {
+    "topic": "Literature",
+    "question": "26. What is the name of the famous monster created by Victor Frankenstein in Mary Shelley's novel?",
+    "options": {
+      "A": "Frankenstein",
+      "B": "Frankenstein's monster",
+      "C": "Igor",
+      "D": "Dracula"
+    },
+    "correct_answer": "B",
+    "explanation": "In Mary Shelley's novel, Frankenstein is the creator scientist; the creature itself is given no personal name."
+  },
+  {
+    "topic": "Literature",
+    "question": "27. Who wrote A Christmas Carol and Oliver Twist?",
+    "options": {
+      "A": "William Makepeace Thackeray",
+      "B": "Charles Dickens",
+      "C": "Thomas Hardy",
+      "D": "Anthony Trollope"
+    },
+    "correct_answer": "B",
+    "explanation": "Charles Dickens chronicled Victorian society in Oliver Twist, Great Expectations, and A Christmas Carol."
+  },
+  {
+    "topic": "Literature",
+    "question": "28. Which Irish playwright and author wrote The Picture of Dorian Gray and The Happy Prince?",
+    "options": {
+      "A": "George Bernard Shaw",
+      "B": "Oscar Wilde",
+      "C": "J.M. Synge",
+      "D": "Sean O'Casey"
+    },
+    "correct_answer": "B",
+    "explanation": "Dublin-born Oscar Wilde was a brilliant wit, playwright, and novelist of the Victorian era."
+  },
+  {
+    "topic": "Literature",
+    "question": "29. What is the name of the legendary Irish warrior who burned his thumb cooking the Salmon of Knowledge?",
+    "options": {
+      "A": "Cú Chulainn",
+      "B": "Fionn mac Cumhaill",
+      "C": "Oisín",
+      "D": "Diarmuid Ua Duibhne"
+    },
+    "correct_answer": "B",
+    "explanation": "Fionn mac Cumhaill burned his thumb on the Salmon of Knowledge (Bradán Feasa) and gained boundless wisdom."
+  },
+  {
+    "topic": "Literature",
+    "question": "30. Who wrote Percy Jackson and the Lightning Thief?",
+    "options": {
+      "A": "Brandon Mull",
+      "B": "Rick Riordan",
+      "C": "Christopher Paolini",
+      "D": "Philip Reeve"
+    },
+    "correct_answer": "B",
+    "explanation": "Rick Riordan wrote the Percy Jackson & the Olympians fantasy adventure series."
+  },
+  {
+    "topic": "Literature",
+    "question": "31. Which Irish author wrote Under the Hawthorn Tree, set during the Great Famine?",
+    "options": {
+      "A": "Siobhán Parkinson",
+      "B": "Marita Conlon-McKenna",
+      "C": "Patricia Lynch",
+      "D": "Cora Harrison"
+    },
+    "correct_answer": "B",
+    "explanation": "Marita Conlon-McKenna wrote Under the Hawthorn Tree, the first volume in the Children of the Famine trilogy."
+  },
+  {
+    "topic": "Literature",
+    "question": "32. In The Chronicles of Narnia, what kind of animal is Aslan?",
+    "options": {
+      "A": "Leopard",
+      "B": "Lion",
+      "C": "Eagle",
+      "D": "Stag"
+    },
+    "correct_answer": "B",
+    "explanation": "C.S. Lewis created Aslan the Great Lion as the majestic guardian and creator of Narnia."
+  },
+  {
+    "topic": "Literature",
+    "question": "33. Who wrote The Adventures of Tom Sawyer and Huckleberry Finn?",
+    "options": {
+      "A": "Herman Melville",
+      "B": "Mark Twain",
+      "C": "F. Scott Fitzgerald",
+      "D": "Jack London"
+    },
+    "correct_answer": "B",
+    "explanation": "Mark Twain (Samuel Clemens) drew on his Mississippi River upbringing to write these American classics."
+  },
+  {
+    "topic": "Literature",
+    "question": "34. What is the name of the traditional Japanese poem made of three lines with 5, 7, and 5 syllables?",
+    "options": {
+      "A": "Tanka",
+      "B": "Haiku",
+      "C": "Senryu",
+      "D": "Limerick"
+    },
+    "correct_answer": "B",
+    "explanation": "A traditional Japanese haiku poem consists of 17 on (syllabic morae) arranged in a 5-7-5 structure."
+  },
+  {
+    "topic": "Literature",
+    "question": "35. Which Canadian poet and author won the 2026 Nobel Prize in Literature?",
+    "options": {
+      "A": "Margaret Atwood",
+      "B": "Anne Carson",
+      "C": "Michael Ondaatje",
+      "D": "Alice Munro"
+    },
+    "correct_answer": "B",
+    "explanation": "Anne Carson, acclaimed classicist and lyric poet, was awarded the Nobel Prize in Literature in 2026."
+  },
+  {
+    "topic": "Literature",
+    "question": "36. Which British science fiction author won the 2026 Booker Prize for The End of Everything?",
+    "options": {
+      "A": "Alan Moore",
+      "B": "M. John Harrison",
+      "C": "China Miéville",
+      "D": "Neil Gaiman"
+    },
+    "correct_answer": "B",
+    "explanation": "M. John Harrison was awarded the 2026 Booker Prize for his novel The End of Everything."
+  },
+  {
+    "topic": "Literature",
+    "question": "37. Which Irish author wrote Ulysses and Dubliners?",
+    "options": {
+      "A": "Flann O'Brien",
+      "B": "James Joyce",
+      "C": "Patrick Kavanagh",
+      "D": "Brian O'Nolan"
+    },
+    "correct_answer": "B",
+    "explanation": "James Joyce pioneered modernist prose in Dubliners, A Portrait of the Artist, and Ulysses."
+  },
+  {
+    "topic": "Literature",
+    "question": "38. How many Irish writers have won the Nobel Prize in Literature?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "correct_answer": "C",
+    "explanation": "Four Irish writers have won the Nobel Prize: W.B. Yeats (1923), G.B. Shaw (1925), Samuel Beckett (1969), and Seamus Heaney (1995)."
+  },
+  {
+    "topic": "Literature",
+    "question": "39. Which Irish playwright won the 1969 Nobel Prize in Literature and wrote Waiting for Godot?",
+    "options": {
+      "A": "Brendan Behan",
+      "B": "Samuel Beckett",
+      "C": "Brian Friel",
+      "D": "Tom Murphy"
+    },
+    "correct_answer": "B",
+    "explanation": "Samuel Beckett wrote landmark absurdist works including Waiting for Godot and Endgame."
+  },
+  {
+    "topic": "Literature",
+    "question": "40. Beginning with P, what is the name for a fictional name used by an author instead of their real name?",
+    "options": {
+      "A": "Protagonist",
+      "B": "Pseudonym",
+      "C": "Parable",
+      "D": "Pastiche"
+    },
+    "correct_answer": "B",
+    "explanation": "A pseudonym (or pen name / nom de plume) is an invented name adopted by an author."
+  },
+  {
+    "topic": "Literature",
+    "question": "41. Which ancient Greek poet is credited with writing The Iliad and The Odyssey?",
+    "options": {
+      "A": "Hesiod",
+      "B": "Homer",
+      "C": "Sophocles",
+      "D": "Euripides"
+    },
+    "correct_answer": "B",
+    "explanation": "Homer is the foundational poet of classical antiquity to whom the Greek epic poems are attributed."
+  },
+  {
+    "topic": "Literature",
+    "question": "42. Who wrote the dystopian novels 1984 and Animal Farm?",
+    "options": {
+      "A": "Aldous Huxley",
+      "B": "George Orwell",
+      "C": "Ray Bradbury",
+      "D": "H.G. Wells"
+    },
+    "correct_answer": "B",
+    "explanation": "George Orwell (Eric Arthur Blair) penned the political satires Animal Farm and Nineteen Eighty-Four."
+  },
+  {
+    "topic": "Literature",
+    "question": "43. Which Irish poet wrote \"The Lake Isle of Innisfree\" and won the Nobel Prize in Literature in 1923?",
+    "options": {
+      "A": "Patrick Kavanagh",
+      "B": "W.B. Yeats",
+      "C": "Seamus Heaney",
+      "D": "Louis MacNeice"
+    },
+    "correct_answer": "B",
+    "explanation": "William Butler Yeats was a pillar of the Irish Literary Revival and co-founder of the Abbey Theatre."
+  },
+  {
+    "topic": "Literature",
+    "question": "44. Beginning with A, what is the literary device where several nearby words start with the same consonant sound (e.g., \"Peter Piper picked\")?",
+    "options": {
+      "A": "Assonance",
+      "B": "Alliteration",
+      "C": "Allegory",
+      "D": "Anaphora"
+    },
+    "correct_answer": "B",
+    "explanation": "Alliteration is the repetition of identical initial consonant sounds in neighbouring syllables."
+  },
+  {
+    "topic": "Literature",
+    "question": "45. Who wrote To Kill a Mockingbird?",
+    "options": {
+      "A": "Toni Morrison",
+      "B": "Harper Lee",
+      "C": "Flannery O'Connor",
+      "D": "Carson McCullers"
+    },
+    "correct_answer": "B",
+    "explanation": "Harper Lee won the Pulitzer Prize in 1961 for her classic novel To Kill a Mockingbird."
+  },
+  {
+    "topic": "Literature",
+    "question": "46. Which Irish author won the 2023 Booker Prize for Prophet Song?",
+    "options": {
+      "A": "Kevin Barry",
+      "B": "Paul Lynch",
+      "C": "Paul Murray",
+      "D": "Donal Ryan"
+    },
+    "correct_answer": "B",
+    "explanation": "Paul Lynch won the 2023 Booker Prize for his dystopian Dublin novel Prophet Song."
+  },
+  {
+    "topic": "Literature",
+    "question": "47. Beginning with S, what is a 14-line poem with a fixed rhyme scheme, famously used by Shakespeare?",
+    "options": {
+      "A": "Stanza",
+      "B": "Sonnet",
+      "C": "Sestina",
+      "D": "Spenserian"
+    },
+    "correct_answer": "B",
+    "explanation": "A sonnet consists of 14 lines in iambic pentameter with a structured rhyming pattern."
+  },
+  {
+    "topic": "Literature",
+    "question": "48. Who wrote Moby-Dick?",
+    "options": {
+      "A": "Nathaniel Hawthorne",
+      "B": "Herman Melville",
+      "C": "Edgar Allan Poe",
+      "D": "Walt Whitman"
+    },
+    "correct_answer": "B",
+    "explanation": "Herman Melville published Moby-Dick in 1851 recounting Captain Ahab's quest for the white whale."
+  },
+  {
+    "topic": "Literature",
+    "question": "49. Which Irish author wrote Normal People and Intermezzo?",
+    "options": {
+      "A": "Claire Keegan",
+      "B": "Sally Rooney",
+      "C": "Marian Keyes",
+      "D": "Emma Donoghue"
+    },
+    "correct_answer": "B",
+    "explanation": "Sally Rooney from County Mayo wrote the bestselling novels Conversations with Friends, Normal People, and Intermezzo."
+  },
+  {
+    "topic": "Literature",
+    "question": "50. Beginning with O, what figure of speech uses words that imitate natural sounds, such as \"buzz\", \"hiss\", or \"bang\"?",
+    "options": {
+      "A": "Oxymoron",
+      "B": "Onomatopoeia",
+      "C": "Optative",
+      "D": "Oratory"
+    },
+    "correct_answer": "B",
+    "explanation": "Onomatopoeia refers to the formation of a word from a sound associated with what is named."
+  }
+]

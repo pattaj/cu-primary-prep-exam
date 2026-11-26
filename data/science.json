@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Science",
+    "question": "1. Which planet is closest to the Sun?",
+    "options": {
+      "A": "Venus",
+      "B": "Mercury",
+      "C": "Mars",
+      "D": "Earth"
+    },
+    "correct_answer": "B",
+    "explanation": "Mercury has the closest orbit to the Sun in our solar system."
+  },
+  {
+    "topic": "Science",
+    "question": "2. What is the largest planet in our solar system?",
+    "options": {
+      "A": "Saturn",
+      "B": "Neptune",
+      "C": "Jupiter",
+      "D": "Uranus"
+    },
+    "correct_answer": "C",
+    "explanation": "Jupiter is the gas giant with the largest diameter and greatest mass in our solar system."
+  },
+  {
+    "topic": "Science",
+    "question": "3. What gas do humans need to breathe in to survive?",
+    "options": {
+      "A": "Carbon dioxide",
+      "B": "Nitrogen",
+      "C": "Oxygen",
+      "D": "Hydrogen"
+    },
+    "correct_answer": "C",
+    "explanation": "Humans inhale oxygen from the air for cellular respiration."
+  },
+  {
+    "topic": "Science",
+    "question": "4. At what temperature in degrees Celsius does pure water freeze?",
+    "options": {
+      "A": "-5°C",
+      "B": "0°C",
+      "C": "10°C",
+      "D": "32°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Under standard atmospheric pressure, pure water freezes at 0°C."
+  },
+  {
+    "topic": "Science",
+    "question": "5. What force pulls objects towards the centre of the Earth?",
+    "options": {
+      "A": "Magnetism",
+      "B": "Friction",
+      "C": "Gravity",
+      "D": "Inertia"
+    },
+    "correct_answer": "C",
+    "explanation": "Gravity is the fundamental attractive force between masses."
+  },
+  {
+    "topic": "Science",
+    "question": "6. Which organ in the human body pumps blood?",
+    "options": {
+      "A": "Lungs",
+      "B": "Liver",
+      "C": "The heart",
+      "D": "Kidneys"
+    },
+    "correct_answer": "C",
+    "explanation": "The heart is the muscular organ that pumps oxygenated and deoxygenated blood through the circulatory system."
+  },
+  {
+    "topic": "Science",
+    "question": "7. What are the three main states of matter?",
+    "options": {
+      "A": "Solid, liquid, and gas",
+      "B": "Ice, water, and steam",
+      "C": "Solid, plasma, and vapour",
+      "D": "Liquid, gas, and energy"
+    },
+    "correct_answer": "A",
+    "explanation": "The three classical states of matter are solid, liquid, and gas."
+  },
+  {
+    "topic": "Science",
+    "question": "8. What is the chemical formula for water?",
+    "options": {
+      "A": "CO2",
+      "B": "H2O",
+      "C": "NaCl",
+      "D": "O2"
+    },
+    "correct_answer": "B",
+    "explanation": "Water molecules consist of two hydrogen atoms bonded to one oxygen atom (H2O)."
+  },
+  {
+    "topic": "Science",
+    "question": "9. Which planet is famous for its large, bright ring system?",
+    "options": {
+      "A": "Jupiter",
+      "B": "Saturn",
+      "C": "Mars",
+      "D": "Neptune"
+    },
+    "correct_answer": "B",
+    "explanation": "Saturn is widely renowned for its prominent and extensive system of planetary rings."
+  },
+  {
+    "topic": "Science",
+    "question": "10. What part of a plant absorbs water and nutrients from the soil?",
+    "options": {
+      "A": "Leaves",
+      "B": "Stem",
+      "C": "Roots",
+      "D": "Flowers"
+    },
+    "correct_answer": "C",
+    "explanation": "Roots anchor the plant and absorb moisture and essential mineral nutrients from soil."
+  },
+  {
+    "topic": "Science",
+    "question": "11. How many bones are in the adult human body?",
+    "options": {
+      "A": "186",
+      "B": "206",
+      "C": "216",
+      "D": "250"
+    },
+    "correct_answer": "B",
+    "explanation": "An adult human skeletal system consists of 206 distinct bones."
+  },
+  {
+    "topic": "Science",
+    "question": "12. What is the hardest natural substance on Earth?",
+    "options": {
+      "A": "Titanium",
+      "B": "Granite",
+      "C": "Diamond",
+      "D": "Quartz"
+    },
+    "correct_answer": "C",
+    "explanation": "Diamond, a crystalline form of carbon, scores 10 on Mohs scale of mineral hardness."
+  },
+  {
+    "topic": "Science",
+    "question": "13. Which metal is liquid at room temperature?",
+    "options": {
+      "A": "Lead",
+      "B": "Mercury",
+      "C": "Aluminium",
+      "D": "Zinc"
+    },
+    "correct_answer": "B",
+    "explanation": "Mercury (Hg) is the only standard metallic element that remains liquid at standard ambient temperature."
+  },
+  {
+    "topic": "Science",
+    "question": "14. What instrument is used to measure temperature?",
+    "options": {
+      "A": "Barometer",
+      "B": "Thermometer",
+      "C": "Anemometer",
+      "D": "Hygrometer"
+    },
+    "correct_answer": "B",
+    "explanation": "A thermometer measures temperature in degrees Celsius, Fahrenheit, or Kelvin."
+  },
+  {
+    "topic": "Science",
+    "question": "15. Which sense organ is responsible for balance as well as hearing?",
+    "options": {
+      "A": "The eye",
+      "B": "The ear",
+      "C": "The nose",
+      "D": "The tongue"
+    },
+    "correct_answer": "B",
+    "explanation": "The inner ear houses the vestibular system, which controls balance and spatial orientation."
+  },
+  {
+    "topic": "Science",
+    "question": "16. What is the name of the galaxy that contains our solar system?",
+    "options": {
+      "A": "Andromeda",
+      "B": "The Milky Way",
+      "C": "Triangulum",
+      "D": "Centaurus A"
+    },
+    "correct_answer": "B",
+    "explanation": "Our solar system resides in the barred spiral galaxy called the Milky Way."
+  },
+  {
+    "topic": "Science",
+    "question": "17. What do we call animals that eat only plants?",
+    "options": {
+      "A": "Carnivores",
+      "B": "Herbivores",
+      "C": "Omnivores",
+      "D": "Insectivores"
+    },
+    "correct_answer": "B",
+    "explanation": "Herbivores are organisms anatomically and physiologically adapted to eating plant material."
+  },
+  {
+    "topic": "Science",
+    "question": "18. What is the chemical symbol for Iron?",
+    "options": {
+      "A": "Ir",
+      "B": "In",
+      "C": "Fe",
+      "D": "Au"
+    },
+    "correct_answer": "C",
+    "explanation": "Fe comes from the Latin word for iron, 'ferrum'."
+  },
+  {
+    "topic": "Science",
+    "question": "19. What is the chemical symbol for Sodium?",
+    "options": {
+      "A": "So",
+      "B": "Sd",
+      "C": "Na",
+      "D": "Sm"
+    },
+    "correct_answer": "C",
+    "explanation": "Na originates from the Latin name 'natrium'."
+  },
+  {
+    "topic": "Science",
+    "question": "20. What is the most abundant gas in Earth's atmosphere?",
+    "options": {
+      "A": "Oxygen",
+      "B": "Carbon dioxide",
+      "C": "Nitrogen",
+      "D": "Argon"
+    },
+    "correct_answer": "C",
+    "explanation": "Nitrogen accounts for approximately 78% of Earth's atmospheric volume."
+  },
+  {
+    "topic": "Science",
+    "question": "21. What is the longest and strongest bone in the human body?",
+    "options": {
+      "A": "Tibia",
+      "B": "Humerus",
+      "C": "Femur",
+      "D": "Fibula"
+    },
+    "correct_answer": "C",
+    "explanation": "The femur (thigh bone) is the longest, heaviest, and strongest bone in the body."
+  },
+  {
+    "topic": "Science",
+    "question": "22. Beginning with P, what is the process by which green plants use sunlight to make their own food?",
+    "options": {
+      "A": "Pollination",
+      "B": "Photosynthesis",
+      "C": "Phosphorylation",
+      "D": "Propagation"
+    },
+    "correct_answer": "B",
+    "explanation": "Photosynthesis uses sunlight, carbon dioxide, and water to synthesize glucose and oxygen."
+  },
+  {
+    "topic": "Science",
+    "question": "23. What is the green pigment in plants that absorbs sunlight?",
+    "options": {
+      "A": "Carotene",
+      "B": "Chlorophyll",
+      "C": "Xanthophyll",
+      "D": "Anthocyanin"
+    },
+    "correct_answer": "B",
+    "explanation": "Chlorophyll in chloroplasts absorbs light energy necessary for photosynthesis."
+  },
+  {
+    "topic": "Science",
+    "question": "24. Which blood cells help the body fight off infections?",
+    "options": {
+      "A": "Red blood cells",
+      "B": "Platelets",
+      "C": "White blood cells",
+      "D": "Plasma"
+    },
+    "correct_answer": "C",
+    "explanation": "White blood cells (leukocytes) are key cells of the immune system defending against pathogens."
+  },
+  {
+    "topic": "Science",
+    "question": "25. What is the unit used to measure electrical resistance?",
+    "options": {
+      "A": "Volt",
+      "B": "Ampere",
+      "C": "Ohm",
+      "D": "Watt"
+    },
+    "correct_answer": "C",
+    "explanation": "Electrical resistance is quantified in ohms (symbol: Ω)."
+  },
+  {
+    "topic": "Science",
+    "question": "26. Which scientist developed the laws of motion and universal gravitation?",
+    "options": {
+      "A": "Albert Einstein",
+      "B": "Galileo Galilei",
+      "C": "Sir Isaac Newton",
+      "D": "Johannes Kepler"
+    },
+    "correct_answer": "C",
+    "explanation": "Sir Isaac Newton formulated the classical three laws of motion and universal gravitation in 1687."
+  },
+  {
+    "topic": "Science",
+    "question": "27. What is the name of the process by which liquid water turns into water vapour?",
+    "options": {
+      "A": "Condensation",
+      "B": "Evaporation",
+      "C": "Precipitation",
+      "D": "Transpiration"
+    },
+    "correct_answer": "B",
+    "explanation": "Evaporation occurs when liquid water changes phase into gaseous water vapour below its boiling point."
+  },
+  {
+    "topic": "Science",
+    "question": "28. Which planet in our solar system is the hottest due to its thick greenhouse atmosphere?",
+    "options": {
+      "A": "Mercury",
+      "B": "Venus",
+      "C": "Mars",
+      "D": "Jupiter"
+    },
+    "correct_answer": "B",
+    "explanation": "Venus has surface temperatures exceeding 460°C due to an intense runaway greenhouse effect."
+  },
+  {
+    "topic": "Science",
+    "question": "29. What is the centre of an atom called?",
+    "options": {
+      "A": "Proton",
+      "B": "Electron",
+      "C": "Nucleus",
+      "D": "Orbit"
+    },
+    "correct_answer": "C",
+    "explanation": "The atomic nucleus is the dense central region containing protons and neutrons."
+  },
+  {
+    "topic": "Science",
+    "question": "30. Which vitamin is produced by human skin when exposed to sunlight?",
+    "options": {
+      "A": "Vitamin A",
+      "B": "Vitamin C",
+      "C": "Vitamin D",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "C",
+    "explanation": "Ultraviolet B rays stimulate synthesis of vitamin D in human skin."
+  },
+  {
+    "topic": "Science",
+    "question": "31. What is the speed of light faster than: sound, or is sound faster?",
+    "options": {
+      "A": "Sound is faster",
+      "B": "Light is faster",
+      "C": "They travel at identical speeds",
+      "D": "It depends on atmospheric temperature"
+    },
+    "correct_answer": "B",
+    "explanation": "Light travels at ~300,000 km/s in vacuum, while sound travels at only ~343 m/s in air."
+  },
+  {
+    "topic": "Science",
+    "question": "32. What instrument is used to measure atmospheric pressure?",
+    "options": {
+      "A": "Altimeter",
+      "B": "Barometer",
+      "C": "Speedometer",
+      "D": "Manometer"
+    },
+    "correct_answer": "B",
+    "explanation": "A barometer measures ambient atmospheric barometric pressure."
+  },
+  {
+    "topic": "Science",
+    "question": "33. Which acid is found in citrus fruits like lemons and oranges?",
+    "options": {
+      "A": "Acetic acid",
+      "B": "Citric acid",
+      "C": "Sulfuric acid",
+      "D": "Lactic acid"
+    },
+    "correct_answer": "B",
+    "explanation": "Citric acid is a natural weak organic acid found in citrus fruits that provides their sour taste."
+  },
+  {
+    "topic": "Science",
+    "question": "34. What is the name of the force that slows down two surfaces rubbing against each other?",
+    "options": {
+      "A": "Tension",
+      "B": "Friction",
+      "C": "Bouyancy",
+      "D": "Drag"
+    },
+    "correct_answer": "B",
+    "explanation": "Friction resists the relative lateral motion of solid surfaces in contact."
+  },
+  {
+    "topic": "Science",
+    "question": "35. Beginning with R, what is the bending of light as it passes from one medium (like air) into another (like water)?",
+    "options": {
+      "A": "Reflection",
+      "B": "Refraction",
+      "C": "Radiation",
+      "D": "Resonance"
+    },
+    "correct_answer": "B",
+    "explanation": "Refraction is the change in direction of a wave passing from one medium to another caused by its change in speed."
+  },
+  {
+    "topic": "Science",
+    "question": "36. Beginning with M, what is the \"powerhouse\" organelle inside a cell that generates energy?",
+    "options": {
+      "A": "Membrane",
+      "B": "Mitochondria",
+      "C": "Microsome",
+      "D": "Meiosis"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria generate most of the cell's supply of ATP through cellular respiration."
+  },
+  {
+    "topic": "Science",
+    "question": "37. What is the chemical symbol for Potassium?",
+    "options": {
+      "A": "P",
+      "B": "Po",
+      "C": "K",
+      "D": "Pt"
+    },
+    "correct_answer": "C",
+    "explanation": "The symbol K derives from the neo-Latin word 'kalium'."
+  },
+  {
+    "topic": "Science",
+    "question": "38. Beginning with A, what is the largest artery in the human body?",
+    "options": {
+      "A": "Atrium",
+      "B": "Aorta",
+      "C": "Arteriole",
+      "D": "Alveolus"
+    },
+    "correct_answer": "B",
+    "explanation": "The aorta carries oxygen-rich blood directly out of the left ventricle to the rest of the body."
+  },
+  {
+    "topic": "Science",
+    "question": "39. What is the name of the scale used to measure how acidic or alkaline a substance is?",
+    "options": {
+      "A": "Mohs scale",
+      "B": "pH scale",
+      "C": "Richter scale",
+      "D": "Kelvin scale"
+    },
+    "correct_answer": "B",
+    "explanation": "The pH scale ranges typically from 0 (very acidic) to 14 (very alkaline)."
+  },
+  {
+    "topic": "Science",
+    "question": "40. On the pH scale, what number represents a completely neutral substance like pure water?",
+    "options": {
+      "A": "0",
+      "B": "5",
+      "C": "7",
+      "D": "10"
+    },
+    "correct_answer": "C",
+    "explanation": "A pH of 7.0 at 25°C is exactly neutral (equal concentration of H+ and OH- ions)."
+  },
+  {
+    "topic": "Science",
+    "question": "41. Beginning with S, what is the process where a solid turns directly into a gas without becoming a liquid first (like dry ice)?",
+    "options": {
+      "A": "Solubilisation",
+      "B": "Sublimation",
+      "C": "Solidification",
+      "D": "Sedimentation"
+    },
+    "correct_answer": "B",
+    "explanation": "Sublimation is the direct phase transition from solid to gas without an intervening liquid state."
+  },
+  {
+    "topic": "Science",
+    "question": "42. What are the three subatomic particles that make up an atom?",
+    "options": {
+      "A": "Photons, neutrons, and quarks",
+      "B": "Protons, neutrons, and electrons",
+      "C": "Positrons, gravitons, and leptons",
+      "D": "Molecules, ions, and isotopes"
+    },
+    "correct_answer": "B",
+    "explanation": "Atoms are composed of positively charged protons, neutral neutrons, and negatively charged electrons."
+  },
+  {
+    "topic": "Science",
+    "question": "43. Which Nobel Prize-winning physicist and chemist discovered the elements polonium and radium?",
+    "options": {
+      "A": "Rosalind Franklin",
+      "B": "Marie Curie",
+      "C": "Lise Meitner",
+      "D": "Dorothy Hodgkin"
+    },
+    "correct_answer": "B",
+    "explanation": "Marie Curie conducted pioneering research on radioactivity and discovered polonium and radium."
+  },
+  {
+    "topic": "Science",
+    "question": "44. Beginning with C, what is the name of the outer atmosphere of the Sun, visible as a halo during a total solar eclipse?",
+    "options": {
+      "A": "Chromosphere",
+      "B": "Corona",
+      "C": "Convective zone",
+      "D": "Core"
+    },
+    "correct_answer": "B",
+    "explanation": "The corona is the outermost layer of the solar atmosphere, visible as a glowing halo during eclipses."
+  },
+  {
+    "topic": "Science",
+    "question": "45. What does the abbreviation DNA stand for?",
+    "options": {
+      "A": "Dinitrogen acid",
+      "B": "Deoxyribonucleic acid",
+      "C": "Dynamic nucleic acid",
+      "D": "Decarbonated nitrogenous acid"
+    },
+    "correct_answer": "B",
+    "explanation": "DNA stands for deoxyribonucleic acid, the hereditary molecule of living organisms."
+  },
+  {
+    "topic": "Science",
+    "question": "46. Beginning with I, what is the tendency of an object to stay at rest or keep moving unless acted on by a force?",
+    "options": {
+      "A": "Impulse",
+      "B": "Inertia",
+      "C": "Induction",
+      "D": "Impact"
+    },
+    "correct_answer": "B",
+    "explanation": "Inertia is described by Newton's First Law of Motion."
+  },
+  {
+    "topic": "Science",
+    "question": "47. Which part of the human brain is mainly responsible for coordination and balance?",
+    "options": {
+      "A": "Cerebrum",
+      "B": "Cerebellum",
+      "C": "Brainstem",
+      "D": "Hypothalamus"
+    },
+    "correct_answer": "B",
+    "explanation": "The cerebellum coordinates voluntary motor movement, balance, and posture."
+  },
+  {
+    "topic": "Science",
+    "question": "48. What is the unit of force in the metric system?",
+    "options": {
+      "A": "Joule",
+      "B": "Watt",
+      "C": "Newton",
+      "D": "Pascal"
+    },
+    "correct_answer": "C",
+    "explanation": "The newton (symbol: N) is the SI unit of force equal to 1 kg·m/s²."
+  },
+  {
+    "topic": "Science",
+    "question": "49. Do arteries carry blood away from the heart or back to the heart?",
+    "options": {
+      "A": "Back to the heart",
+      "B": "Away from the heart",
+      "C": "Both ways simultaneously",
+      "D": "Only within the lungs"
+    },
+    "correct_answer": "B",
+    "explanation": "Arteries carry blood away from the heart, while veins return blood to the heart."
+  },
+  {
+    "topic": "Science",
+    "question": "50. What is the name of the closest star to Earth after the Sun?",
+    "options": {
+      "A": "Sirius",
+      "B": "Alpha Centauri A",
+      "C": "Proxima Centauri",
+      "D": "Betelgeuse"
+    },
+    "correct_answer": "C",
+    "explanation": "Proxima Centauri is a red dwarf star situated roughly 4.24 light-years from Earth."
+  }
+]

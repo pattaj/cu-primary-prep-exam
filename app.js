@@ -1,7 +1,7 @@
 // =========================================================
-// 0. AUTHENTICATION (users.json + ADMIN) & HISTORY STORAGE
+// 0. AUTHENTICATION (users.json + admin.json) & HISTORY STORAGE
 // =========================================================
-const ADMIN_CREDENTIALS = { username: "admin", password: "admin123", name: "Admin", role: "admin" };
+let adminCredentials = null;
 const STORAGE_EXTRA_USERS_KEY = "cu_quiz_authorized_users";
 const STORAGE_SESSION_KEY = "cu_quiz_current_user";
 const STORAGE_HISTORY_KEY = "cu_quiz_history";
@@ -9,6 +9,19 @@ const STORAGE_HISTORY_KEY = "cu_quiz_history";
 let authorizedUsers = [];
 let currentUser = null;
 let currentQuizLabel = "3-Round Practice Quiz";
+
+async function loadAdminCredentials() {
+    try {
+        const res = await fetch("./data/admin.json");
+        if (res.ok) {
+            adminCredentials = await res.json();
+        } else {
+            console.error("Failed to load data/admin.json");
+        }
+    } catch (err) {
+        console.error("Could not load data/admin.json:", err);
+    }
+}
 
 async function loadAuthorizedUsers() {
     let jsonUsers = [];
@@ -105,16 +118,25 @@ window.handleAdminLogin = (e) => {
     const passwordInput = document.getElementById("loginPassword").value;
     const errorEl = document.getElementById("adminLoginError");
 
+    if (!adminCredentials) {
+        errorEl.innerText = "Admin configuration could not be loaded. Check data/admin.json.";
+        return;
+    }
+
     if (
-        usernameInput !== ADMIN_CREDENTIALS.username ||
-        passwordInput !== ADMIN_CREDENTIALS.password
+        usernameInput !== adminCredentials.username.toLowerCase() ||
+        passwordInput !== adminCredentials.password
     ) {
         errorEl.innerText = "Invalid admin username or password.";
         return;
     }
 
     errorEl.innerText = "";
-    currentUser = { ...ADMIN_CREDENTIALS };
+    currentUser = {
+        username: adminCredentials.username,
+        name: adminCredentials.name || "Admin",
+        role: adminCredentials.role || "admin"
+    };
     localStorage.setItem(STORAGE_SESSION_KEY, JSON.stringify(currentUser));
     initAppForUser();
 };
@@ -225,11 +247,12 @@ function renderAdminUsersList() {
 }
 
 // =========================================================
-// 1. STATE & COMPETITION CONFIGURATION
+// 1. STATE, FUZZY MATCHING & VISUAL HELPERS
 // =========================================================
 let loadedModules = {};
 let currentModuleData = [];
 let currentQuizData = [];
+let missedQuestions = [];
 let isPracticeMode = false;
 let currentStudyMode = "QUIZ";
 let flashcardIndex = 0;
@@ -272,6 +295,63 @@ function normalizeAnswer(str) {
         .trim()
         .toLowerCase()
         .replace(/\s+/g, " ");
+}
+
+function levenshteinDistance(a, b) {
+    const m = a.length;
+    const n = b.length;
+    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+    for (let i = 0; i <= m; i++) dp[i][0] = i;
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            dp[i][j] = Math.min(
+                dp[i - 1][j] + 1,      // deletion
+                dp[i][j - 1] + 1,      // insertion
+                dp[i - 1][j - 1] + cost // substitution
+            );
+        }
+    }
+    return dp[m][n];
+}
+
+// Returns "exact", "close" (minor spelling typo), or "wrong"
+function evaluateAnswer(userInput, correctAnswerText, acceptedList = []) {
+    const normUser = normalizeAnswer(userInput);
+    if (!normUser) return "wrong";
+
+    const candidates = [correctAnswerText, ...(Array.isArray(acceptedList) ? acceptedList : [])]
+        .map(normalizeAnswer)
+        .filter(Boolean);
+
+    // 1. Check for exact match first
+    if (candidates.includes(normUser)) {
+        return "exact";
+    }
+
+    // 2. Check for minor spelling typos (skip pure numbers/years)
+    for (const target of candidates) {
+        if (/^\d+$/.test(target)) continue;
+
+        const maxTypos = target.length >= 9 ? 2 : target.length >= 5 ? 1 : 0;
+        if (maxTypos > 0 && levenshteinDistance(normUser, target) <= maxTypos) {
+            return "close";
+        }
+    }
+
+    return "wrong";
+}
+
+function renderProgressBar(pct) {
+    const color = pct >= 75 ? "#2e7d32" : pct >= 50 ? "#ed6c02" : "#c62828";
+    return `
+        <div style="width:100%; background:#e5e7eb; border-radius:999px; height:8px; margin-top:5px; overflow:hidden;">
+            <div style="width:${pct}%; background:${color}; height:100%; border-radius:999px; transition:width 0.4s ease;"></div>
+        </div>
+    `;
 }
 
 function closeMenu() {
@@ -502,7 +582,7 @@ window.prevQuestion = () => {
 };
 
 // =========================================================
-// 4. GRADING, ANALYTICS, STRENGTHS/WEAKNESSES & HISTORY
+// 4. GRADING, ANALYTICS, RETRY MISSED & PROGRESS BARS
 // =========================================================
 window.gradeQuiz = async () => {
     const unanswered = currentQuizData.filter(q => !normalizeAnswer(q.userAnswer)).length;
@@ -526,6 +606,9 @@ window.gradeQuiz = async () => {
     }
 
     let totalScore = 0;
+    let closeSpellingCount = 0;
+    missedQuestions = [];
+
     const totalQuestions = currentQuizData.length;
     const roundScores = { 1: 0, 2: 0, 3: 0 };
     const diffScores = {
@@ -536,15 +619,21 @@ window.gradeQuiz = async () => {
     const topicScores = {};
 
     currentQuizData.forEach(q => {
-        const isCorrect = normalizeAnswer(q.userAnswer) === normalizeAnswer(q.correctAnswerText);
+        const status = evaluateAnswer(q.userAnswer, q.correctAnswerText, q.answers);
+        q.evalStatus = status;
+        const isCorrect = status === "exact" || status === "close";
+
         diffScores[q.difficulty].total++;
 
         if (isCorrect) {
             totalScore++;
+            if (status === "close") closeSpellingCount++;
             if (roundScores[q.round] !== undefined) {
                 roundScores[q.round]++;
             }
             diffScores[q.difficulty].correct++;
+        } else {
+            missedQuestions.push(q);
         }
 
         if (!topicScores[q.topic]) {
@@ -556,6 +645,11 @@ window.gradeQuiz = async () => {
 
     const percentage = totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0;
     lastScoreSummary = { score: totalScore, total: totalQuestions, percentage };
+
+    // Check Personal Best before saving current attempt
+    const prevHistory = getUserHistory(currentUser.username);
+    const prevBest = prevHistory.length ? Math.max(...prevHistory.map(h => h.percentage)) : -1;
+    const isPersonalBest = prevHistory.length > 0 && percentage > prevBest;
 
     // Save attempt to user's progress history
     const now = new Date();
@@ -579,40 +673,73 @@ window.gradeQuiz = async () => {
     } else if (percentage >= 65) {
         feedback = `🥈 Strong score, ${currentUser.name}! Focus on the harder questions to gain the edge.`;
     }
-    document.getElementById("overallScoreText").innerText = feedback;
 
+    const badges = [];
+    if (isPersonalBest) {
+        badges.push(`<span style="display:inline-block; background:#fef3c7; color:#92400e; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700; margin-top:6px;">🌟 New Personal Best!</span>`);
+    }
+    if (closeSpellingCount > 0) {
+        badges.push(`<span style="display:inline-block; background:#e0f2fe; color:#075985; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:600; margin-top:6px;">✏️ ${closeSpellingCount} answer(s) accepted with minor typo</span>`);
+    }
+
+    const retryBtnHtml = missedQuestions.length > 0
+        ? `<div style="margin-top:12px;">
+               <button type="button" onclick="retryMissedQuestions()" style="background:#ed6c02; color:#fff; border:none; padding:9px 16px; border-radius:8px; font-weight:600; cursor:pointer;">
+                   🔁 Retry ${missedQuestions.length} Missed Question${missedQuestions.length > 1 ? "s" : ""}
+               </button>
+           </div>`
+        : "";
+
+    document.getElementById("overallScoreText").innerHTML = `
+        <div>${feedback}</div>
+        <div style="display:flex; flex-wrap:wrap; gap:6px; justify-content:center;">${badges.join("")}</div>
+        ${retryBtnHtml}
+    `;
+
+    // Round Analytics with Progress Bars
     let roundHtml = "";
     if (isPracticeMode) {
         for (let r = 1; r <= TOTAL_ROUNDS; r++) {
+            const pct = Math.round((roundScores[r] / QUESTIONS_PER_ROUND) * 100);
             roundHtml += `
-                <div class="analytics-row">
-                    <span><b>Round ${r}</b></span>
-                    <span><b>${roundScores[r]} / ${QUESTIONS_PER_ROUND} pts</b></span>
+                <div class="analytics-row" style="flex-direction:column; align-items:stretch;">
+                    <div style="display:flex; justify-content:space-between;">
+                        <span><b>Round ${r}</b></span>
+                        <span><b>${roundScores[r]} / ${QUESTIONS_PER_ROUND} pts (${pct}%)</b></span>
+                    </div>
+                    ${renderProgressBar(pct)}
                 </div>`;
         }
     } else {
         roundHtml = `
-            <div class="analytics-row">
-                <span><b>Selected Level</b></span>
-                <span><b>${totalScore} / ${totalQuestions} pts</b></span>
+            <div class="analytics-row" style="flex-direction:column; align-items:stretch;">
+                <div style="display:flex; justify-content:space-between;">
+                    <span><b>Selected Level</b></span>
+                    <span><b>${totalScore} / ${totalQuestions} pts (${percentage}%)</b></span>
+                </div>
+                ${renderProgressBar(percentage)}
             </div>`;
     }
     document.getElementById("roundAnalyticsContent").innerHTML = roundHtml;
 
+    // Difficulty Analytics with Progress Bars
     let diffHtml = "";
     ["Easy", "Medium", "Difficult"].forEach(d => {
         const { correct, total } = diffScores[d];
         if (total === 0 && !isPracticeMode) return;
         const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
         diffHtml += `
-            <div class="analytics-row">
-                <span class="difficulty-badge badge-${d.toLowerCase()}">${d}</span>
-                <span>${correct} / ${total} (${pct}%)</span>
+            <div class="analytics-row" style="flex-direction:column; align-items:stretch;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="difficulty-badge badge-${d.toLowerCase()}">${d}</span>
+                    <span>${correct} / ${total} (${pct}%)</span>
+                </div>
+                ${renderProgressBar(pct)}
             </div>`;
     });
     document.getElementById("difficultyAnalyticsContent").innerHTML = diffHtml;
 
-    // Strengths & Weaknesses
+    // Topic Breakdown, Strengths & Weaknesses with Progress Bars
     const strengths = [];
     const weaknesses = [];
     let topicHtml = "";
@@ -620,9 +747,12 @@ window.gradeQuiz = async () => {
     for (const [topic, data] of Object.entries(topicScores)) {
         const pct = Math.round((data.correct / data.total) * 100);
         topicHtml += `
-            <div class="analytics-row">
-                <span>${topic}</span>
-                <span>${data.correct} / ${data.total} (${pct}%)</span>
+            <div class="analytics-row" style="flex-direction:column; align-items:stretch;">
+                <div style="display:flex; justify-content:space-between;">
+                    <span>${topic}</span>
+                    <span><b>${data.correct} / ${data.total} (${pct}%)</b></span>
+                </div>
+                ${renderProgressBar(pct)}
             </div>`;
 
         if (pct >= 75) {
@@ -654,6 +784,31 @@ window.gradeQuiz = async () => {
     reviewAnswers();
 };
 
+window.retryMissedQuestions = () => {
+    if (!missedQuestions.length) return;
+
+    isPracticeMode = false;
+    currentQuestionIndex = 0;
+    currentQuizLabel = "Retry Missed Questions";
+
+    document.getElementById("difficultySelector").style.display = "none";
+    document.getElementById("modeToggleContainer").style.display = "none";
+    document.getElementById("mainTitle").innerText = `🔁 Retry Missed Questions`;
+    document.getElementById("mainSubtitle").innerText = `Practicing ${missedQuestions.length} question${missedQuestions.length > 1 ? "s" : ""} you missed`;
+
+    currentQuizData = missedQuestions.map((q, idx) => ({
+        ...q,
+        round: 1,
+        roundQNum: idx + 1,
+        quizIndex: idx,
+        userAnswer: "",
+        evalStatus: undefined
+    }));
+
+    renderQuestion();
+    showQuizView();
+};
+
 function renderProgressSection(trendElId, listElId) {
     const history = getUserHistory(currentUser.username);
     const trendEl = document.getElementById(trendElId);
@@ -682,14 +837,17 @@ function renderProgressSection(trendElId, listElId) {
 
     const reversed = [...history].reverse();
     listEl.innerHTML = reversed.map(item => `
-        <div class="history-row">
-            <div>
-                <b>${item.quizTitle}</b>
-                <div class="history-date">${item.date} at ${item.time}</div>
+        <div class="history-row" style="flex-direction:column; align-items:stretch;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <b>${item.quizTitle}</b>
+                    <div class="history-date">${item.date} at ${item.time}</div>
+                </div>
+                <div style="text-align:right;">
+                    <b>${item.score}/${item.total} (${item.percentage}%)</b>
+                </div>
             </div>
-            <div style="text-align:right;">
-                <b>${item.score}/${item.total} (${item.percentage}%)</b>
-            </div>
+            ${renderProgressBar(item.percentage)}
         </div>
     `).join("");
 }
@@ -731,11 +889,14 @@ window.showProgressHistory = () => {
     } else {
         focusEl.innerHTML = sortedTopics.map(t => {
             const label = t.pct < 60 ? "🎯 Focus" : t.pct >= 75 ? "💪 Strong" : "👍 Good";
-            const color = t.pct < 60 ? "#c62828" : t.pct >= 75 ? "#2e7d32" : "#b26a00";
+            const color = t.pct < 60 ? "#c62828" : t.pct >= 75 ? "#2e7d32" : "#ed6c02";
             return `
-                <div class="analytics-row">
-                    <span>${t.topic}</span>
-                    <span style="color:${color}; font-weight:600;">${t.correct}/${t.total} (${t.pct}%) • ${label}</span>
+                <div class="analytics-row" style="flex-direction:column; align-items:stretch;">
+                    <div style="display:flex; justify-content:space-between;">
+                        <span>${t.topic}</span>
+                        <span style="color:${color}; font-weight:600;">${t.correct}/${t.total} (${t.pct}%) • ${label}</span>
+                    </div>
+                    ${renderProgressBar(t.pct)}
                 </div>`;
         }).join("");
     }
@@ -750,28 +911,43 @@ window.reviewAnswers = () => {
     document.getElementById("roundIndicator").style.display = "none";
     document.getElementById("reviewActionBtns").style.display = "flex";
 
+    const retryBtnHtml = missedQuestions.length > 0
+        ? `<div style="margin-top:10px;">
+               <button type="button" onclick="retryMissedQuestions()" style="background:#ed6c02; color:#fff; border:none; padding:8px 14px; border-radius:8px; font-weight:600; cursor:pointer;">
+                   🔁 Retry ${missedQuestions.length} Missed Question${missedQuestions.length > 1 ? "s" : ""}
+               </button>
+           </div>`
+        : "";
+
     const container = document.getElementById("quizContainer");
     container.innerHTML = `
         <div class="review-score-banner">
             <strong>Hi ${currentUser.name}! Final Score: ${lastScoreSummary.score} / ${lastScoreSummary.total} (${lastScoreSummary.percentage}%)</strong>
             <span>Review the correct answers and explanations below, or click "View Scorecard" for full analytics.</span>
+            ${retryBtnHtml}
         </div>
     `;
 
     currentQuizData.forEach((q, idx) => {
         const card = document.createElement("div");
         card.className = "question-card";
-        const isCorrect = normalizeAnswer(q.userAnswer) === normalizeAnswer(q.correctAnswerText);
+        const status = q.evalStatus || evaluateAnswer(q.userAnswer, q.correctAnswerText, q.answers);
+        const isCorrect = status === "exact" || status === "close";
         const qLabel = isPracticeMode ? `Round ${q.round} — Q${q.roundQNum}` : `Question ${idx + 1}`;
         const userText = q.userAnswer && q.userAnswer.trim() ? q.userAnswer.trim() : "(No answer entered)";
+
+        let statusHtml = `<span style="font-weight:bold; color:#c62828;">❌ Incorrect</span>`;
+        if (status === "exact") {
+            statusHtml = `<span style="font-weight:bold; color:#2e7d32;">✅ Correct</span>`;
+        } else if (status === "close") {
+            statusHtml = `<span style="font-weight:bold; color:#b45309;">✨ Almost! (Check spelling — Point Awarded)</span>`;
+        }
 
         card.innerHTML = `
             <div class="question-header">
                 <span class="q-number">${qLabel}</span>
                 <span class="difficulty-badge badge-${q.difficulty.toLowerCase()}">${q.difficulty}</span>
-                <span style="font-weight:bold; color: ${isCorrect ? '#2e7d32' : '#c62828'};">
-                    ${isCorrect ? "✅ Correct" : "❌ Incorrect"}
-                </span>
+                ${statusHtml}
                 <span class="topic-tag">${q.topic}</span>
             </div>
             <div class="question-title">${q.question.replace(/^\d+\.\s*/, "")}</div>
@@ -944,7 +1120,10 @@ window.toggleMenu = () => {
 
 window.addEventListener("DOMContentLoaded", async () => {
     buildSidebar();
-    await loadAuthorizedUsers();
+    await Promise.all([
+        loadAuthorizedUsers(),
+        loadAdminCredentials()
+    ]);
 
     const savedSession = localStorage.getItem(STORAGE_SESSION_KEY);
     if (savedSession) {

@@ -14,18 +14,18 @@ const TOTAL_ROUNDS = 3;
 
 // All 12 categories generated from the 700-question bank
 const availableModules = [
-    { id: "category_01_credit_union_and_civic_ireland", title: "Credit Union & Civic Ireland" },
-    { id: "category_02_current_affairs_2025_2026", title: "Current Affairs (2025/2026)" },
-    { id: "category_03_mathematics", title: "Mathematics" },
-    { id: "category_04_science", title: "Science" },
-    { id: "category_05_history", title: "History" },
-    { id: "category_06_geography", title: "Geography" },
-    { id: "category_07_sport", title: "Sport" },
-    { id: "category_08_nature_and_environment", title: "Nature & Environment" },
-    { id: "category_09_music", title: "Music" },
-    { id: "category_10_literature", title: "Literature" },
-    { id: "category_13_general_knowledge", title: "General Knowledge" },
-    { id: "category_14_countries_capitals_currency", title: "Countries & Capitals" }
+    { id: "cu-civic", title: "Credit Union & Civic Ireland" },
+    { id: "ca", title: "Current Affairs (2025/2026)" },
+    { id: "math", title: "Mathematics" },
+    { id: "science", title: "Science" },
+    { id: "history", title: "History" },
+    { id: "geography", title: "Geography" },
+    { id: "sport", title: "Sport" },
+    { id: "nature-env", title: "Nature & Environment" },
+    { id: "music", title: "Music" },
+    { id: "literature", title: "Literature" },
+    { id: "gen-knowledge", title: "General Knowledge" },
+    { id: "countries", title: "Countries & Capitals" }
 ];
 
 function shuffle(array) {

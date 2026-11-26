@@ -284,8 +284,14 @@ window.gradeQuiz = async () => {
         modal.classList.remove("hidden");
 
         const proceed = await new Promise(resolve => {
-            document.getElementById("modalConfirmBtn").onclick = () => { modal.classList.add("hidden"); resolve(true); };
-            document.getElementById("modalCancelBtn").onclick = () => { modal.classList.add("hidden"); resolve(false); };
+            document.getElementById("modalConfirmBtn").onclick = () => {
+                modal.classList.add("hidden");
+                resolve(true);
+            };
+            document.getElementById("modalCancelBtn").onclick = () => {
+                modal.classList.add("hidden");
+                resolve(false);
+            };
         });
         if (!proceed) return;
     }
@@ -466,3 +472,111 @@ window.loadModule = async (moduleId) => {
 
     try {
         currentModuleData = await fetchCategory(moduleId);
+    } catch (err) {
+        alert(`Could not load data/${moduleId}.json. Please ensure the JSON file is in the 'data' folder.`);
+        console.error(err);
+        return;
+    }
+
+    document.getElementById("instructionsText").style.display = "none";
+    document.getElementById("quizForm").style.display = "none";
+    document.getElementById("flashcardView").style.display = "none";
+    document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("modeToggleContainer").style.display = "none";
+    document.getElementById("difficultySelector").style.display = "block";
+
+    document.querySelectorAll(".diff-select-btn").forEach(btn => btn.classList.remove("active"));
+};
+
+window.selectDifficulty = (level) => {
+    const filtered = currentModuleData.filter(q => q.difficulty === level);
+    if (!filtered.length) {
+        alert(`No ${level} questions found in this module.`);
+        return;
+    }
+
+    document.querySelectorAll(".diff-select-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.innerText.includes(level));
+    });
+
+    document.getElementById("mainSubtitle").innerText = `${level} Level (${filtered.length} Questions)`;
+
+    currentQuestionIndex = 0;
+    currentQuizData = filtered.map((q, idx) => ({
+        ...q,
+        round: 1,
+        roundQNum: idx + 1,
+        quizIndex: idx,
+        userAnswer: ""
+    }));
+
+    document.getElementById("modeToggleContainer").style.display = "flex";
+    switchMode(currentStudyMode);
+};
+
+window.switchMode = (mode) => {
+    currentStudyMode = mode;
+    document.getElementById("btnQuizMode").classList.toggle("active", mode === "QUIZ");
+    document.getElementById("btnFlashcardMode").classList.toggle("active", mode === "FLASHCARD");
+
+    if (mode === "QUIZ") {
+        document.getElementById("flashcardView").style.display = "none";
+        renderQuestion();
+        showQuizView();
+    } else {
+        document.getElementById("quizForm").style.display = "none";
+        document.getElementById("fullAnalyticsView").style.display = "none";
+        document.getElementById("flashcardView").style.display = "block";
+        flashcardIndex = 0;
+        renderFlashcard();
+    }
+};
+
+function renderFlashcard() {
+    if (!currentQuizData.length) return;
+    const card = currentQuizData[flashcardIndex];
+
+    const fcInner = document.getElementById("flashcardInner");
+    fcInner.classList.remove("is-flipped");
+
+    document.getElementById("fcFrontBadge").innerText = `${card.topic} • ${card.difficulty}`;
+    document.getElementById("fcFrontText").innerText = card.question.replace(/^\d+\.\s*/, "");
+    document.getElementById("fcBackAnswer").innerText = card.correctAnswerText;
+    document.getElementById("fcBackExplanation").innerText = card.explanation;
+    document.getElementById("fcCounter").innerText = `${flashcardIndex + 1} / ${currentQuizData.length}`;
+}
+
+window.flipCard = () => {
+    document.getElementById("flashcardInner").classList.toggle("is-flipped");
+};
+
+window.nextFlashcard = () => {
+    if (flashcardIndex < currentQuizData.length - 1) {
+        flashcardIndex++;
+        renderFlashcard();
+    }
+};
+
+window.prevFlashcard = () => {
+    if (flashcardIndex > 0) {
+        flashcardIndex--;
+        renderFlashcard();
+    }
+};
+
+function showQuizView() {
+    document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("instructionsText").style.display = "none";
+    document.getElementById("quizForm").style.display = "block";
+    document.getElementById("flashcardView").style.display = "none";
+    document.getElementById("reviewActionBtns").style.display = "none";
+}
+
+window.toggleMenu = () => {
+    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("overlay").classList.toggle("open");
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+    buildSidebar();
+});

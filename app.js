@@ -1,4 +1,230 @@
 // =========================================================
+// 0. AUTHENTICATION (users.json + ADMIN) & HISTORY STORAGE
+// =========================================================
+const ADMIN_CREDENTIALS = { username: "admin", password: "admin123", name: "Admin", role: "admin" };
+const STORAGE_EXTRA_USERS_KEY = "cu_quiz_authorized_users";
+const STORAGE_SESSION_KEY = "cu_quiz_current_user";
+const STORAGE_HISTORY_KEY = "cu_quiz_history";
+
+let authorizedUsers = [];
+let currentUser = null;
+let currentQuizLabel = "3-Round Practice Quiz";
+
+async function loadAuthorizedUsers() {
+    let jsonUsers = [];
+    try {
+        const res = await fetch("./data/users.json");
+        if (res.ok) {
+            jsonUsers = await res.json();
+        }
+    } catch (err) {
+        console.warn("Could not load data/users.json, falling back to saved users.", err);
+    }
+
+    const savedRaw = localStorage.getItem(STORAGE_EXTRA_USERS_KEY);
+    if (savedRaw) {
+        try {
+            const savedUsers = JSON.parse(savedRaw);
+            const map = new Map();
+            [...jsonUsers, ...savedUsers].forEach(u => {
+                if (u && u.name) map.set(u.name.trim().toLowerCase(), { name: u.name.trim() });
+            });
+            authorizedUsers = Array.from(map.values());
+            return;
+        } catch {
+            // ignore parse error
+        }
+    }
+
+    authorizedUsers = jsonUsers.filter(u => u && u.name).map(u => ({ name: u.name.trim() }));
+}
+
+function saveAuthorizedUsers() {
+    localStorage.setItem(STORAGE_EXTRA_USERS_KEY, JSON.stringify(authorizedUsers));
+}
+
+function getAllHistory() {
+    const raw = localStorage.getItem(STORAGE_HISTORY_KEY);
+    if (!raw) return {};
+    try {
+        return JSON.parse(raw);
+    } catch {
+        return {};
+    }
+}
+
+function getUserHistory(username) {
+    const all = getAllHistory();
+    return all[username] || [];
+}
+
+function saveQuizResultToHistory(username, record) {
+    const all = getAllHistory();
+    if (!all[username]) all[username] = [];
+    all[username].push(record);
+    localStorage.setItem(STORAGE_HISTORY_KEY, JSON.stringify(all));
+}
+
+window.switchLoginTab = (tab) => {
+    const isStudent = tab === "student";
+    document.getElementById("tabStudent").classList.toggle("active", isStudent);
+    document.getElementById("tabAdmin").classList.toggle("active", !isStudent);
+    document.getElementById("studentLoginForm").style.display = isStudent ? "block" : "none";
+    document.getElementById("adminLoginForm").style.display = isStudent ? "none" : "block";
+    document.getElementById("studentLoginError").innerText = "";
+    document.getElementById("adminLoginError").innerText = "";
+};
+
+window.handleStudentLogin = (e) => {
+    e.preventDefault();
+    const enteredName = document.getElementById("studentNameInput").value.trim();
+    const errorEl = document.getElementById("studentLoginError");
+
+    const match = authorizedUsers.find(
+        u => u.name.toLowerCase() === enteredName.toLowerCase()
+    );
+
+    if (!match) {
+        errorEl.innerText = `"${enteredName}" is not on the authorized list. Please ask the Admin to add your name.`;
+        return;
+    }
+
+    errorEl.innerText = "";
+    currentUser = {
+        username: match.name.toLowerCase(),
+        name: match.name,
+        role: "user"
+    };
+    localStorage.setItem(STORAGE_SESSION_KEY, JSON.stringify(currentUser));
+    initAppForUser();
+};
+
+window.handleAdminLogin = (e) => {
+    e.preventDefault();
+    const usernameInput = document.getElementById("loginUsername").value.trim().toLowerCase();
+    const passwordInput = document.getElementById("loginPassword").value;
+    const errorEl = document.getElementById("adminLoginError");
+
+    if (
+        usernameInput !== ADMIN_CREDENTIALS.username ||
+        passwordInput !== ADMIN_CREDENTIALS.password
+    ) {
+        errorEl.innerText = "Invalid admin username or password.";
+        return;
+    }
+
+    errorEl.innerText = "";
+    currentUser = { ...ADMIN_CREDENTIALS };
+    localStorage.setItem(STORAGE_SESSION_KEY, JSON.stringify(currentUser));
+    initAppForUser();
+};
+
+window.handleLogout = () => {
+    currentUser = null;
+    localStorage.removeItem(STORAGE_SESSION_KEY);
+    document.getElementById("appWrapper").style.display = "none";
+    document.getElementById("loginScreen").style.display = "flex";
+    document.getElementById("studentLoginForm").reset();
+    document.getElementById("adminLoginForm").reset();
+};
+
+function initAppForUser() {
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("appWrapper").style.display = "block";
+
+    document.getElementById("sidebarGreeting").innerText = `👋 Hi, ${currentUser.name}`;
+    document.getElementById("mainTitle").innerText = `Hi ${currentUser.name}, take the quiz!`;
+    document.getElementById("mainSubtitle").innerText = "Primary Schools Competition Preparation";
+
+    const adminBtn = document.getElementById("adminManageBtn");
+    adminBtn.style.display = currentUser.role === "admin" ? "block" : "none";
+
+    document.getElementById("instructionsText").style.display = "block";
+    document.getElementById("quizForm").style.display = "none";
+    document.getElementById("flashcardView").style.display = "none";
+    document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "none";
+    document.getElementById("difficultySelector").style.display = "none";
+    document.getElementById("modeToggleContainer").style.display = "none";
+}
+
+// Admin Modal Controls
+window.openAdminModal = () => {
+    if (!currentUser || currentUser.role !== "admin") return;
+    closeMenu();
+    document.getElementById("adminFormMsg").innerText = "";
+    document.getElementById("addUserForm").reset();
+    renderAdminUsersList();
+    document.getElementById("adminModal").classList.remove("hidden");
+};
+
+window.closeAdminModal = () => {
+    document.getElementById("adminModal").classList.add("hidden");
+};
+
+window.handleAddUser = (e) => {
+    e.preventDefault();
+    if (!currentUser || currentUser.role !== "admin") return;
+
+    const name = document.getElementById("newUserName").value.trim();
+    const msgEl = document.getElementById("adminFormMsg");
+
+    if (!name) {
+        msgEl.className = "form-error";
+        msgEl.innerText = "Please enter a name.";
+        return;
+    }
+
+    if (authorizedUsers.some(u => u.name.toLowerCase() === name.toLowerCase())) {
+        msgEl.className = "form-error";
+        msgEl.innerText = `"${name}" is already authorized.`;
+        return;
+    }
+
+    authorizedUsers.push({ name });
+    saveAuthorizedUsers();
+
+    msgEl.className = "form-error form-success";
+    msgEl.innerText = `"${name}" added! Click "Download users.json" to update your GitHub repo.`;
+    document.getElementById("addUserForm").reset();
+    renderAdminUsersList();
+};
+
+window.deleteUser = (nameToRemove) => {
+    if (!currentUser || currentUser.role !== "admin") return;
+    authorizedUsers = authorizedUsers.filter(
+        u => u.name.toLowerCase() !== nameToRemove.toLowerCase()
+    );
+    saveAuthorizedUsers();
+    renderAdminUsersList();
+};
+
+window.downloadUsersJson = () => {
+    const dataStr = JSON.stringify(authorizedUsers, null, 2);
+    const blob = new Blob([dataStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "users.json";
+    a.click();
+    URL.revokeObjectURL(url);
+};
+
+function renderAdminUsersList() {
+    const listEl = document.getElementById("adminUsersList");
+    if (!authorizedUsers.length) {
+        listEl.innerHTML = `<p style="font-size:13px; color:#666;">No authorized users yet.</p>`;
+        return;
+    }
+    listEl.innerHTML = authorizedUsers.map(u => `
+        <div class="analytics-row">
+            <span><b>${u.name}</b></span>
+            <button type="button" class="btn-delete-user" onclick="deleteUser('${u.name.replace(/'/g, "\\'")}')">Remove</button>
+        </div>
+    `).join("");
+}
+
+// =========================================================
 // 1. STATE & COMPETITION CONFIGURATION
 // =========================================================
 let loadedModules = {};
@@ -41,8 +267,8 @@ function normalizeAnswer(str) {
     return (str || "")
         .toString()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "") // removes accents/fadas
-        .replace(/[.,!?;:'"()-]/g, "")   // removes common punctuation
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[.,!?;:'"()-]/g, "")
         .trim()
         .toLowerCase()
         .replace(/\s+/g, " ");
@@ -65,7 +291,6 @@ async function fetchCategory(moduleId) {
     }
     const rawQuestions = await response.json();
 
-    // Q1-17 = Easy, Q18-34 = Medium, Q35-50 = Difficult
     const processed = rawQuestions.map((q, idx) => {
         let difficulty = "Easy";
         if (idx >= 17 && idx < 34) {
@@ -74,7 +299,6 @@ async function fetchCategory(moduleId) {
             difficulty = "Difficult";
         }
 
-        // Supports both { answer: "..." } and { options: {...}, correct_answer: "A" }
         const correctAnswerText =
             q.answer ??
             (q.options && q.options[q.correct_answer]
@@ -99,11 +323,13 @@ window.startPracticeQuiz = async () => {
     closeMenu();
     isPracticeMode = true;
     currentQuestionIndex = 0;
+    currentQuizLabel = "3-Round Practice Quiz";
 
     document.querySelectorAll(".menu-btn").forEach(btn => btn.classList.remove("active"));
     document.getElementById("difficultySelector").style.display = "none";
     document.getElementById("modeToggleContainer").style.display = "none";
-    document.getElementById("mainTitle").innerText = "🏆 3-Round Practice Quiz";
+    document.getElementById("standaloneHistoryView").style.display = "none";
+    document.getElementById("mainTitle").innerText = `🏆 Hi ${currentUser.name} — 3-Round Practice Quiz`;
     document.getElementById("mainSubtitle").innerText = "Official Irish Credit Union Schools Quiz Structure";
 
     const selectedMods = shuffle(availableModules).slice(0, 6);
@@ -276,7 +502,7 @@ window.prevQuestion = () => {
 };
 
 // =========================================================
-// 4. GRADING & IMMEDIATE ANSWER REVIEW
+// 4. GRADING, ANALYTICS, STRENGTHS/WEAKNESSES & HISTORY
 // =========================================================
 window.gradeQuiz = async () => {
     const unanswered = currentQuizData.filter(q => !normalizeAnswer(q.userAnswer)).length;
@@ -331,14 +557,27 @@ window.gradeQuiz = async () => {
     const percentage = totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0;
     lastScoreSummary = { score: totalScore, total: totalQuestions, percentage };
 
-    // Populate Analytics Dashboard (available via "View Scorecard" button)
+    // Save attempt to user's progress history
+    const now = new Date();
+    saveQuizResultToHistory(currentUser.username, {
+        date: now.toLocaleDateString("en-IE", { day: "numeric", month: "short", year: "numeric" }),
+        time: now.toLocaleTimeString("en-IE", { hour: "2-digit", minute: "2-digit" }),
+        quizTitle: currentQuizLabel,
+        score: totalScore,
+        total: totalQuestions,
+        percentage,
+        topicScores
+    });
+
+    // Populate Analytics Dashboard
+    document.getElementById("analyticsHeading").innerText = `Hi ${currentUser.name} — Competition Scorecard`;
     document.getElementById("overallScoreCircle").innerHTML = `${totalScore}/${totalQuestions}<br><small>${percentage}%</small>`;
 
-    let feedback = "🥉 Keep practicing to sharpen your recall!";
+    let feedback = `🥉 Keep practicing, ${currentUser.name}, to sharpen your recall!`;
     if (percentage >= 85) {
-        feedback = "🥇 Exceptional! Competition Final caliber performance!";
+        feedback = `🥇 Exceptional work, ${currentUser.name}! Competition Final caliber performance!`;
     } else if (percentage >= 65) {
-        feedback = "🥈 Strong score! Focus on the harder questions to gain the edge.";
+        feedback = `🥈 Strong score, ${currentUser.name}! Focus on the harder questions to gain the edge.`;
     }
     document.getElementById("overallScoreText").innerText = feedback;
 
@@ -373,22 +612,138 @@ window.gradeQuiz = async () => {
     });
     document.getElementById("difficultyAnalyticsContent").innerHTML = diffHtml;
 
+    // Strengths & Weaknesses
+    const strengths = [];
+    const weaknesses = [];
     let topicHtml = "";
+
     for (const [topic, data] of Object.entries(topicScores)) {
+        const pct = Math.round((data.correct / data.total) * 100);
         topicHtml += `
             <div class="analytics-row">
                 <span>${topic}</span>
-                <span>${data.correct} / ${data.total}</span>
+                <span>${data.correct} / ${data.total} (${pct}%)</span>
             </div>`;
+
+        if (pct >= 75) {
+            strengths.push({ topic, pct, correct: data.correct, total: data.total });
+        } else if (pct < 60) {
+            weaknesses.push({ topic, pct, correct: data.correct, total: data.total });
+        }
     }
+
     document.getElementById("analyticsContent").innerHTML = topicHtml;
 
-    // Immediately show correct answers & explanations on Submit
+    document.getElementById("strengthsContent").innerHTML = strengths.length
+        ? strengths.map(s => `
+            <div class="analytics-row">
+                <span>✅ ${s.topic}</span>
+                <span style="color:#2e7d32; font-weight:600;">${s.pct}%</span>
+            </div>`).join("")
+        : `<p style="font-size:13px; color:#666;">Score 75%+ in a topic to highlight it as a strength.</p>`;
+
+    document.getElementById("weaknessesContent").innerHTML = weaknesses.length
+        ? weaknesses.map(w => `
+            <div class="analytics-row">
+                <span>📌 ${w.topic}</span>
+                <span style="color:#c62828; font-weight:600;">${w.pct}% (${w.correct}/${w.total})</span>
+            </div>`).join("")
+        : `<p style="font-size:13px; color:#2e7d32;">🎉 Great job! No weak topics in this quiz.</p>`;
+
+    renderProgressSection("progressTrendBanner", "progressHistoryContent");
     reviewAnswers();
+};
+
+function renderProgressSection(trendElId, listElId) {
+    const history = getUserHistory(currentUser.username);
+    const trendEl = document.getElementById(trendElId);
+    const listEl = document.getElementById(listElId);
+
+    if (!history.length) {
+        trendEl.innerHTML = "";
+        listEl.innerHTML = `<p style="font-size:13px; color:#666;">No quiz history yet. Complete a quiz to start tracking your progress!</p>`;
+        return;
+    }
+
+    if (history.length >= 2) {
+        const latest = history[history.length - 1];
+        const prev = history[history.length - 2];
+        const diff = latest.percentage - prev.percentage;
+        if (diff > 0) {
+            trendEl.innerHTML = `<div class="trend-banner trend-up">📈 Improved by +${diff}% compared to your previous attempt (${prev.percentage}% → ${latest.percentage}%)!</div>`;
+        } else if (diff < 0) {
+            trendEl.innerHTML = `<div class="trend-banner trend-down">📉 Down ${Math.abs(diff)}% from your previous attempt (${prev.percentage}% → ${latest.percentage}%). Review your focus areas!</div>`;
+        } else {
+            trendEl.innerHTML = `<div class="trend-banner trend-same">➡️ Consistent performance at ${latest.percentage}%!</div>`;
+        }
+    } else {
+        trendEl.innerHTML = `<div class="trend-banner trend-same">🌟 First quiz recorded (${history[0].percentage}%). Take another quiz to track your improvement!</div>`;
+    }
+
+    const reversed = [...history].reverse();
+    listEl.innerHTML = reversed.map(item => `
+        <div class="history-row">
+            <div>
+                <b>${item.quizTitle}</b>
+                <div class="history-date">${item.date} at ${item.time}</div>
+            </div>
+            <div style="text-align:right;">
+                <b>${item.score}/${item.total} (${item.percentage}%)</b>
+            </div>
+        </div>
+    `).join("");
+}
+
+window.showProgressHistory = () => {
+    closeMenu();
+    document.getElementById("instructionsText").style.display = "none";
+    document.getElementById("quizForm").style.display = "none";
+    document.getElementById("flashcardView").style.display = "none";
+    document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("difficultySelector").style.display = "none";
+    document.getElementById("modeToggleContainer").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "block";
+
+    document.getElementById("mainTitle").innerText = `Hi ${currentUser.name}, here is your progress!`;
+    document.getElementById("mainSubtitle").innerText = "Track your improvement over time";
+    document.getElementById("historyHeading").innerText = `${currentUser.name}'s Progress & History`;
+
+    renderProgressSection("standaloneTrendBanner", "standaloneHistoryContent");
+
+    const history = getUserHistory(currentUser.username);
+    const allTopics = {};
+    history.forEach(attempt => {
+        if (!attempt.topicScores) return;
+        for (const [topic, stats] of Object.entries(attempt.topicScores)) {
+            if (!allTopics[topic]) allTopics[topic] = { correct: 0, total: 0 };
+            allTopics[topic].correct += stats.correct;
+            allTopics[topic].total += stats.total;
+        }
+    });
+
+    const sortedTopics = Object.entries(allTopics)
+        .map(([topic, s]) => ({ topic, pct: Math.round((s.correct / s.total) * 100), ...s }))
+        .sort((a, b) => a.pct - b.pct);
+
+    const focusEl = document.getElementById("allTimeFocusContent");
+    if (!sortedTopics.length) {
+        focusEl.innerHTML = `<p style="font-size:13px; color:#666;">Complete a quiz to see your all-time topic strengths and weaknesses.</p>`;
+    } else {
+        focusEl.innerHTML = sortedTopics.map(t => {
+            const label = t.pct < 60 ? "🎯 Focus" : t.pct >= 75 ? "💪 Strong" : "👍 Good";
+            const color = t.pct < 60 ? "#c62828" : t.pct >= 75 ? "#2e7d32" : "#b26a00";
+            return `
+                <div class="analytics-row">
+                    <span>${t.topic}</span>
+                    <span style="color:${color}; font-weight:600;">${t.correct}/${t.total} (${t.pct}%) • ${label}</span>
+                </div>`;
+        }).join("");
+    }
 };
 
 window.reviewAnswers = () => {
     document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "none";
     document.getElementById("quizForm").style.display = "block";
     document.getElementById("paginationControls").style.display = "none";
     document.getElementById("submitQuizBtn").style.display = "none";
@@ -398,8 +753,8 @@ window.reviewAnswers = () => {
     const container = document.getElementById("quizContainer");
     container.innerHTML = `
         <div class="review-score-banner">
-            <strong>Final Score: ${lastScoreSummary.score} / ${lastScoreSummary.total} (${lastScoreSummary.percentage}%)</strong>
-            <span>Review the correct answers and explanations below.</span>
+            <strong>Hi ${currentUser.name}! Final Score: ${lastScoreSummary.score} / ${lastScoreSummary.total} (${lastScoreSummary.percentage}%)</strong>
+            <span>Review the correct answers and explanations below, or click "View Scorecard" for full analytics.</span>
         </div>
     `;
 
@@ -437,6 +792,7 @@ window.reviewAnswers = () => {
 
 window.showAnalytics = () => {
     document.getElementById("quizForm").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "none";
     document.getElementById("fullAnalyticsView").style.display = "block";
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
@@ -470,6 +826,7 @@ window.loadModule = async (moduleId) => {
     if (activeBtn) activeBtn.classList.add("active");
 
     const modMeta = availableModules.find(m => m.id === moduleId);
+    currentQuizLabel = modMeta.title;
     document.getElementById("mainTitle").innerText = modMeta.title;
     document.getElementById("mainSubtitle").innerText = "Choose a difficulty level (Easy, Medium, or Difficult)";
 
@@ -485,6 +842,7 @@ window.loadModule = async (moduleId) => {
     document.getElementById("quizForm").style.display = "none";
     document.getElementById("flashcardView").style.display = "none";
     document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "none";
     document.getElementById("modeToggleContainer").style.display = "none";
     document.getElementById("difficultySelector").style.display = "block";
 
@@ -502,6 +860,8 @@ window.selectDifficulty = (level) => {
         btn.classList.toggle("active", btn.innerText.includes(level));
     });
 
+    const baseTitle = document.getElementById("mainTitle").innerText;
+    currentQuizLabel = `${baseTitle} (${level})`;
     document.getElementById("mainSubtitle").innerText = `${level} Level (${filtered.length} Questions)`;
 
     currentQuestionIndex = 0;
@@ -529,6 +889,7 @@ window.switchMode = (mode) => {
     } else {
         document.getElementById("quizForm").style.display = "none";
         document.getElementById("fullAnalyticsView").style.display = "none";
+        document.getElementById("standaloneHistoryView").style.display = "none";
         document.getElementById("flashcardView").style.display = "block";
         flashcardIndex = 0;
         renderFlashcard();
@@ -569,6 +930,7 @@ window.prevFlashcard = () => {
 
 function showQuizView() {
     document.getElementById("fullAnalyticsView").style.display = "none";
+    document.getElementById("standaloneHistoryView").style.display = "none";
     document.getElementById("instructionsText").style.display = "none";
     document.getElementById("quizForm").style.display = "block";
     document.getElementById("flashcardView").style.display = "none";
@@ -580,6 +942,17 @@ window.toggleMenu = () => {
     document.getElementById("overlay").classList.toggle("open");
 };
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
     buildSidebar();
+    await loadAuthorizedUsers();
+
+    const savedSession = localStorage.getItem(STORAGE_SESSION_KEY);
+    if (savedSession) {
+        try {
+            currentUser = JSON.parse(savedSession);
+            initAppForUser();
+        } catch {
+            localStorage.removeItem(STORAGE_SESSION_KEY);
+        }
+    }
 });

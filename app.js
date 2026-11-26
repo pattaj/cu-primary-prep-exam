@@ -2,17 +2,17 @@
 // 1. STATE & COMPETITION CONFIGURATION
 // =========================================================
 let loadedModules = {};
+let currentModuleData = [];
 let currentQuizData = [];
-let currentFilter = "NONE";
 let isPracticeMode = false;
 let currentStudyMode = "QUIZ";
 let flashcardIndex = 0;
-let currentRound = 1;
+let currentQuestionIndex = 0;
+let lastScoreSummary = { score: 0, total: 0, percentage: 0 };
 
 const QUESTIONS_PER_ROUND = 6;
 const TOTAL_ROUNDS = 3;
 
-// All 12 categories generated from the 700-question bank
 const availableModules = [
     { id: "cu-civic", title: "Credit Union & Civic Ireland" },
     { id: "ca", title: "Current Affairs (2025/2026)" },
@@ -37,6 +37,14 @@ function shuffle(array) {
     return arr;
 }
 
+function normalizeAnswer(str) {
+    return (str || "")
+        .toString()
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+}
+
 function closeMenu() {
     document.getElementById("sidebar").classList.remove("open");
     document.getElementById("overlay").classList.remove("open");
@@ -50,21 +58,31 @@ async function fetchCategory(moduleId) {
 
     const response = await fetch(`./data/${moduleId}.json`);
     if (!response.ok) {
-        throw new Error(`Failed to load ${moduleId}.json`);
+        throw new Error(`Failed to load data/${moduleId}.json`);
     }
     const rawQuestions = await response.json();
 
-    // In the question bank: Q1-17 = Easy, Q18-34 = Moderate, Q35-50 = Hard
+    // Q1-17 = Easy, Q18-34 = Medium, Q35-50 = Difficult
     const processed = rawQuestions.map((q, idx) => {
         let difficulty = "Easy";
         if (idx >= 17 && idx < 34) {
-            difficulty = "Moderate";
+            difficulty = "Medium";
         } else if (idx >= 34) {
-            difficulty = "Hard";
+            difficulty = "Difficult";
         }
+
+        // Supports both { answer: "..." } and { options: {...}, correct_answer: "A" }
+        const correctAnswerText =
+            q.answer ??
+            (q.options && q.options[q.correct_answer]
+                ? q.options[q.correct_answer]
+                : q.correct_answer) ??
+            "";
+
         return {
             ...q,
             difficulty,
+            correctAnswerText,
             originalIndex: idx,
             categoryId: moduleId
         };
@@ -77,166 +95,160 @@ async function fetchCategory(moduleId) {
 window.startPracticeQuiz = async () => {
     closeMenu();
     isPracticeMode = true;
-    currentFilter = "PRACTICE_MODE";
-    currentRound = 1;
+    currentQuestionIndex = 0;
 
-    // Highlight no module as active
     document.querySelectorAll(".menu-btn").forEach(btn => btn.classList.remove("active"));
+    document.getElementById("difficultySelector").style.display = "none";
     document.getElementById("modeToggleContainer").style.display = "none";
     document.getElementById("mainTitle").innerText = "🏆 3-Round Practice Quiz";
     document.getElementById("mainSubtitle").innerText = "Official Irish Credit Union Schools Quiz Structure";
 
-    // Load at least 6 random modules to ensure question variety
     const selectedMods = shuffle(availableModules).slice(0, 6);
     try {
         await Promise.all(selectedMods.map(m => fetchCategory(m.id)));
     } catch (err) {
-        alert("Please ensure the 12 category JSON files are in the same directory as index.html.");
+        alert("Could not load JSON files. Please ensure they are inside the 'data' folder.");
         console.error(err);
         return;
     }
 
-    // Partition loaded questions into pools by difficulty
     let easyPool = [];
-    let modPool = [];
-    let hardPool = [];
+    let medPool = [];
+    let diffPool = [];
 
     Object.values(loadedModules).forEach(catQuestions => {
         catQuestions.forEach(q => {
             if (q.difficulty === "Easy") easyPool.push(q);
-            else if (q.difficulty === "Moderate") modPool.push(q);
-            else if (q.difficulty === "Hard") hardPool.push(q);
+            else if (q.difficulty === "Medium") medPool.push(q);
+            else if (q.difficulty === "Difficult") diffPool.push(q);
         });
     });
 
     const requiredPerDifficulty = TOTAL_ROUNDS * 2;
     if (
         easyPool.length < requiredPerDifficulty ||
-        modPool.length < requiredPerDifficulty ||
-        hardPool.length < requiredPerDifficulty
+        medPool.length < requiredPerDifficulty ||
+        diffPool.length < requiredPerDifficulty
     ) {
-        alert("Not enough Easy, Moderate, or Hard questions available to build a 3-round quiz.");
+        alert("Not enough Easy, Medium, or Difficult questions available to build a 3-round quiz.");
         return;
     }
 
     easyPool = shuffle(easyPool);
-    modPool = shuffle(modPool);
-    hardPool = shuffle(hardPool);
+    medPool = shuffle(medPool);
+    diffPool = shuffle(diffPool);
 
-    // Build exactly 3 rounds (6 questions each: 2 Easy, 2 Moderate, 2 Hard = 18 total)
     currentQuizData = [];
     for (let r = 1; r <= TOTAL_ROUNDS; r++) {
         const rEasy = easyPool.splice(0, 2);
-        const rMod = modPool.splice(0, 2);
-        const rHard = hardPool.splice(0, 2);
+        const rMed = medPool.splice(0, 2);
+        const rDiff = diffPool.splice(0, 2);
 
         const roundSet = [
             { ...rEasy[0], round: r, roundQNum: 1 },
             { ...rEasy[1], round: r, roundQNum: 2 },
-            { ...rMod[0], round: r, roundQNum: 3 },
-            { ...rMod[1], round: r, roundQNum: 4 },
-            { ...rHard[0], round: r, roundQNum: 5 },
-            { ...rHard[1], round: r, roundQNum: 6 }
+            { ...rMed[0], round: r, roundQNum: 3 },
+            { ...rMed[1], round: r, roundQNum: 4 },
+            { ...rDiff[0], round: r, roundQNum: 5 },
+            { ...rDiff[1], round: r, roundQNum: 6 }
         ];
 
         currentQuizData.push(...roundSet);
     }
 
-    // Assign global indices for form control
-    currentQuizData = currentQuizData.map((q, idx) => ({ ...q, quizIndex: idx, userAnswer: null }));
+    currentQuizData = currentQuizData.map((q, idx) => ({
+        ...q,
+        quizIndex: idx,
+        userAnswer: ""
+    }));
 
-    renderPracticeQuiz();
+    renderQuestion();
     showQuizView();
 };
 
 // =========================================================
-// 3. QUIZ RENDERING & ROUND NAVIGATION
+// 3. SINGLE-QUESTION RENDERING & NAVIGATION
 // =========================================================
-function renderPracticeQuiz() {
+function renderQuestion() {
     const container = document.getElementById("quizContainer");
     container.innerHTML = "";
 
+    const q = currentQuizData[currentQuestionIndex];
+    if (!q) return;
+
     const roundIndicator = document.getElementById("roundIndicator");
+    roundIndicator.style.display = "block";
     if (isPracticeMode) {
-        roundIndicator.style.display = "block";
         roundIndicator.innerHTML = `
-            <div class="round-badge">Round ${currentRound} of ${TOTAL_ROUNDS}</div>
-            <div class="round-desc">ILCU Format: Questions 1–2 (Easy), 3–4 (Moderate), 5–6 (Hard)</div>
+            <div class="round-badge">Round ${q.round} of ${TOTAL_ROUNDS} • Question ${q.roundQNum} of ${QUESTIONS_PER_ROUND}</div>
+            <div class="round-desc">Overall Progress: ${currentQuestionIndex + 1} / ${currentQuizData.length}</div>
         `;
     } else {
-        roundIndicator.style.display = "none";
+        roundIndicator.innerHTML = `
+            <div class="round-badge">Question ${currentQuestionIndex + 1} of ${currentQuizData.length}</div>
+            <div class="round-desc">Level: ${q.difficulty}</div>
+        `;
     }
 
-    // Filter to current round's questions (or all questions in single-module mode)
-    const activeQuestions = isPracticeMode
-        ? currentQuizData.filter(q => q.round === currentRound)
-        : currentQuizData;
+    const card = document.createElement("div");
+    card.className = "question-card";
 
-    activeQuestions.forEach(q => {
-        const card = document.createElement("div");
-        card.className = "question-card";
+    const badgeClass = q.difficulty.toLowerCase();
+    const cleanQuestion = q.question.replace(/^\d+\.\s*/, "");
 
-        const badgeClass = q.difficulty.toLowerCase();
-        const cleanQuestion = q.question.replace(/^\d+\.\s*/, "");
+    card.innerHTML = `
+        <div class="question-header">
+            <span class="q-number">Question ${currentQuestionIndex + 1}</span>
+            <span class="difficulty-badge badge-${badgeClass}">${q.difficulty}</span>
+            <span class="topic-tag">${q.topic}</span>
+        </div>
+        <div class="question-title">${cleanQuestion}</div>
+        <div class="answer-input-group">
+            <input
+                type="text"
+                id="userAnswerInput"
+                class="answer-input"
+                placeholder="Type your answer here..."
+                autocomplete="off"
+            />
+        </div>
+    `;
 
-        card.innerHTML = `
-            <div class="question-header">
-                <span class="q-number">Question ${q.roundQNum}</span>
-                <span class="difficulty-badge badge-${badgeClass}">${q.difficulty}</span>
-                <span class="topic-tag">${q.topic}</span>
-            </div>
-            <div class="question-title">${cleanQuestion}</div>
-        `;
+    container.appendChild(card);
 
-        for (const [key, text] of Object.entries(q.options)) {
-            const isChecked = q.userAnswer === key ? "checked" : "";
-            const optionId = `q_${q.quizIndex}_${key}`;
+    const inputEl = document.getElementById("userAnswerInput");
+    inputEl.value = q.userAnswer || "";
+    inputEl.focus();
 
-            const label = document.createElement("label");
-            label.className = "option-label";
-            label.htmlFor = optionId;
-            label.innerHTML = `
-                <input type="radio" id="${optionId}" name="q_${q.quizIndex}" value="${key}" ${isChecked}>
-                <span><b>${key}:</b> ${text}</span>
-            `;
-
-            label.querySelector("input").addEventListener("change", (e) => {
-                saveAnswer(q.quizIndex, e.target.value);
-            });
-
-            card.appendChild(label);
-        }
-
-        container.appendChild(card);
+    inputEl.addEventListener("input", (e) => {
+        currentQuizData[currentQuestionIndex].userAnswer = e.target.value;
     });
 
-    updateRoundNavigation();
+    inputEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            if (currentQuestionIndex < currentQuizData.length - 1) {
+                nextQuestion();
+            } else {
+                gradeQuiz();
+            }
+        }
+    });
+
+    updateNavigation();
 }
 
-window.saveAnswer = (quizIndex, value) => {
-    currentQuizData[quizIndex].userAnswer = value;
-};
-
-function updateRoundNavigation() {
+function updateNavigation() {
     const controls = document.getElementById("paginationControls");
     const prevBtn = document.getElementById("prevPageBtn");
     const nextBtn = document.getElementById("nextPageBtn");
     const submitBtn = document.getElementById("submitQuizBtn");
 
-    if (!isPracticeMode) {
-        controls.style.display = "none";
-        submitBtn.style.display = "block";
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        return;
-    }
-
     controls.style.display = "flex";
-    prevBtn.style.display = currentRound > 1 ? "block" : "none";
-    prevBtn.innerText = `⬅ Round ${currentRound - 1}`;
+    prevBtn.style.display = currentQuestionIndex > 0 ? "block" : "none";
 
-    if (currentRound < TOTAL_ROUNDS) {
+    if (currentQuestionIndex < currentQuizData.length - 1) {
         nextBtn.style.display = "block";
-        nextBtn.innerText = `Round ${currentRound + 1} ➡`;
         submitBtn.style.display = "none";
     } else {
         nextBtn.style.display = "none";
@@ -246,30 +258,29 @@ function updateRoundNavigation() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-window.nextRoundOrPage = () => {
-    if (isPracticeMode && currentRound < TOTAL_ROUNDS) {
-        currentRound++;
-        renderPracticeQuiz();
+window.nextQuestion = () => {
+    if (currentQuestionIndex < currentQuizData.length - 1) {
+        currentQuestionIndex++;
+        renderQuestion();
     }
 };
 
-window.prevRoundOrPage = () => {
-    if (isPracticeMode && currentRound > 1) {
-        currentRound--;
-        renderPracticeQuiz();
+window.prevQuestion = () => {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        renderQuestion();
     }
 };
 
 // =========================================================
-// 4. GRADING & ADVANCED ANALYTICS
+// 4. GRADING & IMMEDIATE ANSWER REVIEW
 // =========================================================
 window.gradeQuiz = async () => {
-    const unanswered = currentQuizData.filter(q => !q.userAnswer).length;
+    const unanswered = currentQuizData.filter(q => !normalizeAnswer(q.userAnswer)).length;
     if (unanswered > 0) {
         const modal = document.getElementById("customModal");
-        const scopeText = isPracticeMode ? "across the 3 rounds" : "in this module";
         document.getElementById("modalMessage").innerText =
-            `You have ${unanswered} question(s) unanswered ${scopeText}. Unanswered questions score 0. Do you want to submit?`;
+            `You have ${unanswered} question(s) unanswered. Unanswered questions score 0. Do you want to submit?`;
         modal.classList.remove("hidden");
 
         const proceed = await new Promise(resolve => {
@@ -284,13 +295,13 @@ window.gradeQuiz = async () => {
     const roundScores = { 1: 0, 2: 0, 3: 0 };
     const diffScores = {
         Easy: { correct: 0, total: 0 },
-        Moderate: { correct: 0, total: 0 },
-        Hard: { correct: 0, total: 0 }
+        Medium: { correct: 0, total: 0 },
+        Difficult: { correct: 0, total: 0 }
     };
     const topicScores = {};
 
     currentQuizData.forEach(q => {
-        const isCorrect = q.userAnswer === q.correct_answer;
+        const isCorrect = normalizeAnswer(q.userAnswer) === normalizeAnswer(q.correctAnswerText);
         diffScores[q.difficulty].total++;
 
         if (isCorrect) {
@@ -309,6 +320,9 @@ window.gradeQuiz = async () => {
     });
 
     const percentage = totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0;
+    lastScoreSummary = { score: totalScore, total: totalQuestions, percentage };
+
+    // Populate Analytics Dashboard (available via "View Scorecard" button)
     document.getElementById("overallScoreCircle").innerHTML = `${totalScore}/${totalQuestions}<br><small>${percentage}%</small>`;
 
     let feedback = "🥉 Keep practicing to sharpen your recall!";
@@ -319,7 +333,6 @@ window.gradeQuiz = async () => {
     }
     document.getElementById("overallScoreText").innerText = feedback;
 
-    // 1. Round Stats (or Overall Module Summary)
     let roundHtml = "";
     if (isPracticeMode) {
         for (let r = 1; r <= TOTAL_ROUNDS; r++) {
@@ -332,16 +345,16 @@ window.gradeQuiz = async () => {
     } else {
         roundHtml = `
             <div class="analytics-row">
-                <span><b>Full Module</b></span>
+                <span><b>Selected Level</b></span>
                 <span><b>${totalScore} / ${totalQuestions} pts</b></span>
             </div>`;
     }
     document.getElementById("roundAnalyticsContent").innerHTML = roundHtml;
 
-    // 2. Difficulty Breakdown
     let diffHtml = "";
-    ["Easy", "Moderate", "Hard"].forEach(d => {
+    ["Easy", "Medium", "Difficult"].forEach(d => {
         const { correct, total } = diffScores[d];
+        if (total === 0 && !isPracticeMode) return;
         const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
         diffHtml += `
             <div class="analytics-row">
@@ -351,7 +364,6 @@ window.gradeQuiz = async () => {
     });
     document.getElementById("difficultyAnalyticsContent").innerHTML = diffHtml;
 
-    // 3. Topic Breakdown
     let topicHtml = "";
     for (const [topic, data] of Object.entries(topicScores)) {
         topicHtml += `
@@ -362,9 +374,8 @@ window.gradeQuiz = async () => {
     }
     document.getElementById("analyticsContent").innerHTML = topicHtml;
 
-    document.getElementById("quizForm").style.display = "none";
-    document.getElementById("fullAnalyticsView").style.display = "block";
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Immediately show correct answers & explanations on Submit
+    reviewAnswers();
 };
 
 window.reviewAnswers = () => {
@@ -376,13 +387,19 @@ window.reviewAnswers = () => {
     document.getElementById("reviewActionBtns").style.display = "flex";
 
     const container = document.getElementById("quizContainer");
-    container.innerHTML = "";
+    container.innerHTML = `
+        <div class="review-score-banner">
+            <strong>Final Score: ${lastScoreSummary.score} / ${lastScoreSummary.total} (${lastScoreSummary.percentage}%)</strong>
+            <span>Review the correct answers and explanations below.</span>
+        </div>
+    `;
 
-    currentQuizData.forEach(q => {
+    currentQuizData.forEach((q, idx) => {
         const card = document.createElement("div");
         card.className = "question-card";
-        const isCorrect = q.userAnswer === q.correct_answer;
-        const qLabel = isPracticeMode ? `Round ${q.round} — Q${q.roundQNum}` : `Question ${q.roundQNum}`;
+        const isCorrect = normalizeAnswer(q.userAnswer) === normalizeAnswer(q.correctAnswerText);
+        const qLabel = isPracticeMode ? `Round ${q.round} — Q${q.roundQNum}` : `Question ${idx + 1}`;
+        const userText = q.userAnswer && q.userAnswer.trim() ? q.userAnswer.trim() : "(No answer entered)";
 
         card.innerHTML = `
             <div class="question-header">
@@ -394,31 +411,14 @@ window.reviewAnswers = () => {
                 <span class="topic-tag">${q.topic}</span>
             </div>
             <div class="question-title">${q.question.replace(/^\d+\.\s*/, "")}</div>
+            <div class="review-answer ${isCorrect ? 'review-correct' : 'review-wrong'}">
+                <b>Your Answer:</b> ${userText}
+            </div>
+            <div class="explanation" style="display:block;">
+                💡 <b>Correct Answer:</b> ${q.correctAnswerText}<br>
+                <span style="color:#444;">${q.explanation}</span>
+            </div>
         `;
-
-        for (const [key, text] of Object.entries(q.options)) {
-            let style = "";
-            if (key === q.correct_answer) {
-                style = "background: #e8f5e9; border-color: #2e7d32; font-weight: bold;";
-            } else if (key === q.userAnswer && !isCorrect) {
-                style = "background: #ffebee; border-color: #c62828;";
-            }
-
-            const label = document.createElement("label");
-            label.className = "option-label";
-            label.style.cssText = style;
-            label.innerHTML = `
-                <input type="radio" disabled ${key === q.userAnswer ? "checked" : ""}>
-                <span><b>${key}:</b> ${text}</span>
-            `;
-            card.appendChild(label);
-        }
-
-        const exp = document.createElement("div");
-        exp.className = "explanation";
-        exp.style.display = "block";
-        exp.innerHTML = `💡 <b>Official Answer (${q.correct_answer}):</b> ${q.explanation}`;
-        card.appendChild(exp);
 
         container.appendChild(card);
     });
@@ -433,7 +433,7 @@ window.showAnalytics = () => {
 };
 
 // =========================================================
-// 5. SINGLE MODULE BROWSER & FLASHCARDS
+// 5. SINGLE MODULE BROWSER, DIFFICULTY PICKER & FLASHCARDS
 // =========================================================
 function buildSidebar() {
     const container = document.getElementById("moduleContainer");
@@ -455,7 +455,6 @@ function buildSidebar() {
 window.loadModule = async (moduleId) => {
     closeMenu();
     isPracticeMode = false;
-    currentRound = 1;
 
     document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
     const activeBtn = document.getElementById(`btn_${moduleId}`);
@@ -463,95 +462,7 @@ window.loadModule = async (moduleId) => {
 
     const modMeta = availableModules.find(m => m.id === moduleId);
     document.getElementById("mainTitle").innerText = modMeta.title;
+    document.getElementById("mainSubtitle").innerText = "Choose a difficulty level (Easy, Medium, or Difficult)";
 
-    let data;
     try {
-        data = await fetchCategory(moduleId);
-    } catch (err) {
-        alert(`Could not load ${moduleId}.json. Please ensure the JSON file is in the same directory as index.html.`);
-        console.error(err);
-        return;
-    }
-
-    document.getElementById("mainSubtitle").innerText = `Category Question Bank (${data.length} Questions)`;
-
-    currentQuizData = data.map((q, idx) => ({
-        ...q,
-        round: 1,
-        roundQNum: idx + 1,
-        quizIndex: idx,
-        userAnswer: null
-    }));
-
-    document.getElementById("modeToggleContainer").style.display = "flex";
-    switchMode(currentStudyMode);
-};
-
-window.switchMode = (mode) => {
-    currentStudyMode = mode;
-    document.getElementById("btnQuizMode").classList.toggle("active", mode === "QUIZ");
-    document.getElementById("btnFlashcardMode").classList.toggle("active", mode === "FLASHCARD");
-
-    if (mode === "QUIZ") {
-        document.getElementById("flashcardView").style.display = "none";
-        renderPracticeQuiz();
-        showQuizView();
-    } else {
-        document.getElementById("quizForm").style.display = "none";
-        document.getElementById("fullAnalyticsView").style.display = "none";
-        document.getElementById("flashcardView").style.display = "block";
-        flashcardIndex = 0;
-        renderFlashcard();
-    }
-};
-
-function renderFlashcard() {
-    if (!currentQuizData.length) return;
-    const card = currentQuizData[flashcardIndex];
-
-    const fcInner = document.getElementById("flashcardInner");
-    fcInner.classList.remove("is-flipped");
-
-    document.getElementById("fcFrontBadge").innerText = `${card.topic} • ${card.difficulty}`;
-    document.getElementById("fcFrontText").innerText = card.question.replace(/^\d+\.\s*/, "");
-    document.getElementById("fcBackAnswer").innerText = `Answer: (${card.correct_answer}) ${card.options[card.correct_answer]}`;
-    document.getElementById("fcBackExplanation").innerText = card.explanation;
-    document.getElementById("fcCounter").innerText = `${flashcardIndex + 1} / ${currentQuizData.length}`;
-}
-
-window.flipCard = () => {
-    document.getElementById("flashcardInner").classList.toggle("is-flipped");
-};
-
-window.nextFlashcard = () => {
-    if (flashcardIndex < currentQuizData.length - 1) {
-        flashcardIndex++;
-        renderFlashcard();
-    }
-};
-
-window.prevFlashcard = () => {
-    if (flashcardIndex > 0) {
-        flashcardIndex--;
-        renderFlashcard();
-    }
-};
-
-function showQuizView() {
-    document.getElementById("fullAnalyticsView").style.display = "none";
-    document.getElementById("instructionsText").style.display = "none";
-    document.getElementById("quizForm").style.display = "block";
-    document.getElementById("flashcardView").style.display = "none";
-    document.getElementById("reviewActionBtns").style.display = "none";
-}
-
-// Mobile sidebar toggle
-window.toggleMenu = () => {
-    document.getElementById("sidebar").classList.toggle("open");
-    document.getElementById("overlay").classList.toggle("open");
-};
-
-// Initialization
-window.addEventListener("DOMContentLoaded", () => {
-    buildSidebar();
-});
+        currentModuleData = await fetchCategory(moduleId);

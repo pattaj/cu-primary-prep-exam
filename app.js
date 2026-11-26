@@ -48,7 +48,7 @@ function closeMenu() {
 async function fetchCategory(moduleId) {
     if (loadedModules[moduleId]) return loadedModules[moduleId];
 
-    const response = await fetch(`./${moduleId}.json`);
+    const response = await fetch(`./data/${moduleId}.json`);
     if (!response.ok) {
         throw new Error(`Failed to load ${moduleId}.json`);
     }

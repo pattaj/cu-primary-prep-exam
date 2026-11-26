@@ -1,0 +1,602 @@
+[
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "1. How many people are shown holding hands on the Irish Credit Union logo?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "The official Irish Credit Union logo features four stylized figures holding hands in mutual cooperation."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "2. What are the three colours of the Irish national flag?",
+    "options": {
+      "A": "Green, white, and orange",
+      "B": "Green, white, and gold",
+      "C": "Green, red, and orange",
+      "D": "Orange, white, and blue"
+    },
+    "correct_answer": "A",
+    "explanation": "The national flag of Ireland is a tricolour of green, white, and orange, symbolising peace between traditions."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "3. What is the title of the head of the Irish Government?",
+    "options": {
+      "A": "Tánaiste",
+      "B": "President",
+      "C": "Taoiseach",
+      "D": "Ceann Comhairle"
+    },
+    "correct_answer": "C",
+    "explanation": "The Taoiseach is the prime minister and head of government in the Republic of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "4. What is the title of the deputy head of the Irish Government?",
+    "options": {
+      "A": "Taoiseach",
+      "B": "Tánaiste",
+      "C": "Cathaoirleach",
+      "D": "Attorney General"
+    },
+    "correct_answer": "B",
+    "explanation": "The Tánaiste serves as the deputy prime minister of the Republic of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "5. What is the official residence of the President of Ireland in Phoenix Park?",
+    "options": {
+      "A": "Leinster House",
+      "B": "Dublin Castle",
+      "C": "Áras an Uachtaráin",
+      "D": "Farmleigh House"
+    },
+    "correct_answer": "C",
+    "explanation": "Áras an Uachtaráin, located in Phoenix Park, Dublin, is the official residence of the President of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "6. In which city does the Irish Parliament (Oireachtas) meet?",
+    "options": {
+      "A": "Cork",
+      "B": "Galway",
+      "C": "Limerick",
+      "D": "Dublin"
+    },
+    "correct_answer": "D",
+    "explanation": "The Oireachtas meets in Dublin at Leinster House on Kildare Street."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "7. What is the name of the building where Dáil Éireann sits?",
+    "options": {
+      "A": "The Custom House",
+      "B": "Leinster House",
+      "C": "The Four Courts",
+      "D": "Mansion House"
+    },
+    "correct_answer": "B",
+    "explanation": "Dáil Éireann (the lower house of the Oireachtas) sits in Leinster House."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "8. What is the official national anthem of Ireland?",
+    "options": {
+      "A": "The Fields of Athenry",
+      "B": "Amhrán na bhFiann",
+      "C": "Ireland's Call",
+      "D": "A Nation Once Again"
+    },
+    "correct_answer": "B",
+    "explanation": "Amhrán na bhFiann (The Soldier's Song) is the national anthem of the Republic of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "9. How many provinces are on the island of Ireland?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "The island of Ireland has four historical provinces: Connacht, Leinster, Munster, and Ulster."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "10. How many counties are in the Republic of Ireland?",
+    "options": {
+      "A": "26",
+      "B": "28",
+      "C": "30",
+      "D": "32"
+    },
+    "correct_answer": "A",
+    "explanation": "There are 26 traditional counties in the Republic of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "11. How many counties are on the entire island of Ireland?",
+    "options": {
+      "A": "26",
+      "B": "30",
+      "C": "32",
+      "D": "36"
+    },
+    "correct_answer": "C",
+    "explanation": "There are 32 counties across the entire island of Ireland (26 in the Republic and 6 in Northern Ireland)."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "12. What is the name of Ireland's national police service?",
+    "options": {
+      "A": "An Garda Síochána",
+      "B": "Defence Forces",
+      "C": "PSNI",
+      "D": "National Bureau of Investigation"
+    },
+    "correct_answer": "A",
+    "explanation": "An Garda Síochána (Guardians of the Peace) is the national police and security service of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "13. What currency is used in the Republic of Ireland?",
+    "options": {
+      "A": "Pound Sterling",
+      "B": "Irish Punt",
+      "C": "Euro",
+      "D": "Dollar"
+    },
+    "correct_answer": "C",
+    "explanation": "Ireland adopted the Euro in 1999 as accounting currency and introduced banknotes and coins in 2002."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "14. What is the age requirement to vote in an Irish General Election?",
+    "options": {
+      "A": "16",
+      "B": "18",
+      "C": "20",
+      "D": "21"
+    },
+    "correct_answer": "B",
+    "explanation": "Citizens must be at least 18 years of age on polling day to vote in an Irish General Election."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "15. What is the maximum number of pupils on a Credit Union Schools Quiz team?",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "correct_answer": "B",
+    "explanation": "Each official Credit Union Schools Quiz team comprises a maximum of four primary school pupils."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "16. In the Credit Union Schools Quiz, how many questions are in each standard round?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "8",
+      "D": "10"
+    },
+    "correct_answer": "B",
+    "explanation": "Each standard round of the Credit Union Schools Quiz consists of six questions."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "17. What symbol appears on the Irish side of Euro coins?",
+    "options": {
+      "A": "Shamrock",
+      "B": "The Harp",
+      "C": "Celtic Cross",
+      "D": "Round Tower"
+    },
+    "correct_answer": "B",
+    "explanation": "All denominations of Irish Euro coins feature the traditional Irish harp (cláirseach)."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "18. Who is the 10th President of Ireland, inaugurated in November 2025?",
+    "options": {
+      "A": "Michael D. Higgins",
+      "B": "Catherine Connolly",
+      "C": "Mary McAleese",
+      "D": "Mairead McGuinness"
+    },
+    "correct_answer": "B",
+    "explanation": "Catherine Connolly was inaugurated as the 10th President of Ireland in November 2025."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "19. Who is the Taoiseach of Ireland as of November 2026?",
+    "options": {
+      "A": "Simon Harris",
+      "B": "Micheál Martin",
+      "C": "Mary Lou McDonald",
+      "D": "Leo Varadkar"
+    },
+    "correct_answer": "B",
+    "explanation": "Micheál Martin serves as Taoiseach under the rotating coalition government agreement."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "20. Who is the Tánaiste and Minister for Finance as of November 2026?",
+    "options": {
+      "A": "Simon Harris",
+      "B": "Paschal Donohoe",
+      "C": "Jack Chambers",
+      "D": "Michael McGrath"
+    },
+    "correct_answer": "A",
+    "explanation": "Simon Harris holds the roles of Tánaiste and Minister for Finance as of November 2026."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "21. What does the abbreviation ILCU stand for?",
+    "options": {
+      "A": "Irish League of Credit Unions",
+      "B": "International Law and Credit Union",
+      "C": "Irish Lending and Credit Union",
+      "D": "Independent League of Credit Unions"
+    },
+    "correct_answer": "A",
+    "explanation": "ILCU stands for the Irish League of Credit Unions, representing affiliated credit unions across Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "22. What does the abbreviation TD stand for in Irish politics?",
+    "options": {
+      "A": "Taoiseach Delegate",
+      "B": "Teachta Dála",
+      "C": "Tribunal Director",
+      "D": "Tánaiste Deputy"
+    },
+    "correct_answer": "B",
+    "explanation": "A Teachta Dála (TD) is an elected member of Dáil Éireann, the lower house of the Oireachtas."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "23. What is the name of the upper house of the Irish Parliament?",
+    "options": {
+      "A": "Dáil Éireann",
+      "B": "Seanad Éireann",
+      "C": "House of Commons",
+      "D": "Council of State"
+    },
+    "correct_answer": "B",
+    "explanation": "Seanad Éireann (the Senate) is the upper house of the Oireachtas."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "24. How many years is a single term for the President of Ireland?",
+    "options": {
+      "A": "4 years",
+      "B": "5 years",
+      "C": "6 years",
+      "D": "7 years"
+    },
+    "correct_answer": "D",
+    "explanation": "The President of Ireland is elected for a term of seven years and may serve a maximum of two terms."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "25. In what year was the first Credit Union founded in Ireland?",
+    "options": {
+      "A": "1948",
+      "B": "1958",
+      "C": "1968",
+      "D": "1978"
+    },
+    "correct_answer": "B",
+    "explanation": "The credit union movement began in Ireland in 1958 with pioneer initiatives in Dublin."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "26. Who was the Dublin teacher who helped pioneer the Credit Union movement in Ireland?",
+    "options": {
+      "A": "Nora Herlihy",
+      "B": "Kathleen Clarke",
+      "C": "Hanna Sheehy-Skeffington",
+      "D": "Mary MacSwiney"
+    },
+    "correct_answer": "A",
+    "explanation": "Nora Herlihy, a primary school teacher from Ballydesmond living in Dublin, was central to founding the movement."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "27. In what year was the Irish League of Credit Unions (ILCU) founded?",
+    "options": {
+      "A": "1958",
+      "B": "1960",
+      "C": "1966",
+      "D": "1972"
+    },
+    "correct_answer": "B",
+    "explanation": "The Irish League of Credit Unions was officially established in 1960."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "28. In what year was the first Credit Union Schools Quiz held?",
+    "options": {
+      "A": "1982",
+      "B": "1988",
+      "C": "1992",
+      "D": "2000"
+    },
+    "correct_answer": "C",
+    "explanation": "The inaugural Credit Union National Schools Quiz was launched in 1992."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "29. How many rounds are played in Competition A (Under 11) of the Credit Union Schools Quiz?",
+    "options": {
+      "A": "8",
+      "B": "10",
+      "C": "12",
+      "D": "14"
+    },
+    "correct_answer": "B",
+    "explanation": "Competition A (for pupils under 11) consists of 10 rounds of six questions each."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "30. How many rounds are played in Competition B (Under 13) of the Credit Union Schools Quiz?",
+    "options": {
+      "A": "10",
+      "B": "11",
+      "C": "12",
+      "D": "14"
+    },
+    "correct_answer": "C",
+    "explanation": "Competition B (for pupils aged 11 to 13) consists of 12 rounds of six questions each."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "31. What is the title of the chairperson who keeps order in Dáil Éireann?",
+    "options": {
+      "A": "Taoiseach",
+      "B": "Ceann Comhairle",
+      "C": "Cathaoirleach",
+      "D": "Attorney General"
+    },
+    "correct_answer": "B",
+    "explanation": "The Ceann Comhairle presides over Dáil Éireann debates and enforces parliamentary rules."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "32. In what year did Ireland join the European Economic Community (now the EU)?)",
+    "options": {
+      "A": "1968",
+      "B": "1973",
+      "C": "1981",
+      "D": "1986"
+    },
+    "correct_answer": "B",
+    "explanation": "Ireland entered the European Economic Community alongside Britain and Denmark on 1 January 1973."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "33. What is the name of Ireland's national public service broadcaster?",
+    "options": {
+      "A": "Virgin Media One",
+      "B": "RTÉ",
+      "C": "TG4",
+      "D": "BBC Northern Ireland"
+    },
+    "correct_answer": "B",
+    "explanation": "RTÉ (Raidió Teilifís Éireann) is Ireland's national public service multimedia organisation."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "34. What is the name of the Irish Constitution, adopted in 1937?",
+    "options": {
+      "A": "Bunreacht na hÉireann",
+      "B": "Dáil Charter",
+      "C": "Brehon Law",
+      "D": "The Free State Act"
+    },
+    "correct_answer": "A",
+    "explanation": "Bunreacht na hÉireann was approved by plebiscite in 1937 as the fundamental law of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "35. Who is the President of the Irish League of Credit Unions (ILCU) in 2026?",
+    "options": {
+      "A": "Martin Sisk",
+      "B": "Brendan Jenkins",
+      "C": "Gerry Thompson",
+      "D": "Helena O'Keeffe"
+    },
+    "correct_answer": "B",
+    "explanation": "Brendan Jenkins is the serving President of the Irish League of Credit Unions in 2026."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "36. What was the theme of the 2026 Credit Union National Art Competition?",
+    "options": {
+      "A": "Dreams of Tomorrow",
+      "B": "World of Colour",
+      "C": "Together as One",
+      "D": "The Magic of Community"
+    },
+    "correct_answer": "B",
+    "explanation": "\"World of Colour\" was chosen as the creative theme for the 2026 National Art Competition."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "37. Who is the Minister for Education and Youth in the Irish Cabinet in 2026?",
+    "options": {
+      "A": "Norma Foley",
+      "B": "Hildegarde Naughton",
+      "C": "Helen McEntee",
+      "D": "Heather Humphreys"
+    },
+    "correct_answer": "B",
+    "explanation": "Hildegarde Naughton serves as the Minister for Education and Youth in 2026."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "38. Who is the Minister for Foreign Affairs and Trade (and Defence) in 2026?",
+    "options": {
+      "A": "Micheál Martin",
+      "B": "Helen McEntee",
+      "C": "Simon Harris",
+      "D": "Paschal Donohoe"
+    },
+    "correct_answer": "B",
+    "explanation": "Helen McEntee serves as Minister for Foreign Affairs, Trade, and Defence in the 2026 cabinet."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "39. Who is the Minister of State with responsibility for Credit Unions in 2026?",
+    "options": {
+      "A": "Robert Troy",
+      "B": "Jennifer Carroll MacNeill",
+      "C": "Sean Fleming",
+      "D": "Damien English"
+    },
+    "correct_answer": "A",
+    "explanation": "Robert Troy holds special ministerial responsibility for the credit union sector in 2026."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "40. In what month is Stage 1 (Credit Union Level) of the 2027 Credit Union Schools Quiz scheduled?",
+    "options": {
+      "A": "January",
+      "B": "February",
+      "C": "March",
+      "D": "April"
+    },
+    "correct_answer": "B",
+    "explanation": "Stage 1 (local level) of the Credit Union Schools Quiz takes place annually in early February."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "41. In what month is the Stage 3 National Final of the 2027 Credit Union Schools Quiz scheduled?",
+    "options": {
+      "A": "March",
+      "B": "April",
+      "C": "May",
+      "D": "June"
+    },
+    "correct_answer": "B",
+    "explanation": "The Stage 3 National Final is scheduled for April at the RDS in Dublin."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "42. How many seats are in the 34th Dáil Éireann (elected in late 2024)?",
+    "options": {
+      "A": "160",
+      "B": "166",
+      "C": "174",
+      "D": "180"
+    },
+    "correct_answer": "C",
+    "explanation": "Electoral boundary revisions increased the size of the 34th Dáil to 174 seats."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "43. How many members (Senators) sit in Seanad Éireann?",
+    "options": {
+      "A": "50",
+      "B": "60",
+      "C": "70",
+      "D": "80"
+    },
+    "correct_answer": "B",
+    "explanation": "Seanad Éireann is composed of 60 senators elected or nominated from various vocational panels."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "44. What is the name of the highest court in Ireland?",
+    "options": {
+      "A": "High Court",
+      "B": "Court of Appeal",
+      "C": "The Supreme Court",
+      "D": "Circuit Court"
+    },
+    "correct_answer": "C",
+    "explanation": "The Supreme Court is the court of final appeal in the Republic of Ireland."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "45. Who was the first female President of Ireland (1990–1997)?",
+    "options": {
+      "A": "Mary Robinson",
+      "B": "Mary McAleese",
+      "C": "Catherine Connolly",
+      "D": "Constance Markievicz"
+    },
+    "correct_answer": "A",
+    "explanation": "Mary Robinson was elected in 1990 as Ireland's first female President."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "46. Who was the first President of Ireland (1938–1945)?",
+    "options": {
+      "A": "Douglas Hyde",
+      "B": "Éamon de Valera",
+      "C": "Cearbhall Ó Dálaigh",
+      "D": "Erskine Childers"
+    },
+    "correct_answer": "A",
+    "explanation": "Douglas Hyde was selected by all-party consensus as the first President under the 1937 Constitution."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "47. What is the name of the \"common link\" (such as living or working in the same area) required to join a local credit union?",
+    "options": {
+      "A": "Membership charter",
+      "B": "Common bond",
+      "C": "Civic tie",
+      "D": "Community trust"
+    },
+    "correct_answer": "B",
+    "explanation": "The 'common bond' connects credit union members by geographical area, employer, or association."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "48. Which political party is led by Micheál Martin?",
+    "options": {
+      "A": "Fine Gael",
+      "B": "Fianna Fáil",
+      "C": "Sinn Féin",
+      "D": "Labour Party"
+    },
+    "correct_answer": "B",
+    "explanation": "Micheál Martin has served as leader of Fianna Fáil since 2011."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "49. Which political party is led by Simon Harris?",
+    "options": {
+      "A": "Fianna Fáil",
+      "B": "Fine Gael",
+      "C": "Green Party",
+      "D": "Social Democrats"
+    },
+    "correct_answer": "B",
+    "explanation": "Simon Harris is the leader of Fine Gael."
+  },
+  {
+    "topic": "Credit Union & Civic Ireland",
+    "question": "50. Under the Irish Government's rotating Taoiseach agreement, in what year is Simon Harris scheduled to resume the role of Taoiseach?",
+    "options": {
+      "A": "2026",
+      "B": "2027",
+      "C": "2028",
+      "D": "2029"
+    },
+    "correct_answer": "B",
+    "explanation": "Simon Harris is scheduled to rotate back into the office of Taoiseach in November 2027."
+  }
+]

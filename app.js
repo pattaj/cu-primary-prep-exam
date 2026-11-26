@@ -37,12 +37,17 @@ function shuffle(array) {
     return arr;
 }
 
+function closeMenu() {
+    document.getElementById("sidebar").classList.remove("open");
+    document.getElementById("overlay").classList.remove("open");
+}
+
 // =========================================================
 // 2. DATA LOADING & 3-ROUND QUIZ GENERATION
 // =========================================================
 async function fetchCategory(moduleId) {
     if (loadedModules[moduleId]) return loadedModules[moduleId];
-    
+
     const response = await fetch(`./${moduleId}.json`);
     if (!response.ok) {
         throw new Error(`Failed to load ${moduleId}.json`);
@@ -70,6 +75,7 @@ async function fetchCategory(moduleId) {
 }
 
 window.startPracticeQuiz = async () => {
+    closeMenu();
     isPracticeMode = true;
     currentFilter = "PRACTICE_MODE";
     currentRound = 1;
@@ -102,6 +108,16 @@ window.startPracticeQuiz = async () => {
             else if (q.difficulty === "Hard") hardPool.push(q);
         });
     });
+
+    const requiredPerDifficulty = TOTAL_ROUNDS * 2;
+    if (
+        easyPool.length < requiredPerDifficulty ||
+        modPool.length < requiredPerDifficulty ||
+        hardPool.length < requiredPerDifficulty
+    ) {
+        alert("Not enough Easy, Moderate, or Hard questions available to build a 3-round quiz.");
+        return;
+    }
 
     easyPool = shuffle(easyPool);
     modPool = shuffle(modPool);
@@ -141,14 +157,20 @@ function renderPracticeQuiz() {
     container.innerHTML = "";
 
     const roundIndicator = document.getElementById("roundIndicator");
-    roundIndicator.style.display = "block";
-    roundIndicator.innerHTML = `
-        <div class="round-badge">Round ${currentRound} of ${TOTAL_ROUNDS}</div>
-        <div class="round-desc">ILCU Format: Questions 1–2 (Easy), 3–4 (Moderate), 5–6 (Hard)</div>
-    `;
+    if (isPracticeMode) {
+        roundIndicator.style.display = "block";
+        roundIndicator.innerHTML = `
+            <div class="round-badge">Round ${currentRound} of ${TOTAL_ROUNDS}</div>
+            <div class="round-desc">ILCU Format: Questions 1–2 (Easy), 3–4 (Moderate), 5–6 (Hard)</div>
+        `;
+    } else {
+        roundIndicator.style.display = "none";
+    }
 
-    // Filter to current round's 6 questions
-    const activeQuestions = currentQuizData.filter(q => q.round === currentRound);
+    // Filter to current round's questions (or all questions in single-module mode)
+    const activeQuestions = isPracticeMode
+        ? currentQuizData.filter(q => q.round === currentRound)
+        : currentQuizData;
 
     activeQuestions.forEach(q => {
         const card = document.createElement("div");
@@ -201,6 +223,13 @@ function updateRoundNavigation() {
     const nextBtn = document.getElementById("nextPageBtn");
     const submitBtn = document.getElementById("submitQuizBtn");
 
+    if (!isPracticeMode) {
+        controls.style.display = "none";
+        submitBtn.style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+    }
+
     controls.style.display = "flex";
     prevBtn.style.display = currentRound > 1 ? "block" : "none";
     prevBtn.innerText = `⬅ Round ${currentRound - 1}`;
@@ -218,14 +247,14 @@ function updateRoundNavigation() {
 }
 
 window.nextRoundOrPage = () => {
-    if (currentRound < TOTAL_ROUNDS) {
+    if (isPracticeMode && currentRound < TOTAL_ROUNDS) {
         currentRound++;
         renderPracticeQuiz();
     }
 };
 
 window.prevRoundOrPage = () => {
-    if (currentRound > 1) {
+    if (isPracticeMode && currentRound > 1) {
         currentRound--;
         renderPracticeQuiz();
     }
@@ -238,8 +267,9 @@ window.gradeQuiz = async () => {
     const unanswered = currentQuizData.filter(q => !q.userAnswer).length;
     if (unanswered > 0) {
         const modal = document.getElementById("customModal");
+        const scopeText = isPracticeMode ? "across the 3 rounds" : "in this module";
         document.getElementById("modalMessage").innerText =
-            `You have ${unanswered} question(s) unanswered across the 3 rounds. Unanswered questions score 0. Do you want to submit?`;
+            `You have ${unanswered} question(s) unanswered ${scopeText}. Unanswered questions score 0. Do you want to submit?`;
         modal.classList.remove("hidden");
 
         const proceed = await new Promise(resolve => {
@@ -252,16 +282,25 @@ window.gradeQuiz = async () => {
     let totalScore = 0;
     const totalQuestions = currentQuizData.length;
     const roundScores = { 1: 0, 2: 0, 3: 0 };
-    const diffScores = { Easy: { correct: 0, total: 6 }, Moderate: { correct: 0, total: 6 }, Hard: { correct: 0, total: 6 } };
+    const diffScores = {
+        Easy: { correct: 0, total: 0 },
+        Moderate: { correct: 0, total: 0 },
+        Hard: { correct: 0, total: 0 }
+    };
     const topicScores = {};
 
     currentQuizData.forEach(q => {
         const isCorrect = q.userAnswer === q.correct_answer;
+        diffScores[q.difficulty].total++;
+
         if (isCorrect) {
             totalScore++;
-            roundScores[q.round]++;
+            if (roundScores[q.round] !== undefined) {
+                roundScores[q.round]++;
+            }
             diffScores[q.difficulty].correct++;
         }
+
         if (!topicScores[q.topic]) {
             topicScores[q.topic] = { correct: 0, total: 0 };
         }
@@ -269,7 +308,7 @@ window.gradeQuiz = async () => {
         if (isCorrect) topicScores[q.topic].correct++;
     });
 
-    const percentage = Math.round((totalScore / totalQuestions) * 100);
+    const percentage = totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0;
     document.getElementById("overallScoreCircle").innerHTML = `${totalScore}/${totalQuestions}<br><small>${percentage}%</small>`;
 
     let feedback = "🥉 Keep practicing to sharpen your recall!";
@@ -280,13 +319,21 @@ window.gradeQuiz = async () => {
     }
     document.getElementById("overallScoreText").innerText = feedback;
 
-    // 1. Round Stats
+    // 1. Round Stats (or Overall Module Summary)
     let roundHtml = "";
-    for (let r = 1; r <= TOTAL_ROUNDS; r++) {
-        roundHtml += `
+    if (isPracticeMode) {
+        for (let r = 1; r <= TOTAL_ROUNDS; r++) {
+            roundHtml += `
+                <div class="analytics-row">
+                    <span><b>Round ${r}</b></span>
+                    <span><b>${roundScores[r]} / ${QUESTIONS_PER_ROUND} pts</b></span>
+                </div>`;
+        }
+    } else {
+        roundHtml = `
             <div class="analytics-row">
-                <span><b>Round ${r}</b></span>
-                <span><b>${roundScores[r]} / 6 pts</b></span>
+                <span><b>Full Module</b></span>
+                <span><b>${totalScore} / ${totalQuestions} pts</b></span>
             </div>`;
     }
     document.getElementById("roundAnalyticsContent").innerHTML = roundHtml;
@@ -294,11 +341,12 @@ window.gradeQuiz = async () => {
     // 2. Difficulty Breakdown
     let diffHtml = "";
     ["Easy", "Moderate", "Hard"].forEach(d => {
-        const pct = Math.round((diffScores[d].correct / diffScores[d].total) * 100);
+        const { correct, total } = diffScores[d];
+        const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
         diffHtml += `
             <div class="analytics-row">
                 <span class="difficulty-badge badge-${d.toLowerCase()}">${d}</span>
-                <span>${diffScores[d].correct} / ${diffScores[d].total} (${pct}%)</span>
+                <span>${correct} / ${total} (${pct}%)</span>
             </div>`;
     });
     document.getElementById("difficultyAnalyticsContent").innerHTML = diffHtml;
@@ -330,15 +378,15 @@ window.reviewAnswers = () => {
     const container = document.getElementById("quizContainer");
     container.innerHTML = "";
 
-    // Render all 18 questions with correctness highlighting
     currentQuizData.forEach(q => {
         const card = document.createElement("div");
         card.className = "question-card";
         const isCorrect = q.userAnswer === q.correct_answer;
+        const qLabel = isPracticeMode ? `Round ${q.round} — Q${q.roundQNum}` : `Question ${q.roundQNum}`;
 
         card.innerHTML = `
             <div class="question-header">
-                <span class="q-number">Round ${q.round} — Q${q.roundQNum}</span>
+                <span class="q-number">${qLabel}</span>
                 <span class="difficulty-badge badge-${q.difficulty.toLowerCase()}">${q.difficulty}</span>
                 <span style="font-weight:bold; color: ${isCorrect ? '#2e7d32' : '#c62828'};">
                     ${isCorrect ? "✅ Correct" : "❌ Incorrect"}
@@ -405,6 +453,7 @@ function buildSidebar() {
 }
 
 window.loadModule = async (moduleId) => {
+    closeMenu();
     isPracticeMode = false;
     currentRound = 1;
 
@@ -414,9 +463,18 @@ window.loadModule = async (moduleId) => {
 
     const modMeta = availableModules.find(m => m.id === moduleId);
     document.getElementById("mainTitle").innerText = modMeta.title;
-    document.getElementById("mainSubtitle").innerText = "Category Question Bank (50 Questions)";
 
-    const data = await fetchCategory(moduleId);
+    let data;
+    try {
+        data = await fetchCategory(moduleId);
+    } catch (err) {
+        alert(`Could not load ${moduleId}.json. Please ensure the JSON file is in the same directory as index.html.`);
+        console.error(err);
+        return;
+    }
+
+    document.getElementById("mainSubtitle").innerText = `Category Question Bank (${data.length} Questions)`;
+
     currentQuizData = data.map((q, idx) => ({
         ...q,
         round: 1,

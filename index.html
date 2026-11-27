@@ -20,14 +20,12 @@
                 <button type="button" id="tabAdmin" class="login-tab" onclick="switchLoginTab('admin')">Admin</button>
             </div>
 
-            <!-- Student Name-Only Login -->
+            <!-- Student Login -->
             <form id="studentLoginForm" onsubmit="handleStudentLogin(event)">
-                <div class="form-group">
-                    <label for="studentNameInput">Your Name</label>
-                    <input type="text" id="studentNameInput" class="answer-input" placeholder="Enter your name" required autocomplete="off">
-                </div>
-                <div id="studentLoginError" class="form-error"></div>
-                <button type="submit" class="btn btn-competition" style="margin-top: 10px;">Start Quiz</button>
+                <input type="text" id="studentUsernameInput" placeholder="Student Username" required />
+                <input type="password" id="studentPasswordInput" placeholder="Password" required />
+                <button type="submit">Login</button>
+                <p id="studentLoginError" class="form-error"></p>
             </form>
 
             <!-- Admin Credentials Login -->
@@ -245,13 +243,13 @@
     <div id="adminModal" class="modal-overlay hidden">
         <div class="modal-content" style="max-width: 480px;">
             <h3 style="margin-top:0; color:#0b5394;">⚙️ Admin: Authorized Users</h3>
-            <form id="addUserForm" onsubmit="handleAddUser(event)" style="margin-top: 12px;">
-                <div class="form-group">
-                    <label for="newUserName">Authorized Student Name</label>
-                    <input type="text" id="newUserName" class="answer-input" placeholder="e.g. Conor" required>
-                </div>
-                <div id="adminFormMsg" class="form-error"></div>
-                <button type="submit" class="btn" style="width:100%; margin-top: 6px;">➕ Authorize User</button>
+
+            <form id="addUserForm" onsubmit="handleAddUser(event)">
+                <input type="text" id="newUserName" placeholder="Student Display Name (e.g. Jane)" required />
+                <input type="text" id="newUserUsername" placeholder="Username (e.g. jane01)" required />
+                <input type="password" id="newUserPassword" placeholder="Password" required />
+                <button type="submit">Add Student</button>
+                <p id="adminFormMsg" class="form-error"></p>
             </form>
 
             <div style="margin-top: 20px;">
@@ -266,6 +264,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="auth.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

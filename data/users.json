@@ -1,5 +1,12 @@
 [
-  { "name": "Jade" },
-  { "name": "Ahren" },
-  { "name": "Jay" }
+  {
+    "name": "Ahren",
+    "username": "ahren001",
+    "password": "ahren001"
+  },
+  {
+    "name": "Jay",
+    "username": "jay002",
+    "password": "jay002"
+  }
 ]
